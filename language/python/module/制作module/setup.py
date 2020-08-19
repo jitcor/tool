@@ -117,6 +117,7 @@ setup(
 
     # When your source code is in a subdirectory under the project root, e.g.
     # `src/`, it is necessary to specify the `package_dir` argument.
+    # 指定源码根路径，“.”为当前目录
     package_dir={'': '.'},  # Optional
 
     # You can just specify package directories manually here if your project is
@@ -128,6 +129,7 @@ setup(
     #
     #   py_modules=["my_module"],
     #
+    # 路径应该跟上面保持一致即可
     packages=find_packages(where='.'),  # Required
 
     # Specify which Python versions you support. In contrast to the
@@ -142,6 +144,7 @@ setup(
     #
     # For an analysis of "install_requires" vs pip's requirements files see:
     # https://packaging.python.org/en/latest/requirements.html
+    # 添加依赖包
     install_requires=[
         'capstone',
         'unicorn==1.0.1',
@@ -165,6 +168,7 @@ setup(
 
     # If there are data files included in your packages that need to be
     # installed, specify them here.
+    # 添加所需的数据文件，androidemu为包名，后面为要添加的文件
     package_data={  # Optional
         'androidemu': ['so/arm/*.so'],
     },
