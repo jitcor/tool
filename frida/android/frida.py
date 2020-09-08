@@ -1,20 +1,32 @@
-import os
+# coding=utf-8
 import frida
 import sys
+import os
+import telnetlib
+import socket
+default_ip= '127.0.0.1'
+default_port=27042
+default_frida_server_name='frida_server'
+# 输出frida版本
+print('frida version:' + frida.__version__)
 
 
 def on_message(message, data):
-    if message['type'] == 'send':
-        print("[*] {0}".format(message['payload']))
+    type = message["type"]
+    msg = message
+    if type == "send":
+        msg = message["payload"]
+    elif type == 'error':
+        msg = message['stack']
     else:
-        print(message['description'])
+        msg = message
+    print(msg)
 
 
-def injectProcess(packageName, jsPath, isReboot=False, ip=None, port=None):
+def injectProcess(packageName, jsPath, isReboot=False,ip=default_ip, port=default_port,frida_server=default_frida_server_name):
+    start_server(frida_server,ip,port)
     # 获取设备
-    device = frida.get_remote_device() if ip is None and port is None else frida.get_device_manager().add_remote_device(
-        '{host}:{port}'.format(
-            host=ip, port=port))
+    device = frida.get_device_manager().add_remote_device('{host}:{port}'.format(host=ip, port=port))
     # 注入进程
     if isReboot:
         pid = device.spawn(packageName)
@@ -33,3 +45,29 @@ def injectProcess(packageName, jsPath, isReboot=False, ip=None, port=None):
     print("common_enabled_debug running....")
     # 执行脚本
     sys.stdin.read()
+
+
+def start_server(frida_server_name,ip=default_ip, port=default_port):
+    if check_frida_server(ip,port): return
+    os.system('adb forward tcp:27042 tcp:27042')
+    # os.system('adb forward tcp:27043 tcp:27043')
+    os.system('adb shell su -c "setenforce 0"')
+    os.system('adb shell su -c "chmod 777 /data/local/tmp/' + frida_server_name + '"')
+    os.system('start cmd.exe /c "adb shell su -c "./data/local/tmp/' + frida_server_name + '""')
+    while check_frida_server(ip,port) != True: pass
+
+def check_frida_server(ip=default_ip,port=default_port):
+    try:
+        tcp = socket.socket()
+        tcp.settimeout(2)
+        tcp.connect((ip, port))
+        tcp.send(b'\x00AUTH\r\n')
+        res = tcp.recv(100)
+        return str(res).find('REJECTED') >= 0
+    except Exception as e:
+        return False
+
+
+if __name__ == '__main__':
+    # start_server('fs12116')
+    print("ret:", check_frida_server())
