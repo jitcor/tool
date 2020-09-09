@@ -1,5 +1,11 @@
+# 配置抓包环境
+android 6.0.1 \
+Xposed v89 \
+JustTrustMe \
+Charles(需导入证书)
+> 注：ulogs.umeng.com请求，并不是每次启动App都会请求，但清除应用数据，可大大提高请求概率
 # 通过ucrack分析网络请求堆栈
-
+日志保存在files/monito_log/目录下
 # 打印umeng调试日志
 `adb shell setprop debug.umeng.rtlog 1`
 # 开启umeng调试模式
