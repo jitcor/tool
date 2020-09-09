@@ -62,6 +62,7 @@ private Envelope a(Context context, byte[] bArr) {
 ```
 # 保存编码数据
 `com.umeng.commonsdk.framework.UMFrUtils.saveEnvelopeFile(Context context, String str, byte[] bArr)->int`
+> 注：保存的是临时文件，实测会在请求后即时删除
 # 构建原始json数据函数
 `com.umeng.commonsdk.framework.UMEnvelopeBuild.buildEnvelopeWithExtHeader(Context context, JSONObject jSONObject, JSONObject jSONObject2)->JSONObject`
 # 拦截日志
