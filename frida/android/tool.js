@@ -8,6 +8,40 @@ Java.perform(function () {
                 console.log(e)
             }
         },
+        getStackTraceString: function () {
+            return Java.use("android.util.Log").getStackTraceString(Java.use("java.lang.Exception").$new())
+        },
+        StringMonitor:function (callback) {
+            tool.api.StringBuffer.toString.implementation = function () {
+                var string = this.toString()
+                 if (callback != null) callback(string)
+                return string
+            }
+            tool.api.StringBuilder.toString.implementation = function () {
+                var string = this.toString()
+                 if (callback != null) callback(string)
+                return string
+            }
+
+        },
+        AlgorithmMonitor: function (algorithm, callback) {
+            tool.api.MessageDigest.digest.overload().implementation = function () {
+                var bin = this.digest()
+                if (algorithm == this.getAlgorithm()) {
+                    if (callback != null) callback(bin)
+                }
+                return bin
+            }
+        },
+        checkCast: function (sourceCls, targetCls) {
+            try {
+                return Java.cast(sourceCls, targetCls)
+            } catch (e) {
+                console.log(e)
+                return sourceCls
+            }
+        }
+        ,
         Hexdump: function (data) {
             try {
                 return Java.use('org.lasinger.tools.hexdump.Hexdump').hexdump(data)
@@ -68,9 +102,21 @@ Java.perform(function () {
             application: Java.use("android.app.Application"),
             Toast: Java.use('android.widget.Toast'),
             System: Java.use('java.lang.System'),
+            StringBuilder: Java.use('java.lang.StringBuilder'),
+            StringBuffer: Java.use('java.lang.StringBuffer'),
+            MessageDigest: Java.use('java.security.MessageDigest'),
             ActivityThread: Java.use("android.app.ActivityThread"),
-            currentApplication: Java.use("android.app.ActivityThread").currentApplication()
+            currentApplication: Java.use("android.app.ActivityThread").currentApplication(),
+        },
+        className: {
+            String: "java.lang.String",
+            application: "android.app.Application",
+            Toast: 'android.widget.Toast',
+            System: 'java.lang.System',
+            MessageDigest: 'java.security.MessageDigest',
+            ActivityThread: "android.app.ActivityThread",
         }
     }
+
 
 });
