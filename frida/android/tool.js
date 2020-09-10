@@ -8,13 +8,24 @@ Java.perform(function () {
                 console.log(e)
             }
         },
-        Gson: function () {
+        Hexdump: function (data) {
             try {
-                Java.openClassFile("/data/local/tmp/gson.dex").load();
-                console.log("load gson.dex ok");
-                return Java.use('com.google.gson.Gson').$new()
+                return Java.use('org.lasinger.tools.hexdump.Hexdump').hexdump(data)
             } catch (e) {
                 console.log(e);
+                Java.openClassFile("/data/local/tmp/hexdump.dex").load();
+                console.log("load hexdump.dex ok");
+                return Java.use('org.lasinger.tools.hexdump.Hexdump').hexdump(data)
+            }
+        },
+        Gson: function (object) {
+            try {
+                return Java.use('com.google.gson.Gson').$new().toJson(object)
+            } catch (e) {
+                console.log(e);
+                Java.openClassFile("/data/local/tmp/gson.dex").load();
+                console.log("load gson.dex ok");
+                return Java.use('com.google.gson.Gson').$new().toJson(object)
             }
         },
         sleep: function sleep(numberMillis) {
@@ -58,7 +69,7 @@ Java.perform(function () {
             Toast: Java.use('android.widget.Toast'),
             System: Java.use('java.lang.System'),
             ActivityThread: Java.use("android.app.ActivityThread"),
-            currentApplication: ActivityThread.currentApplication()
+            currentApplication: Java.use("android.app.ActivityThread").currentApplication()
         }
     }
 
