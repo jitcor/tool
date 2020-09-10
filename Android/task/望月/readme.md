@@ -85,7 +85,11 @@ sb.append(dVar.b);
 return HelperUtils.MD5(sb.toString()).toLowerCase(Locale.US);
 }
 ```
-
+# Thrift 框架
+官方地址：https://thrift.apache.org/download \
+Thrift是一个通信框架，使用教程参考https://my.oschina.net/wangmengjun/blog/917456 \
+IDL语言编译工具下载地址https://mirrors.tuna.tsinghua.edu.cn/apache/thrift/
+官方IDL编写例子https://git-wip-us.apache.org/repos/asf?p=thrift.git;a=blob_plain;f=test/ThriftTest.thrift;hb=HEAD
 # 拦截日志
 ```
 "D:\Program Files\Python3.7.0\python.exe" D:/Project/python/fridaPy/wangy/wangy.py
