@@ -53,7 +53,7 @@ def inject_process(package_name, js_path, is_reboot=False, ip=default_ip, port=d
 
 def start_server(frida_server_name, ip=default_ip, port=default_port):
     if check_frida_server(ip, port): return
-    os.system('adb forward tcp:27042 tcp:27042')
+    os.system('adb forward tcp:{port} tcp:{port}'.format(port=port))
     # os.system('adb forward tcp:27043 tcp:27043')
     os.system('adb shell su -c "setenforce 0"')
     os.system('adb shell su -c "chmod 777 /data/local/tmp/' + frida_server_name + '"')
