@@ -65,6 +65,27 @@ private Envelope a(Context context, byte[] bArr) {
 > 注：保存的是临时文件，实测会在请求后即时删除
 # 构建原始json数据函数
 `com.umeng.commonsdk.framework.UMEnvelopeBuild.buildEnvelopeWithExtHeader(Context context, JSONObject jSONObject, JSONObject jSONObject2)->JSONObject`
+# imprint
+property:ImprintValue\[value,ts,guid\] \
+version:1 \
+checksum:md5(property+version).toLowerCase()
+具体实现代码:\n
+```java
+public String a(com.umeng.commonsdk.statistics.proto.d dVar) {
+StringBuilder sb = new StringBuilder();
+for (Map.Entry entry : new TreeMap(dVar.c()).entrySet()) {
+    sb.append((String) entry.getKey());
+    if (((e) entry.getValue()).d()) {
+	sb.append(((e) entry.getValue()).b());
+    }
+    sb.append(((e) entry.getValue()).e());
+    sb.append(((e) entry.getValue()).h());
+}
+sb.append(dVar.b);
+return HelperUtils.MD5(sb.toString()).toLowerCase(Locale.US);
+}
+```
+
 # 拦截日志
 ```
 "D:\Program Files\Python3.7.0\python.exe" D:/Project/python/fridaPy/wangy/wangy.py
