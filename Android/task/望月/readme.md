@@ -90,6 +90,96 @@ return HelperUtils.MD5(sb.toString()).toLowerCase(Locale.US);
 Thrift是一个通信框架，使用教程参考https://my.oschina.net/wangmengjun/blog/917456 \
 IDL语言编译工具下载地址https://mirrors.tuna.tsinghua.edu.cn/apache/thrift/ \
 官方IDL编写例子https://git-wip-us.apache.org/repos/asf?p=thrift.git;a=blob_plain;f=test/ThriftTest.thrift;hb=HEAD
+# 通过拦截TDeserializer和TSerializer的序列化和反序列化函数，得知imprint值为上一个请求response结构体中imprint值经过TCompactProtocol编码后再Base64后的值
+# id_tracking 也通过上面可以拦截到，是提取的本地设备参数构造个IdTracking结构通过TCompactProtocol编码再Base64的值，拦截到的数据如下
+```
+IdTracking(
+snapshots:{
+  utdid=IdSnapshot(
+    identity:X1oZcb+pAFwDAHpNwA1q8C2X, 
+    ts:1599740273989, 
+    version:1), 
+  idfa=IdSnapshot(
+    identity:048b219d-328b-4408-aa85-7346ba275323, 
+    ts:1599740273911, 
+    version:1), 
+  serial=IdSnapshot(
+    identity:097984760f1e4554, 
+    ts:1599740273914, 
+    version:1), 
+  idmd5=IdSnapshot(
+    identity:9f98d773c0d0152c41d18544b282ac4, 
+    ts:1599740273718, 
+    version:1), 
+  android_id=IdSnapshot(
+    identity:fb0834bcb5007d29, 
+    ts:1599740273700, 
+    version:1), 
+  mac=IdSnapshot(
+    identity:88:c9:d0:ef:e2:9d, 
+    ts:1599740273699, 
+    version:1)})
+```
+# 从jadx代码提取的thritf代码
+```thrift 
+namespace java com.example.tool
+struct IdSnapshot {
+    1: required string identity;
+    2: required i64 ts;
+    3: required i32 version;
+}
+struct IdJournal {
+    1: required string domain;
+    2: optional string old_id;
+    3: required string new_id;
+    4: required i64 ts;
+}
+struct IdTracking {
+     1: required map<string,IdSnapshot> snapshots;
+     2: optional list<IdJournal> journals;
+     3: optional string checksum;
+}
+struct UMEnvelope {
+    1: required string version;
+    2: required string address;
+    3: required string signature;
+    4: required i32 serial_num;
+    5: required i32 ts_secs;
+    6: required i32 length;
+    7: required binary entity;
+    8: required string guid;
+    9: required string checksum;
+    10: optional i32 codex;
+}
+struct UMSLEnvelope {
+    1: required string version;
+    2: required string address;
+    3: required string signature;
+    4: required i32 serial_num;
+    5: required i32 ts_secs;
+    6: required i32 length;
+    7: required binary entity;
+    8: required string guid;
+    9: required string checksum;
+    10: optional i32 codex;
+}
+
+struct ImprintValue {
+    1: optional string value;
+    2: required i64 ts;
+    3: required string guid;
+}
+struct Imprint {
+    1: required map<string,ImprintValue> property;
+    2: required i32 version;
+    3: required string checksum;
+}
+struct Response {
+    1: required i32 resp_code;
+    2: optional string msg;
+    3: optional Imprint imprint;
+}
+```
 # 拦截日志
 ```
 "D:\Program Files\Python3.7.0\python.exe" D:/Project/python/fridaPy/wangy/wangy.py
