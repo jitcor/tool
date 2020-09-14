@@ -28,11 +28,30 @@
 - eg `dis -a $pc`:从当前欲要执行地址开始反汇编
 - `image list`:获取执行文件基址
 - or `image list -f -o WhatsApp`:增加过滤选项
+# voltron:调试辅助工具(for macOS)
+- `git clone https://github.com/snare/voltron.git`
+- `cd voltron`
+- `./install.sh`:这里执行之后会返回一个entry path，稍后会用到
+- 打开一个新命令窗口
+- `lldb`
+- `command srcipt import {entry path}`:entry path 就是上面的，执行之后会显示`voltron loaded`
+-  `voltron init`
+- 打开一个新窗口
+- `voltron view register`:显示寄存器窗口[<sup>q2</sup>](#q.2)
+- `voltron view stack`:显示堆栈窗口[<sup>q2</sup>](#q.2)
+- `voltron view disasm`显示汇编窗口[<sup>q2</sup>](#q.2)
+- `voltron view backtrace`:显示调用栈[<sup>q2</sup>](#q.2)
+- 切换到lldb窗口
+- `platform select remote-ios`
+- `process connect connect://localhost:1234`[<sup>q1</sup>](#q.1)
+- 这时再切换到voltron窗口就可以看到效果了
 # 问题
 - q1.`error: rejecting incoming connection from ::ffff:127.0.0.1 (expecting ::1)`<a id="q.1"/> \
 将*:1234中的'*'改成127.0.0.1[<sup>2</sup>](#ref.2)
-- q2.
+- q2.`Exception getting memory from debugger: NameError("name 'xrange' is not defined>`<a id="q.2"/> \
+将克隆地址切换到`https://github.com/jonasmr/voltron.git`[<sup>3</sup>](#ref.3)
+- q3.
 # 参考
 - [1] [2018-08-10更新-LLDB常用命令--飘云整理](https://www.dllhook.com/post/51.html)<a id="ref.1"/>
 - [2] [IOS越狱12.4之后debugger使用lldb连不上](https://www.ioshacker.net/thread-148-1-1.html)<a id="ref.2"/>
-
+- [3] [fix xrange when using python 3 in lldb. fixes disassembly & registers…](https://github.com/snare/voltron/pull/270)<a id="ref.3"/>
