@@ -14,7 +14,8 @@
 # 问题
 - <span id="question.1">1.</span>`error: rejecting incoming connection from ::ffff:127.0.0.1 (expecting ::1)
 ` \
-将*:1234中的'*'改成127.0.0.1(<sup>1</sup>)[#ref-1]
+将*:1234中的'*'改成127.0.0.1[<sup>1</sup>](#refer-anchor-1)
 # 参考
-- [1] [2018-08-10更新-LLDB常用命令--飘云整理](https://www.dllhook.com/post/51.html)<a id="ref-1"></a>
+<div id="refer-anchor-1"></div>
+- [1] [2018-08-10更新-LLDB常用命令--飘云整理](https://www.dllhook.com/post/51.html)
 - [2] [IOS越狱12.4之后debugger使用lldb连不上](https://www.ioshacker.net/thread-148-1-1.html)
