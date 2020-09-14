@@ -16,8 +16,6 @@
 ` \
 将*:1234中的'*'改成127.0.0.1[<sup>1</sup>](#ref.1)
 # 参考
-- <a id="ref.1"></a>
- [1] [2018-08-10更新-LLDB常用命令--飘云整理](https://www.dllhook.com/post/51.html)
-- <a id="ref.2"></a>
- [2] [IOS越狱12.4之后debugger使用lldb连不上](https://www.ioshacker.net/thread-148-1-1.html)
+- [1] [2018-08-10更新-LLDB常用命令--飘云整理](https://www.dllhook.com/post/51.html)<a id="ref.1"></a>
+- [2] [IOS越狱12.4之后debugger使用lldb连不上](https://www.ioshacker.net/thread-148-1-1.html)<a id="ref.2"></a>
 
