@@ -25,6 +25,7 @@
 - `return`:退出子函数
 - `breakpoint set -a 0x012345`:在函数地址下断
 - `dis -a 0x12345`:从某地址开始反汇编
+- and `dis -a $pc`:从当前欲要执行地址开始反汇编
 - `image list`:获取执行文件基址
 - or `image list -f -o WhatsApp`:增加过滤选项
 # 问题
