@@ -28,7 +28,7 @@
 - eg `dis -a $pc`:从当前欲要执行地址开始反汇编
 - `image list`:获取执行文件基址
 - or `image list -f -o WhatsApp`:增加过滤选项
-# script:导入python脚本
+# script:导入python脚本[<sup>4</sup>](#ref.4)
 - `command srcipt import pyFilePath`
 > 脚本编写模版参考
 # voltron:调试辅助工具(for macOS)
@@ -58,3 +58,4 @@
 - [1] [2018-08-10更新-LLDB常用命令--飘云整理](https://www.dllhook.com/post/51.html)<a id="ref.1"/>
 - [2] [IOS越狱12.4之后debugger使用lldb连不上](https://www.ioshacker.net/thread-148-1-1.html)<a id="ref.2"/>
 - [3] [fix xrange when using python 3 in lldb. fixes disassembly & registers…](https://github.com/snare/voltron/pull/270)<a id="ref.3"/>
+- [4] [脚本模版](https://github.com/ihbing/tool/blob/master/iOS/%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/lldb/lldb_tool.py)<a id="ref.4"/>
