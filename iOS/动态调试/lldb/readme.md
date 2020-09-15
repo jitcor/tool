@@ -28,6 +28,9 @@
 - eg `dis -a $pc`:从当前欲要执行地址开始反汇编
 - `image list`:获取执行文件基址
 - or `image list -f -o WhatsApp`:增加过滤选项
+# script:导入python脚本
+- `command srcipt import pyFilePath`
+
 # voltron:调试辅助工具(for macOS)
 - `git clone https://github.com/snare/voltron.git`
 - `cd voltron`
