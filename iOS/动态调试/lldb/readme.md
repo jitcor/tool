@@ -30,7 +30,6 @@
 - or `image list -f -o WhatsApp`:增加过滤选项
 # script:导入python脚本[<sup>4</sup>](#ref.4)
 - `command srcipt import pyFilePath`
-> 脚本编写模版参考
 # voltron:调试辅助工具(for macOS)
 - `git clone https://github.com/snare/voltron.git`
 - `cd voltron`
