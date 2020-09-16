@@ -31,8 +31,9 @@ wsl为window子系统工具
 enabled = true
 appendWindowPath = true
  ```
- - q3.vscode 的remoteWSL 不能编辑root权限的文件 \
+ - q3.vscode 的remoteWSL 不能编辑root权限的文件[<sup>3<sup/>](#ref3) \
  `ubuntu.exe config --default-user root`
  # 参考
  - 1.[WSL 命令和启动配置](https://docs.microsoft.com/zh-cn/windows/wsl/wsl-config#set-wsl-launch-settings)<a id="ref1"/>
  - 2.[适用于 Linux 的 Windows 子系统安装指南 (Windows 10)](https://docs.microsoft.com/zh-cn/windows/wsl/install-win10)<a id="ref2"/>
+ - 3.[WSL中的VSCode：如何对根文件进行sudo，以便我可以对其进行编辑](https://stackoverflow.com/questions/58980356/vscode-in-wsl-how-to-sudo-a-root-file-so-i-can-edit-it)<a id="ref3"/>
