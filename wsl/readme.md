@@ -25,7 +25,7 @@ wsl为window子系统工具
 - q1.`The system can not find the file specified.`<a id="q1"/> \
  If you have downloaded the Appx file then extract it with any unzipping tool (for example 7zip) in a folder and run the ubuntu.exe in it.
  - q2.linux系统默认没有导入window path问题，导致一些window下的命令在子系统里找不到<a id="q2"/> \
- 在/etc/wsl.conf文件里加入如下代码:
+ 在/etc/wsl.conf文件（没有则touch一个）里加入如下代码:
  ```ini
 [interop]
 enabled = true
