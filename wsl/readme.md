@@ -15,11 +15,16 @@ wsl为window子系统工具
 - `wsl --list`列出所有已安装系统
 - `wsl --unregsiter {system name}`卸载指定系统（system name即是上面命令返回的列表字符串)
 # remoteWSL工具(vscode插件)
-vscode搜索即可下载，安装完后点击左下角的图标(类似这样“><“的图标)
+- vscode搜索即可下载，安装完后点击左下角的图标(类似这样“><“的图标)
+- 在子系统里进入到项目目录
+- `code .`[<sup>q2<sup/>](#q2)
+- 等待自动打开vscode
+- 编写代码
+
 # 问题
 - q1.`The system can not find the file specified.`<a id="q1"/> \
  If you have downloaded the Appx file then extract it with any unzipping tool (for example 7zip) in a folder and run the ubuntu.exe in it.
- - q2.linux系统默认没有导入window path问题?<a id="q2"/> \
+ - q2.linux系统默认没有导入window path问题，导致一些window下的命令在子系统里找不到<a id="q2"/> \
  在/etc/wsl.conf文件里加入如下代码:
  ```ini
 [interop]
