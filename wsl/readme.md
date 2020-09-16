@@ -20,7 +20,9 @@ wsl为window子系统工具
 - `code .`[<sup>q2<sup/>](#q2)
 - 等待自动打开vscode
 - 编写代码
-
+# linux访问window目录
+ - `cd /mnt/`
+ - 即可看到挂载的目录
 # 问题
 - q1.`The system can not find the file specified.`<a id="q1"/> \
  If you have downloaded the Appx file then extract it with any unzipping tool (for example 7zip) in a folder and run the ubuntu.exe in it.
