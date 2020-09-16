@@ -1,0 +1,33 @@
+# 简介
+wsl为window子系统工具
+# 安装WSL[<sup>2<sup/>](#ref2)
+- `dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart`(PowerShell)
+- 等待重启系统即可
+# 使用ubuntu子系统
+- 下载安装文件https://docs.microsoft.com/zh-cn/windows/wsl/install-manual
+- `Add-AppxPackage .\app_name.appx`使用PowerShell安装该文件[<sup>q1<sup/>](#q1)
+- or 直接鼠标点击打开[<sup>q1<sup/>](#q1)
+- 等待系统初始化完成
+- 设置用户名和密码
+- `sudo su`切换到root用户(可选)
+- `sudo apt-get update`(apt更新)
+# wsl常用命令[<sup>1<sup/>](#ref1)
+- `wsl --list`列出所有已安装系统
+- `wsl --unregsiter {system name}`卸载指定系统（system name即是上面命令返回的列表字符串)
+# remoteWSL工具(vscode插件)
+vscode搜索即可下载，安装完后点击左下角的图标(类似这样“><“的图标)
+# 问题
+- q1.`The system can not find the file specified.`<a id="q1"/> \
+ If you have downloaded the Appx file then extract it with any unzipping tool (for example 7zip) in a folder and run the ubuntu.exe in it.
+ - q2.linux系统默认没有导入window path问题?<a id="q2"/> \
+ 在/etc/wsl.conf文件里加入如下代码:
+ ```ini
+[interop]
+enabled = true
+appendWindowPath = true
+ ```
+ - q3.vscode 的remoteWSL 不能编辑root权限的文件 \
+ `ubuntu.exe config --default-user root`
+ # 参考
+ - 1.[WSL 命令和启动配置](https://docs.microsoft.com/zh-cn/windows/wsl/wsl-config#set-wsl-launch-settings)<a id="ref1"/>
+ - 2.[适用于 Linux 的 Windows 子系统安装指南 (Windows 10)](https://docs.microsoft.com/zh-cn/windows/wsl/install-win10)<a id="ref2"/>
