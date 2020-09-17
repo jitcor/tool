@@ -4,7 +4,7 @@ wsl为window子系统工具
 - `dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart`(PowerShell)
 - 等待重启系统即可
 # 使用ubuntu子系统
-- 下载安装文件https://docs.microsoft.com/zh-cn/windows/wsl/install-manual
+- 下载安装文件[<sup>4<sup/>](#ref4)
 - `Add-AppxPackage .\app_name.appx`使用PowerShell安装该文件[<sup>q1<sup/>](#q1)
 - or 直接鼠标点击打开[<sup>q1<sup/>](#q1)
 - 等待系统初始化完成
@@ -39,3 +39,4 @@ appendWindowPath = true
  - 1.[WSL 命令和启动配置](https://docs.microsoft.com/zh-cn/windows/wsl/wsl-config#set-wsl-launch-settings)<a id="ref1"/>
  - 2.[适用于 Linux 的 Windows 子系统安装指南 (Windows 10)](https://docs.microsoft.com/zh-cn/windows/wsl/install-win10)<a id="ref2"/>
  - 3.[WSL中的VSCode：如何对根文件进行sudo，以便我可以对其进行编辑](https://stackoverflow.com/questions/58980356/vscode-in-wsl-how-to-sudo-a-root-file-so-i-can-edit-it)<a id="ref3"/>
+ - 4.[手动下载适用于 Linux 的 Windows 子系统发行版包](https://docs.microsoft.com/zh-cn/windows/wsl/install-manual)<a id="ref4"/>
