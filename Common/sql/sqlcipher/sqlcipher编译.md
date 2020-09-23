@@ -15,3 +15,5 @@ make
 sudo make install
 # 调用
 ./sqlcipher
+# 引用
+gcc hello.c -o demo -lsqlcipher
