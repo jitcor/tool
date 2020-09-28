@@ -1,0 +1,2 @@
+# 快速下载cydia
+checkra1n越狱之后，通过PC爱思助手安装biubiu加速器，连接PUBG日服VPN，之后就可以正常在checkra1n下载cydia了
