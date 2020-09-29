@@ -13,7 +13,7 @@ max_pool_count = 50
 # 客户端配置模板
 ```ini
 [common]
-server_addr = 34.242.68.89
+server_addr = xx.xx.xx.xx
 server_port = 5443
 token = token123456
 [chp]
@@ -50,5 +50,5 @@ if __name__ == '__main__':
 ```
 - FastApi 具体使用参考[地址1](https://fastapi.tiangolo.com/zh/)
 # 远程访问
-- 访问`http://34.242.68.89:4567/`
+- 访问`http://xx.xx.xx.xx:4567/`
 - 正常情况下就会打印`Hello World`
