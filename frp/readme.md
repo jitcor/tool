@@ -26,7 +26,7 @@ remote_port = 4567
 - 服务端环境：ubuntu server
 - 一键安装脚本[地址](https://github.com/MvsCode/frps-onekey)
 - 不过他这个的配置是http的，不太适合我，可以等安装完后直接将/usr/local/frp/下的frps.ini配置文件的内容修改成上面的模板代码即可
-- frps start(启动frp服务端)
+- `frps start`(启动frp服务端)
 - 在服务器控制台开启相应端口(这里需要开启的端口就是:5443,6443,4567)
 # 安装客户端
 - 下载客户端[地址](https://github.com/fatedier/frp/releases/tag/v0.34.0)
