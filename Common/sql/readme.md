@@ -2,6 +2,8 @@
 ```python
 import hashlib
 
-print(hashlib.pbkdf2_hmac('sha1', bytes.fromhex('7f16632e1624672a12201123422f1b6d0c6d0061'),
-                          bytes.fromhex('4DF4085B8FA8549CC2CF4E27C30A3EB8'), 64000, 32).hex())
+print(hashlib.pbkdf2_hmac('sha1',b'password',b'salt', 64000, 32).hex())
 ```
+- salt就是加密数据库前16个字节
+- 64000 就是kdf次数
+- 32 输出秘钥长度(固定)
