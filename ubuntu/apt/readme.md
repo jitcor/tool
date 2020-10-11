@@ -5,3 +5,4 @@ Acquire::http::proxy "http://127.0.0.1:10809/";
 Acquire::https::proxy "https://127.0.0.1:10809/";
 ```
 - apt-get update
+- apt-get install xxxx
