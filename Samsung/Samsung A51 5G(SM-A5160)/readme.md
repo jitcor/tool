@@ -14,5 +14,7 @@
 
 # 资料
 - 固件下载地址https://samfrew.com/zh/download/Galaxy__A51__5G__/pkOv/CHC/A5160ZCU2ATG2/A5160CHC2ATG2/
+- 固件下载地址https://www.banxiayue.com/galaxy-a51-5g-sm-a5160firmware.html
+- 固件下载地址`https://pan.baidu.com/s/1LpY1aayW7OcPl1ZYSPv5RA 提取码：9527`
 - Odin工具下载地址
 - Samsung USB Driver工具下载地址
