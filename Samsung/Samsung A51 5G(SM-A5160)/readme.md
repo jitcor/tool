@@ -32,7 +32,8 @@
 - 打开Odin3工具，选择AP，找到修补后的文件，点击start开始刷入
 - 刷入完成后，拔掉数据线，等待手机自动重启(期间不需任何操作，可能会重启多次)
 - 已进入到系统桌面
-- 再次安装MagiskManager,按照提示，会让修复，修复后等待重启
+- 再次安装MagiskManager
+- 安装完成后打开，按照提示会让修复，修复后等待重启
 - 重启后尝试用MT管理器获取Root权限验证下
 > 参考https://www.getdroidtips.com/unlock-bootloader-root-galaxy-a51/
 # 资料
