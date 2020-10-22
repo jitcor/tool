@@ -7,3 +7,4 @@
 - twrp下刷入
 # 刷固件
 - 固件下载地址https://firmwarefile.com/samsung-sm-g9300
+- 教程https://rootsamsung.com/flash-samsung-stock-firmware-4-files
