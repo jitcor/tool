@@ -5,3 +5,5 @@
 - odin-Ap-TWRP-start
 # 刷magisk
 - twrp下刷入
+# 刷固件
+- 固件下载地址https://firmwarefile.com/samsung-sm-g9300
