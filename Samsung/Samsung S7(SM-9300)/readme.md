@@ -1,0 +1,7 @@
+# 解BL锁
+- 开启oem
+# 刷recovery
+- https://twrp.me/samsung/samsunggalaxys7china.html
+- odin-Ap-TWRP-start
+# 刷magisk
+- twrp下刷入
