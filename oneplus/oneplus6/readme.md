@@ -1,7 +1,7 @@
 # 解BL锁
 - 开启oem
 - fastboot oem unlock
-> 注：解BL锁后，Wlan无法正常使用了，即使完全还原也不行，可能需要升级到最新版固件包才能解决
+> 注：解BL锁后，Wlan无法正常使用了，即使完全还原也不行，可能需要升级到最新版固件包才能解决(更新:据酷安网友说需要刷persist分区才行，具体待测试)
 # Magisk
 - 下载固件包[https://www.h2os.com/download.](https://www.h2os.com/download.)
 - 解包提取boot.img
