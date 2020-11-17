@@ -21,6 +21,6 @@ publish {
     website = 'https://github.com/ihbing/ShiLuLib'
 }
 ```
-- git 上传到github里
+- 编译通过后，通过git 上传到github里
 - 在github里创建一个发布版本,tag里不要加前缀v，直接版本号即可
 - 然后访问https://jitpack.io/#ihbing/ShiLuLib获取依赖链接
