@@ -1,9 +1,9 @@
-- ddd
+- MessageDigest
 ```java
 MessageDigest md = MessageDigest.getInstance(algorithm);
 md.digest(resBytes);
 ```
-- dddd
+- Mac
 ```java
 Mac mac = Mac.getInstance(algorithm);
 mac.init(sk);
