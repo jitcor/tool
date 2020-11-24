@@ -1,4 +1,5 @@
 # 跟java中DESede通用
+# 参考https://www.jianshu.com/p/b6d3ed120383
 from Crypto.Cipher import DES3
 import base64
 text=base64.b64encode(b'1001244624')
