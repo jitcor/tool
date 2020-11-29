@@ -8,3 +8,13 @@ systemProp.http.proxyPort=10809
 systemProp.https.proxyHost=127.0.0.1
 systemProp.https.proxyPort=10809
 ```
+# 打不开问题
+- 1.提示如下
+```
+Missing essential plugin:
+
+  org.jetbrains.android
+
+Please reinstall Android Studio from scratch.
+```
+- 删除文件C:\Users\YourUserName\AppData\Roaming\Google\AndroidStudioPreview4.1\disabled_plugins.txt
