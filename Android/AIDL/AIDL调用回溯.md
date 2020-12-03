@@ -162,4 +162,4 @@ public interface IPerson extends android.os.IInterface
     }
 ｝
 ```
-- 然后根据上面特征即可找到stub函数
+- 然后根据上面特征即可找到stub类
