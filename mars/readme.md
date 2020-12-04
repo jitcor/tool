@@ -4,7 +4,7 @@ mars是腾讯微信开源的消息通讯框架
 - 用AndroidStudio 3.1.4打开 marsSampleChat 开始build(测试用AndroidStudio 4.1虽然也会编译通过，但很多文件打开都会报红，可能新版编辑器编码问题)
 - 期间可能会报No toolchains found in the NDK toolchains folder for ABI with prefix: mipsel-linux-android问题
 - 具体解决办法就是将ndk版本切换为官方使用版本ndk-r16b(这里我用的r17,应该是只要保证ndk/toolchains/下有 mipsel-linux-android-xx文件夹就行)
-- 然后将Apk安装在两个或多规格手机上(聊天室只有一个人看不到效果)
+- 然后将Apk安装在两个或多个手机上(聊天室只有一个人看不到效果)，或者换个包名在一个手机上安装两个Apk(虽然也能正常进行通讯，但会出现看到自己发送的消息再发送给自己的情况)
 - 然后用PyCharm2019 pro打开samples/Server工程
 - 将python版本调整到2.7版本
 - 运行start_server.py文件，等待构建完成，可能会比较漫长
