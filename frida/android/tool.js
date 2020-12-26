@@ -39,11 +39,11 @@ Java.perform(function () {
             return Thread.backtrace(content, Backtracer.ACCURATE).map(DebugSymbol.fromAddress).join('\n');
         },
         StringMonitor: function (callback) {
-            tool.api.StringBuffer.toString.implementation = function () {
-                var string = this.toString()
-                if (callback != null) callback(string)
-                return string
-            }
+            // tool.api.StringBuffer.toString.implementation = function () {
+            //     var string = this.toString()
+            //     if (callback != null) callback(string)
+            //     return string
+            // }
             tool.api.StringBuilder.toString.implementation = function () {
                 var string = this.toString()
                 if (callback != null) callback(string)
@@ -66,9 +66,9 @@ Java.perform(function () {
                     // var trace = Thread.backtrace(this.context, Backtracer.ACCURATE).map(DebugSymbol.fromAddress).join('\n');
                     if (fileName.indexOf(keyToTrace) > -1) {
                         if (callback != null) callback(fileName)
-                        console.log('[native stack]\n' +
-                            Thread.backtrace(this.context, Backtracer.ACCURATE)
-                                .map(DebugSymbol.fromAddress).join('\n') + '\n');
+                        // console.log('[native stack]\n' +
+                        //     Thread.backtrace(this.context, Backtracer.ACCURATE)
+                        //         .map(DebugSymbol.fromAddress).join('\n') + '\n');
                     }
                 },
                 onLeave: function (retval) {
@@ -168,7 +168,7 @@ Java.perform(function () {
             for (var i = 0; i < overloadCount; i++) {
 
                 hook[targetMethod].overloads[i].implementation = function () {
-                    console.warn("\n*** entered " + targetClassMethod);
+                    console.log("\n*** entered " + targetClassMethod);
 
                     // print backtrace
                     if (printBacktrace == true) {
@@ -182,13 +182,13 @@ Java.perform(function () {
                     // print args
                     if (arguments.length) console.log();
                     for (var j = 0; j < arguments.length; j++) {
-                        console.log("arg[" + j + "]: " + arguments[j]);
+                        console.log(targetMethod," arg[" + j + "]: " + arguments[j]);
                     }
 
                     // print retval
                     var retval = this[targetMethod].apply(this, arguments); // rare crash (Frida bug?)
-                    console.log("\nretval: " + retval);
-                    console.warn("\n*** exiting " + targetClassMethod);
+                    console.log(targetMethod," retval: " + retval);
+                    console.log("\n*** exiting " + targetClassMethod);
                     return retval;
                 }
             }
