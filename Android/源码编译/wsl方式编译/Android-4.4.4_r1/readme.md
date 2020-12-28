@@ -18,7 +18,7 @@ curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 chmod a+x ~/bin/repo
 mkdir source
 cd source
-repo init -u https://aosp.tuna.tsinghua.edu.cn/platform/manifest -b android-4.4.4_r1
+repo init -u https://android.googlesource.com/platform/manifest -b android-4.4.4_r1
 repo sync
 ```
 - 配置代理参见[tool/proxy](https://github.com/ihbing/tool/tree/master/proxy)
@@ -37,3 +37,5 @@ fatal: The remote end hung up unexpectedly
 fatal: early EOF
 fatal: index-pack failed
 ```
+# 参考
+-1.[AOSP 编译和烧写](http://blog.hanschen.site/2019/09/12/aosp_compile_and_flash/)
