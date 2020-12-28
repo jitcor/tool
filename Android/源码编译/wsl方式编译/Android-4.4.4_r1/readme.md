@@ -21,6 +21,7 @@ cd source
 repo init -u https://aosp.tuna.tsinghua.edu.cn/platform/manifest -b android-4.4.4_r1
 repo sync
 ```
+- 配置代理参见[tool/proxy](https://github.com/ihbing/tool/tree/master/proxy)
 - 提示配置用户和邮箱时随便配置即可
 - sync过程中有报以下错误
 ```
