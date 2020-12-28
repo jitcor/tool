@@ -10,3 +10,29 @@ Android 1.5 (Cupcake) - Android 2.2.x (Froyo)：Ubuntu - Java JDK 5
 ```
 Android 4.0.x (Ice Cream Sandwich) 及更低版本需要将 make 3.82 还原到较低版本，以避免出现编译错误
 ```
+# 详细步骤
+```
+mkdir ~/bin
+PATH=~/bin:$PATH
+curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+chmod a+x ~/bin/repo
+mkdir source
+cd source
+repo init -u https://aosp.tuna.tsinghua.edu.cn/platform/manifest -b android-4.4.4_r1
+repo sync
+```
+- 提示配置用户和邮箱时随便配置即可
+- sync过程中有报以下错误
+```
+error: RPC failed; curl 56 GnuTLS recv error (-9): A TLS packet with unexpected length was received.
+fatal: The remote end hung up unexpectedly
+fatal: early EOF
+fatal: index-pack failed
+platform/bootable/recovery:
+remote: Counting objects: 28282, done.
+remote: Compressing objects: 100% (1106/1106), done.
+error: RPC failed; curl 56 GnuTLS recv error (-9): A TLS packet with unexpected length was received.
+fatal: The remote end hung up unexpectedly
+fatal: early EOF
+fatal: index-pack failed
+```
