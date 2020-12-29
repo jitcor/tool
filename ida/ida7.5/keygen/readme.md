@@ -1,0 +1,4 @@
+- 1、首先修改ida-tmplv6v7.key内容，保存。
+- 2、执行ida_key -s ida-tmplv6v7.key > ida.key 生成key
+- 3、执行patch_ida.exe对附件中的文件进行修改
+- 4、复制KEY和修改后的文件覆盖即可。
