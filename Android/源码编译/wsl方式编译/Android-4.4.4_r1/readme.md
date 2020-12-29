@@ -10,6 +10,8 @@ Android 1.5 (Cupcake) - Android 2.2.x (Froyo)：Ubuntu - Java JDK 5
 ```
 Android 4.0.x (Ice Cream Sandwich) 及更低版本需要将 make 3.82 还原到较低版本，以避免出现编译错误
 ```
+# python3.6+配置
+
 # 详细步骤
 ```
 mkdir ~/bin
