@@ -2,13 +2,6 @@
 # Ubuntu配置
 ```
 ubuntu16.04
-服务器：aliyun
-地区：中国香港
-SSD：100G
-CPU：2核
-内存：4G
-数据盘：无
-阿里云产品名：轻量应用服务器
 ```
 # JDK配置([JDK要求](https://source.android.com/source/requirements?hl=zh-cn#jdk))
 ```
@@ -28,6 +21,8 @@ git config --global user.name "Your Name"
 ```
 # python3.6+配置
 参见[tool/language/python/ubuntu/](https://github.com/ihbing/tool/blob/master/language/python/ubuntu/ubuntu16.04%E5%AE%89%E8%A3%85python3.6.md)
+# 配置代理
+参见[tool/proxy](https://github.com/ihbing/tool/tree/master/proxy)
 # 详细步骤
 ```
 mkdir ~/bin
@@ -39,7 +34,6 @@ cd source
 repo init -u https://android.googlesource.com/platform/manifest -b android-4.4.4_r1
 repo sync
 ```
-- 配置代理参见[tool/proxy](https://github.com/ihbing/tool/tree/master/proxy)
 - 提示配置用户和邮箱时随便配置即可
 - sync过程中有报以下错误
 ```
