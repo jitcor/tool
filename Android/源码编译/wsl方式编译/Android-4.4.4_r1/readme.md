@@ -7,7 +7,8 @@ ubuntu16.04
 SSD：100G
 CPU：2核
 内存：4G
-
+数据盘：无
+阿里云产品名：轻量应用服务器
 ```
 # JDK配置([JDK要求](https://source.android.com/source/requirements?hl=zh-cn#jdk))
 ```
