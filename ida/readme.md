@@ -8,3 +8,4 @@ https://wwa.lanzous.com/irSqBg923vg
 - 1.[IDA：作者花熊](https://blog.csdn.net/hgy413/category_1151311.html)
 # IDA 系列脚本
 - 1.[flare-ida](https://github.com/fireeye/flare-ida)
+- 2.[FLARE IDA Pro的脚本系列：自动化提取函数参数](https://www.freebuf.com/sectool/89273.html)
