@@ -9,3 +9,4 @@ https://wwa.lanzous.com/irSqBg923vg
 # IDA 系列脚本
 - 1.[flare-ida](https://github.com/fireeye/flare-ida)
 - 2.[FLARE IDA Pro的脚本系列：自动化提取函数参数](https://www.freebuf.com/sectool/89273.html)
+- 3.[自动化SO字符串解密](https://gaybc.github.io/2019/04/11/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91-%E8%87%AA%E5%8A%A8%E5%8C%96SO%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%A7%A3%E5%AF%86/)
