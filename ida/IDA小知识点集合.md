@@ -3,3 +3,5 @@
 - 或者菜单->edit->Functions->Set type
 - 或者在伪代码界面右键该函数->Set item type
 > 参考[IDA-重新设置函数类型、创建数组结构](https://blog.csdn.net/hgy413/article/details/7669369)
+# 调用约定
+- _cdecl
