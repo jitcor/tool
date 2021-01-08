@@ -12,3 +12,4 @@ PRAGMA key = 'test';
 PRAGMA cipher_plaintext_header_size = 32;
 PRAGMA cipher_salt = "x'01010101010101010101010101010101'";
 ```
+> 具体参考官方文档[sqlcipher-api/#cipher_plaintext_header_size](https://www.zetetic.net/sqlcipher/sqlcipher-api/#cipher_plaintext_header_size)
