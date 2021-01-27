@@ -24,7 +24,7 @@ wsl为window子系统工具
  - `cd /mnt/`
  - 即可看到挂载的目录
  # 开启子系统全局代理
- - `export ALL_PROXY="http://127.0.0.1:8000"`
+ - `export ALL_PROXY="http://127.0.0.1:10809"`
 # 问题
 - q1.`The system can not find the file specified.`<a id="q1"/> \
  If you have downloaded the Appx file then extract it with any unzipping tool (for example 7zip) in a folder and run the ubuntu.exe in it.
