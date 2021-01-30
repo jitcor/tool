@@ -138,6 +138,37 @@ Java.perform(function () {
                     return;
             }
         },
+        JniCallJavaStackTrace: function (className, methodNameKeyword) {
+            var module_libart = Process.findModuleByName("libart.so");
+            var symbols = module_libart.enumerateSymbols();
+
+            for (var i = 0; i < symbols.length; i++) {
+                var symbol = symbols[i];
+                var address = symbol.address;
+                var name = symbol.name;
+                if (name.indexOf("FindMethodIDERNS") > -1) {
+                    Interceptor.attach(address, {
+                        onEnter: function (args) {
+                            try {
+                                var methodName = tool.Memory.readCString(args[2])
+                                console.log('find method:', methodName);
+                                if (methodName.indexOf(methodName) > -1) {
+                                    console.log('[native stack]\n' +
+                                        Thread.backtrace(this.context, Backtracer.ACCURATE)
+                                            .map(DebugSymbol.fromAddress).join('\n') + '\n');
+                                }
+                            } catch (error) {
+                                console.log(error);
+                            }
+                        }, onLeave: function (retval) {
+                        }
+                    });
+
+                }
+
+            }
+
+        },
         onJniLoad: function (callback) {
             return Interceptor.attach(this.libc.dlsym(), {
                 onEnter: function (args) {
