@@ -1,0 +1,18 @@
+[user]
+	name = xxxx
+	email = xxxx@xxxxx.xx
+[credential]
+  helper = store
+[https]
+	proxy = socks5://127.0.0.1:10808
+[http]
+	proxy = socks5://127.0.0.1:10808
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[core]
+	autocrlf = true
+	safecrlf = true
+	editor   = F:/tool/notepad2/Notepad2.exe
