@@ -1,5 +1,6 @@
 # 改验证地址
-`adb shell settings put global captive_portal_https_url https://www.google.cn/generate_204`
+`adb shell settings put global captive_portal_https_url https://www.google.cn/generate_204` \
+然后开关飞行模式
 # 修正系统时间
 ```
 设置->系统->日期和时间->使用网络提供的时间 :关闭该选项
