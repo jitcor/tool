@@ -12,3 +12,5 @@
 ```
 ..\python3.6.8\Scripts>pip3.6 install frida-tools==5.2.0  -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
 ```
+# 安装多个Python版本问题
+设置pythonpath为当前要用的版本路径即可
