@@ -4,3 +4,8 @@ mklink /d C:\Users\$(user) H:\Users\$(user) (需先移动$(user)目录，再mkli
 windowUpdateBlocker
 # WindowDefender问题
 DefenderControl
+# 启动大小写敏感
+- 以管理员方式启动cmd
+- cd 到目标目录
+- 执行 `fsutil.exe file SetCaseSensitiveInfo ./ enable`开启当前目录的大小写敏感
+- 执行 `fsutil.exe file queryCaseSensitiveInfo ./` 查询当前目录的大小写敏感状态
