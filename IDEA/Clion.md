@@ -69,3 +69,15 @@ echo "PasswordAuthentication yes"
 - ssh 连接地址ssh://127.0.0.1:2222
 - ssh 连接账户密码就是wsl账户密码
 - 可以先用xshell尝试下
+
+# Clion部分
+- ![image](https://user-images.githubusercontent.com/27600008/124693387-f0a95780-df11-11eb-8960-e3589223340d.png)
+- ![image](https://user-images.githubusercontent.com/27600008/124693499-23ebe680-df12-11eb-9b1a-d52a8368f13c.png)
+- 填写完Credentials，其他的会自动获取
+- ![image](https://user-images.githubusercontent.com/27600008/124693619-5a296600-df12-11eb-8127-d2371b100d08.png)
+- 若是出现如上图错误，请选择Environmnet为其它的选项
+- ![image](https://user-images.githubusercontent.com/27600008/124693853-b2f8fe80-df12-11eb-82cb-5ebf7f9d6c74.png)
+- 然后开始新建的c项目编译运行吧
+
+
+
