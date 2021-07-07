@@ -1,4 +1,5 @@
 # WSL+Clion
+## WSL部分
 - 进入wsl 选择一个目录作为工作目录
 - cd 到该目录
 - 执行·sudo apt-add-repository -r ppa:gophers/archive·
@@ -70,7 +71,7 @@ echo "PasswordAuthentication yes"
 - ssh 连接账户密码就是wsl账户密码
 - 可以先用xshell尝试下
 
-# Clion部分
+## Clion部分
 - ![image](https://user-images.githubusercontent.com/27600008/124693387-f0a95780-df11-11eb-8960-e3589223340d.png)
 - ![image](https://user-images.githubusercontent.com/27600008/124693499-23ebe680-df12-11eb-9b1a-d52a8368f13c.png)
 - 填写完Credentials，其他的会自动获取
