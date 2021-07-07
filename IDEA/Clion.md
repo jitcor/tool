@@ -68,3 +68,4 @@ echo "PasswordAuthentication yes"
 - ![image](https://user-images.githubusercontent.com/27600008/124688573-92787680-df09-11eb-8a3a-2ad3fafb610e.png)
 - ssh 连接地址ssh://127.0.0.1:2222
 - ssh 连接账户密码就是wsl账户密码
+- 可以先用xshell尝试下
