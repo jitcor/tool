@@ -1,6 +1,7 @@
 # 简介
 # 下载编译
 - 环境：Window10 WSL
+- 基于llvm-project commit：https://github.com/llvm/llvm-project/tree/31f80393bc06f8eeab35218e1d4476bf120e452e
 - 下载编译步骤
 ```
 git clone https://github.com/llvm/llvm-project.git
