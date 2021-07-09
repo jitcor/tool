@@ -5,7 +5,7 @@ export PATH=/usr/local/bin:$PATH
 ```
 ## 永久修改(当前用户)
 ```bash
-sudo vim ~/.bashrc 
+vim ~/.bashrc 
 //在最后一行添上：
 export PATH=$PATH:xxx/xxx/xx
 //关闭保存，执行以下命令
