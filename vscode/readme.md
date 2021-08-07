@@ -2,7 +2,19 @@
 - 1.ctrl+c，光标变粗问题
 > 卸载或禁用vim插件
 # remote-ssh问题
-- ssh config
+## openssh-server
+```
+dpkg -l | grep ssh //check ssh-server
+sudo apt-get install openssh-server
+```
+关于报错
+```
+下列软件包有未满足的依赖关系：
+ openssh-server : 依赖: openssh-client (= 1:6.6p1-2ubuntu1)
+E: 无法修正错误，因为您要求某些软件包保持现状，就是它们破坏了软件包间的依赖关系。
+```
+直接`sudo apt-get install openssh-client=1:6.6p1-2ubuntu1`
+## ssh config
 ```
 Host 47.xx.xx.11
   HostName 47.xx.xx.11
