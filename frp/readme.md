@@ -2,11 +2,11 @@
 ```ini
 [common]
 bind_addr = 0.0.0.0
-bind_port = 5443
-dashboard_port = 6443
-dashboard_user = admin
-dashboard_pwd = 123456
-token = token123456
+bind_port = xxxx
+dashboard_port = xxxx
+dashboard_user = xxxx
+dashboard_pwd = xxxxxx
+token = xxxxxx
 max_pool_count = 50
 
 ```
@@ -14,13 +14,25 @@ max_pool_count = 50
 ```ini
 [common]
 server_addr = xx.xx.xx.xx
-server_port = 5443
-token = token123456
+server_port = xxx
+token = xxxxxx
 [chp]
 type = tcp
 local_ip = 127.0.0.1
-local_port = 4567
-remote_port = 4567
+local_port = xxxx
+remote_port = xxxx
+```
+# Window 远程桌面配置模板
+```ini
+[common]
+server_addr = xx.xx.xx.xx
+server_port = xxxx
+token = xxxxx
+[chp]
+type = tcp
+local_ip = 127.0.0.1
+local_port = 3389
+remote_port = xxxx
 ```
 # 安装服务端
 - 服务端环境：ubuntu server
