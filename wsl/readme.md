@@ -34,19 +34,20 @@ wsl为window子系统工具
  ## wsl1
  - `export ALL_PROXY="http://127.0.0.1:10809"`
 # 问题
-- q1.`The system can not find the file specified.`<a id="q1"/> \
+## q1.`The system can not find the file specified.`<a id="q1"/> \
  If you have downloaded the Appx file then extract it with any unzipping tool (for example 7zip) in a folder and run the ubuntu.exe in it.
- - q2.linux系统默认没有导入window path问题，导致一些window下的命令在子系统里找不到<a id="q2"/> \
+## q2.linux系统默认没有导入window path问题，导致一些window下的命令在子系统里找不到<a id="q2"/> \
  在/etc/wsl.conf文件（没有则touch一个）里加入如下代码:
  ```ini
 [interop]
 enabled = true
 appendWindowPath = true
  ```
- - q3.vscode 的remoteWSL 不能编辑root权限的文件[<sup>3<sup/>](#ref3) \
+## q3.vscode 的remoteWSL 不能编辑root权限的文件[<sup>3<sup/>](#ref3) \
  `ubuntu.exe config --default-user root`
- - q4.参考的对象类型不支持尝试的操作(WSL2)
- 下载
+ ## q4.参考的对象类型不支持尝试的操作(WSL2)
+ - 下载NoLsp.exe
+ - 管理员CMD/PowerShell执行`NoLsp.exe C:\windows\system32\wsl.exe`
  
  # 参考
  - 1.[WSL 命令和启动配置](https://docs.microsoft.com/zh-cn/windows/wsl/wsl-config#set-wsl-launch-settings)<a id="ref1"/>
