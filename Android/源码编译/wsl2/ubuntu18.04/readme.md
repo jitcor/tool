@@ -21,3 +21,4 @@ Try re-running with "-j1 --fail-fast" to exit at the first error.
 ```
 再次执行`repo sync`即可
 # 参考
+https://blog.csdn.net/u013427969/article/details/114371933
