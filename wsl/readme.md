@@ -45,6 +45,9 @@ appendWindowPath = true
  ```
  - q3.vscode 的remoteWSL 不能编辑root权限的文件[<sup>3<sup/>](#ref3) \
  `ubuntu.exe config --default-user root`
+ - q4.参考的对象类型不支持尝试的操作(WSL2)
+ 下载
+ 
  # 参考
  - 1.[WSL 命令和启动配置](https://docs.microsoft.com/zh-cn/windows/wsl/wsl-config#set-wsl-launch-settings)<a id="ref1"/>
  - 2.[适用于 Linux 的 Windows 子系统安装指南 (Windows 10)](https://docs.microsoft.com/zh-cn/windows/wsl/install-win10)<a id="ref2"/>
