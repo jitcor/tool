@@ -42,7 +42,9 @@ wsl为window子系统工具
  del d:\ubuntu20.04.tar
  ```
  # 使目录大小写敏感
- 管理员方式执行`fsutil.exe file setCaseSensitiveInfo <path> enable`
+ - 管理员方式执行`fsutil.exe file setCaseSensitiveInfo <path> enable`
+ - 禁用则执行`fsutil.exe file setCaseSensitiveInfo <path> disable`
+ - 查询则执行`fsutil.exe file queryCaseSensitiveInfo <path>`
 # 问题
 ## q1.`The system can not find the file specified.`<a id="q1"/> 
  If you have downloaded the Appx file then extract it with any unzipping tool (for example 7zip) in a folder and run the ubuntu.exe in it.
