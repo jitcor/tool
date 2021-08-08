@@ -4,4 +4,6 @@
 ## 重要
 - 直接用谷歌账号登录unity3d即可
 - 广告ID申请https://dashboard.unityads.unity3d.com/
+- 添加付款资料需要二次验证，直接用Google验证器即可
+- Banner广告好像资源很少，插屏广告还行每次都能展示
 
