@@ -33,6 +33,15 @@ wsl为window子系统工具
  # 开启子系统全局代理
  ## wsl1
  - `export ALL_PROXY="http://127.0.0.1:10809"`
+ # WSL修改子系统目录
+ ```
+ wsl -l -v
+ wsl --export Ubuntu-20.04 d:\ubuntu20.04.tar
+ wsl --unregister Ubuntu-20.04
+ wsl --import Ubuntu-20.04 d:\ubuntu d:\ubuntu20.04.tar --version 2
+ del d:\ubuntu20.04.tar
+ ```
+ 
 # 问题
 ## q1.`The system can not find the file specified.`<a id="q1"/> 
  If you have downloaded the Appx file then extract it with any unzipping tool (for example 7zip) in a folder and run the ubuntu.exe in it.
