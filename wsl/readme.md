@@ -3,6 +3,12 @@ wsl为window子系统工具
 # 安装WSL[<sup>2<sup/>](#ref2)
 - `dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart`(PowerShell)
 - 等待重启系统即可
+# 安装WSL2
+ - 执行命令开启系统虚拟化：`dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart`(PowerShell)
+ - 等待重启系统
+ - `wsl --set-default-version 2`设置wsl默认版本，也就是新子系统安装时使用的wsl版本
+ - `wsl -l -v`查看所有已安装子系统及其wsl版本
+ - `wsl --set-version UbuntuXX 2`设置某个已安装子系统的wsl版本
 # 使用ubuntu子系统
 - 下载安装文件[<sup>4<sup/>](#ref4)
 - `Add-AppxPackage .\app_name.appx`使用PowerShell安装该文件[<sup>q1<sup/>](#q1)
@@ -14,6 +20,7 @@ wsl为window子系统工具
 # wsl常用命令[<sup>1<sup/>](#ref1)
 - `wsl --list`列出所有已安装系统
 - `wsl --unregsiter {system name}`卸载指定系统（system name即是上面命令返回的列表字符串)
+ 
 # remoteWSL工具(vscode插件)
 - vscode搜索即可下载，安装完后点击左下角的图标(类似这样“><“的图标)
 - 在子系统里进入到项目目录
@@ -24,6 +31,7 @@ wsl为window子系统工具
  - `cd /mnt/`
  - 即可看到挂载的目录
  # 开启子系统全局代理
+ ## wsl1
  - `export ALL_PROXY="http://127.0.0.1:10809"`
 # 问题
 - q1.`The system can not find the file specified.`<a id="q1"/> \
