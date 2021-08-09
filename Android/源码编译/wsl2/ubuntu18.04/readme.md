@@ -19,6 +19,13 @@ error: Unable to fully sync the tree.
 error: Downloading network changes failed.
 Try re-running with "-j1 --fail-fast" to exit at the first error.
 ```
-再次执行`repo sync`即可
+根据提示执行`repo sync -j1 --fail-fast`即可
+### Exited sync due to fetch errors.
+```
+error: Exited sync due to fetch errors.
+Local checkouts *not* updated. Resolve network issues & retry.
+`repo sync -l` will update some local checkouts.
+```
+根据提示执行`repo sync -l`
 # 参考
 https://blog.csdn.net/u013427969/article/details/114371933
