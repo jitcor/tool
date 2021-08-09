@@ -4,6 +4,11 @@
 
 # 具体步骤
 参考https://www.vectoros.club/post/fe9083b4.html
+## success result
+```
+Checking out: 100% (677/677), done in 9m34.823s
+repo sync has finished successfully.
+```
 ## 问题
 ### /usr/bin/env: ‘python’: No such file or directory
 - If Python 3 is not installed, install it: `apt-get install python3`
