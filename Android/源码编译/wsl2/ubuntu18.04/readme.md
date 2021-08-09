@@ -10,6 +10,9 @@ Checking out: 100% (677/677), done in 9m34.823s
 repo sync has finished successfully.
 ```
 ## 问题
+## 大小写敏感问题
+- 管理员cmd命令开启大小写敏感`fsutil.exe file setCaseSensitiveInfo <path> enable`
+> 这里的路径不能偷懒，直接设定AOSP和CCACHE的上级目录，而应该分别设定
 ### /usr/bin/env: ‘python’: No such file or directory
 - If Python 3 is not installed, install it: `apt-get install python3`
 - If Python 3 has been installed, run these commands: `whereis python3`
