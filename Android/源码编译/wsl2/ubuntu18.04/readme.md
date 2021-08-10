@@ -18,9 +18,9 @@ repo sync has finished successfully.
 - 管理员cmd命令开启大小写敏感`fsutil.exe file setCaseSensitiveInfo <path> enable`
 > 这里的路径不能偷懒，直接设定AOSP和CCACHE的上级目录，而应该分别设定
 ### /usr/bin/env: ‘python’: No such file or directory
-- If Python 3 is not installed, install it: `apt-get install python3`
-- If Python 3 has been installed, run these commands: `whereis python3`
-- Then we create a symlink to it: `sudo ln -s /usr/bin/python3 /usr/bin/python`
+- ~~If Python 3 is not installed, install it: `apt-get install python3`~~
+- ~~If Python 3 has been installed, run these commands: `whereis python3`~~
+- ~~Then we create a symlink to it: `sudo ln -s /usr/bin/python3 /usr/bin/python`~~
 ### Unable to fully sync the tree
 ```
 Checking out files: 100% (17/17), done.
