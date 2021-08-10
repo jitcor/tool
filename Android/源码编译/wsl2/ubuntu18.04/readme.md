@@ -3,7 +3,7 @@
 - Ubuntu18.04
 
 # 具体步骤
- ~~参考https://www.vectoros.club/post/fe9083b4.html \
+ ~~参考https://www.vectoros.club/post/fe9083b4.html~~ \
 
 参考https://blog.csdn.net/weixin_42695485/article/details/108655661
 ## 关于源码同步问题
