@@ -18,7 +18,8 @@ repo sync has finished successfully.
 ## 问题
 ## 大小写敏感问题
 - 管理员cmd命令开启大小写敏感`fsutil.exe file setCaseSensitiveInfo <path> enable`
-> 这里的路径不能偷懒，直接设定AOSP和CCACHE的上级目录，而应该分别设定
+> ~~这里的路径不能偷懒，直接设定AOSP和CCACHE的上级目录，而应该分别设定~~
+> 实测发现原来是Window系统版本的问题，老版本虽然可以设置大小写敏感，但是子目录无法继承，新版虽然已创建的子目录也无法继承，但新创建的子目录可以继承
 ### /usr/bin/env: ‘python’: No such file or directory
 - ~~If Python 3 is not installed, install it: `apt-get install python3`~~
 - ~~If Python 3 has been installed, run these commands: `whereis python3`~~
