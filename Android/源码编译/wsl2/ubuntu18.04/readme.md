@@ -43,6 +43,8 @@ Local checkouts *not* updated. Resolve network issues & retry.
 `repo sync -l` will update some local checkouts.
 ```
 根据提示执行`repo sync -l`
+### Failed to listen for path logs: listen unix out/.path_interposer_log: bind: operation not supported
+
 # 参考
 https://blog.csdn.net/u013427969/article/details/114371933
 https://blog.csdn.net/weixin_42695485/article/details/108655661
