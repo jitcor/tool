@@ -6,7 +6,8 @@
 参考https://www.vectoros.club/post/fe9083b4.html
 ## 关于源码同步问题
 可以参考https://mirrors.tuna.tsinghua.edu.cn/help/AOSP/ \
-直接下载aosp-latest.tar文件，然后解压repo sync同步
+直接下载aosp-latest.tar文件，然后解压repo sync同步 \
+同步后，直接`repo init -b android-4.4.4_r1 --depth=1`即可取出代码
 ## success result
 ```
 Checking out: 100% (677/677), done in 9m34.823s
