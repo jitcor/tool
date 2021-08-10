@@ -21,6 +21,7 @@ repo sync has finished successfully.
 - ~~If Python 3 is not installed, install it: `apt-get install python3`~~
 - ~~If Python 3 has been installed, run these commands: `whereis python3`~~
 - ~~Then we create a symlink to it: `sudo ln -s /usr/bin/python3 /usr/bin/python`~~
+- 直接`sudo apt install python`
 ### Unable to fully sync the tree
 ```
 Checking out files: 100% (17/17), done.
@@ -41,3 +42,4 @@ Local checkouts *not* updated. Resolve network issues & retry.
 根据提示执行`repo sync -l`
 # 参考
 https://blog.csdn.net/u013427969/article/details/114371933
+https://blog.csdn.net/weixin_42695485/article/details/108655661
