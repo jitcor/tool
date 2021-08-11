@@ -41,6 +41,9 @@ wsl为window子系统工具
  wsl --import Ubuntu-20.04 d:\ubuntu d:\ubuntu20.04.tar --version 2
  del d:\ubuntu20.04.tar
  ```
+ # 切换账户
+ - 切换到root账户`sudo su`
+ - root账户切换到普通账户`su - username`
  # 使目录大小写敏感
  - 管理员方式执行`fsutil.exe file setCaseSensitiveInfo <path> enable`
  - 禁用则执行`fsutil.exe file setCaseSensitiveInfo <path> disable`
