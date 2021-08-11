@@ -44,6 +44,14 @@ wsl为window子系统工具
  # 切换账户
  - 切换到root账户`sudo su`
  - root账户切换到普通账户`su - username`
+ # WSL2设置全局代理
+ ```sh
+ #!/bin/bash
+host_ip=$(cat /etc/resolv.conf |grep "nameserver" |cut -f 2 -d " ")
+export ALL_PROXY="http://$host_ip:10809"
+echo "proxy ip:$ALL_PROXY"
+ ```
+ > 执行时需用source执行，否则无法生效
  # 使目录大小写敏感
  - 管理员方式执行`fsutil.exe file setCaseSensitiveInfo <path> enable`
  - 禁用则执行`fsutil.exe file setCaseSensitiveInfo <path> disable`
