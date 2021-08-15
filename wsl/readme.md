@@ -72,7 +72,7 @@ appendWindowPath = true
  - 下载NoLsp.exe
  - 管理员CMD/PowerShell执行`NoLsp.exe C:\windows\system32\wsl.exe`
 ## q4. `error: chmod on /aosp/.repo/repo/.git/config.lock failed: Operation not permitted`
- 参考https://github.com/docker/for-win/issues/6284
+ 参考https://github.com/docker/for-win/issues/6284 \
  参考https://devblogs.microsoft.com/commandline/chmod-chown-wsl-improvements/
  - 第一个方案就是把文件放在WSL自己的文件系统里
  - 第二个就是采用官方的Chmod支持插件
