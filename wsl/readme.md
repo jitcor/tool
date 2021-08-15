@@ -71,7 +71,11 @@ appendWindowPath = true
  ## q4.参考的对象类型不支持尝试的操作(WSL2)
  - 下载NoLsp.exe
  - 管理员CMD/PowerShell执行`NoLsp.exe C:\windows\system32\wsl.exe`
- 
+## q4. `error: chmod on /aosp/.repo/repo/.git/config.lock failed: Operation not permitted`
+ 参考https://github.com/docker/for-win/issues/6284
+ 参考https://devblogs.microsoft.com/commandline/chmod-chown-wsl-improvements/
+ - 第一个方案就是把文件放在WSL自己的文件系统里
+ - 第二个就是采用官方的Chmod支持插件
  # 参考
  - 1.[WSL 命令和启动配置](https://docs.microsoft.com/zh-cn/windows/wsl/wsl-config#set-wsl-launch-settings)<a id="ref1"/>
  - 2.[适用于 Linux 的 Windows 子系统安装指南 (Windows 10)](https://docs.microsoft.com/zh-cn/windows/wsl/install-win10)<a id="ref2"/>
