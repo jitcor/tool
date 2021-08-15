@@ -46,6 +46,6 @@ Local checkouts *not* updated. Resolve network issues & retry.
 ### Failed to listen for path logs: listen unix out/.path_interposer_log: bind: operation not supported
 
 # 参考
-https://blog.csdn.net/u013427969/article/details/114371933
-https://blog.csdn.net/weixin_42695485/article/details/108655661
-https://ckcat.github.io/2019/11/03/%E7%BC%96%E8%AF%91Android%E7%B3%BB%E7%BB%9F/
+- https://blog.csdn.net/u013427969/article/details/114371933
+- https://blog.csdn.net/weixin_42695485/article/details/108655661
+- https://ckcat.github.io/2019/11/03/%E7%BC%96%E8%AF%91Android%E7%B3%BB%E7%BB%9F/
