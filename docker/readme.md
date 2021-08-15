@@ -2,6 +2,7 @@
 - WSL1不支持
 - Docker桌面版会强制安装到C盘
 - 可以直接在WSL2里像在Linux里安装一样
+- 尽量把文件放在WSL发行版文件系统里，一可以提高性能，二减少一些兼容性问题的出现(毕竟WSL与Window的文件系统还是不一样的)
 
 # WSL2 安装Docker
 参考https://zhuanlan.zhihu.com/p/148511634
