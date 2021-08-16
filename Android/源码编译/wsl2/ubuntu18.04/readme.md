@@ -44,6 +44,7 @@ Local checkouts *not* updated. Resolve network issues & retry.
 ```
 根据提示执行`repo sync -l`
 ### Failed to listen for path logs: listen unix out/.path_interposer_log: bind: operation not supported
+将源码放在WSL的文件系统里，不要放在Window文件系统里
 ### FAILED: setup-jack-server
 参考https://segmentfault.com/a/1190000039970343 \
 `/etc/java-8-openjdk/security/java.security`文件里属性jdk.tls.disabledAlgorithms去掉TLSv1, TLSv1.1参数，然后`aosp/prebuilts/sdk/tools/` 目录下执行`./jack-admin kill-server && ./jack-admin start-server` 成功。
