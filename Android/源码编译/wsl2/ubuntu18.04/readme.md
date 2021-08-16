@@ -44,7 +44,11 @@ Local checkouts *not* updated. Resolve network issues & retry.
 ```
 根据提示执行`repo sync -l`
 ### Failed to listen for path logs: listen unix out/.path_interposer_log: bind: operation not supported
-
+### FAILED: setup-jack-server
+参考https://segmentfault.com/a/1190000039970343 \
+`/etc/java-8-openjdk/security/java.security`文件里属性jdk.tls.disabledAlgorithms去掉TLSv1, TLSv1.1参数，然后`aosp/prebuilts/sdk/tools/` 目录下执行`./jack-admin kill-server && ./jack-admin start-server` 成功。
+### SyntaxError: invalid syntax
+python3->python2
 # 参考
 - https://blog.csdn.net/u013427969/article/details/114371933
 - https://blog.csdn.net/weixin_42695485/article/details/108655661
