@@ -68,25 +68,12 @@ apt-get -y install git-core gnupg flex bison build-essential zip curl zlib1g-dev
 
 
 case $SourceUrlIndex in
-     2) SourceUrl="https://androidsource.google.com/git/git-repo/"
+     2) echo "not implement :2"
      ;;
-     3) SourceUrl="https://mirrors.tuna.kd.edu.cn/git/git-repo/"
+     3) echo "not implement :2"
      ;;
      *)
        #echo "编译命令：cd $WorkDirectory && curl https://mirrors.tuna.tsinghua.edu.cn/git/git-repo -o repo && chmod +x repo && export REPO_URL='https://mirrors.tuna.tsinghua.edu.cn/git/git-repo/' && wget -c https://mirrors.tuna.tsinghua.edu.cn/aosp-monthly/aosp-20200101.tar && tar xf aosp-20200101.tar && cd aosp && repo init -u https://aosp.tuna.tsinghua.edu.cn/platform/manifest -b $AndroidVersion && repo sync -n -j1; while [ $? -ne 0 ]; do echo \"======sync failed, re-sync again======\"; repo sync -n -j1 ; done && repo sync -l ; while [ $? -ne 0 ]; do echo \"======2sync failed, re-sync again======\"; repo sync -l  ; done && source build/envsetup.sh && lunch $CompileVersion && make -j$JobCount"
        cd $WorkDirectory && curl https://mirrors.tuna.tsinghua.edu.cn/git/git-repo -o repo && chmod +x repo && export REPO_URL='https://mirrors.tuna.tsinghua.edu.cn/git/git-repo/' && wget -c https://mirrors.tuna.tsinghua.edu.cn/aosp-monthly/aosp-20200101.tar && tar xf aosp-20200101.tar && cd aosp && repo init -u https://aosp.tuna.tsinghua.edu.cn/platform/manifest -b $AndroidVersion && repo sync -n -j1; while [ $? -ne 0 ]; do echo "======sync failed, re-sync again======"; repo sync -n -j1 ; done && repo sync -l ; while [ $? -ne 0 ]; do echo "======2sync failed, re-sync again======"; repo sync -l  ; done && source build/envsetup.sh && lunch $CompileVersion && sed -i 's/jdk.tls.disabledAlgorithms=SSLv3, TLSv1 TLSv1.1,/jdk.tls.disabledAlgorithms=SSLv3,/g' /etc/java-8-openjdk/security/java.security && cd prebuilts/sdk/tools/ && ./jack-admin kill-server && ./jack-admin start-server && cd ../../../ && make -j$JobCount
      ;;
 esac
-
-
-
-
-
-
-
-
-
-
-
-
-
