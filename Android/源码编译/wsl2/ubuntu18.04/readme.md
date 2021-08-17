@@ -10,10 +10,14 @@
 可以参考https://mirrors.tuna.tsinghua.edu.cn/help/AOSP/ \
 直接下载aosp-latest.tar文件，然后解压repo sync同步 \
 同步后，直接`repo init -b android-4.4.4_r1 --depth=1`即可取出代码
-## success result
+## `repo sync` success result
 ```
 Checking out: 100% (677/677), done in 9m34.823s
 repo sync has finished successfully.
+```
+## `make` 成功返回
+```
+#### build completed successfully (04:08:18 (hh:mm:ss)) ####
 ```
 ## 问题
 ## 大小写敏感问题
