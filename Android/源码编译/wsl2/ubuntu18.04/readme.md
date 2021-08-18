@@ -19,7 +19,7 @@ repo sync has finished successfully.
 ```
 #### build completed successfully (04:08:18 (hh:mm:ss)) ####
 ```
-## 问题
+# 问题
 ## 大小写敏感问题
 - 管理员cmd命令开启大小写敏感`fsutil.exe file setCaseSensitiveInfo <path> enable`
 > ~~这里的路径不能偷懒，直接设定AOSP和CCACHE的上级目录，而应该分别设定~~ \
