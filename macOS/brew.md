@@ -25,7 +25,8 @@ $ git -C "$(brew --repo homebrew/core)" remote set-url origin https://mirrors.al
 
 # 修改 xxxx的源，后面的xxxxxxxxxxxxxxxxx参考上面设置，也就是其仓库地址，这里可以使用https://codechina.csdn.net/mirrors克隆github仓库，然后替换地址
 $ git -C "$(brew --repo xxxxx)" remote set-url origin xxxxxxxxxxxxxxxxxxxxxx
-
+# 例子:facebook的homebrew-fb
+git -C "$(brew --repo facebook/fb)" remote set-url origin https://gitclone.com/github.com/facebook/homebrew-fb.git
 ```
 ## 查看代理
 brew 使用的是curl，所以查看curl的代理即可，如何查看呢？可以在`curl http://google.com -v`看一下输出
