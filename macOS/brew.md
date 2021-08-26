@@ -48,7 +48,10 @@ socks5 = "127.0.0.1:1089"
 - macOS Catalina 10.15.7
 - brew 3.2.9
 经查是由于其在使用curl工具时有个`--disabale`选项，该选项禁止了.curlrc文件方式
-
+- 最终成功方法是
+```
+export ALL_PROXY=socks5://127.0.0.1:1089
+```
 # 权限问题
 brew在安装某些软件时会涉及到/usr/local/
 
