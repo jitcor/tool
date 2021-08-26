@@ -28,6 +28,22 @@ $ git -C "$(brew --repo xxxxx)" remote set-url origin xxxxxxxxxxxxxxxxxxxxxx
 
 ```
 ## 查看代理
+brew 使用的是curl，所以查看curl的代理即可，如何查看呢？可以在`curl http://google.com -v`看一下输出
+## 设置代理
+命令行形式。形如`curl http://google.com -x http://127.0.0.1:7890`或者`curl http://google.com -x socks4://127.0.0.1:1089` \
+curl的代理配置文件在`~/.curlrc`文件里，格式如下
+http \
+```
+proxy = "127.0.0.1:7890"
+```
+或者
+socks5 \
+```
+socks5 = "127.0.0.1:1089"
+```
+但socks5未测试成功，即使以命令行-x 选项也不行，可能是代理的问题 \
+
+
 
 
 
