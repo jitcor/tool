@@ -53,8 +53,17 @@ socks5 = "127.0.0.1:1089"
 export ALL_PROXY=socks5://127.0.0.1:1089
 ```
 # 权限问题
-brew在安装某些软件时会涉及到/usr/local/
-
-
-
+brew在安装某些软件时会涉及到/usr/local/目录的读写权限，会出现类似如下错误 
+```
+Error: /usr/local/Cellar/buck/2021.01.12.01 is not a directory
+```
+这时执行
+```
+sudo chown -R $(whoami) /usr/local/Cellar/
+```
+即可，但又会出现另一个问题
+```
+Error: Failure while executing; `cp -pR /private/tmp/d20210826-15074-zh9zmn/buck/. /usr/local/Cellar/buck` exited with 1. Here's the output:
+cp: /usr/local/Cellar/buck/./2021.01.12.01_1/bin/buck: Permission denied
+```
 
