@@ -1,3 +1,29 @@
+# 安装
+由于通过apt安装的版本很老，所以这里直接下载压缩包进行安装
+
+压缩包下载地址https://cmake.org/files/
+
+这里以WSL安装未例
+```
+export http_proxy=http://127.0.0.1:10809
+export https_proxy=http://127.0.0.1:10809
+wget https://cmake.org/files/v3.16/cmake-3.16.9-Linux-x86_64.tar.gz
+tar -zxvf cmake-3.16.9-Linux-x86_64.tar.gz
+cp -r ./cmake-3.16.9-Linux-x86_64 /usr/local/cmake
+....
+...
+.
+sudo ln -s /usr/local/cmake/bin/cmake /usr/bin/cmake
+vim ~/.bashrc 
+// 添加
+export PATH=/usr/local/cmake/bin:$PATH
+//esc
+:wq
+source ~/.bashrc
+//check
+cmake -version
+
+```
 # C语言项目
 ## 最简写法
 ```cmake
