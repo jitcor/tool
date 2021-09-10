@@ -49,6 +49,8 @@ wsl为window子系统工具
  #!/bin/bash
 host_ip=$(cat /etc/resolv.conf |grep "nameserver" |cut -f 2 -d " ")
 export ALL_PROXY="http://$host_ip:10809"
+export HTTP_PROXY="http://$host_ip:10809"
+export HTTPS_PROXY="http://$host_ip:10809"
 echo "proxy ip:$ALL_PROXY"
  ```
  > 执行时需用source执行，否则无法生效
