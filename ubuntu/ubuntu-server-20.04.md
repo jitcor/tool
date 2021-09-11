@@ -28,7 +28,7 @@ network:
 - 执行`wget https://raw.githubusercontent.com/Humenger/tool/master/IDEA/ssh-setup.sh`
 - 执行`./ssh-setup.sh`开启ssh服务，默认端口22
 - xshell，或IDEA里ssh连接即可
--修改`/etc/systemd/logind.conf`的HandleLidSwitch的值为ignore，并去掉前面的注释
+- 修改`/etc/systemd/logind.conf`的HandleLidSwitch的值为ignore，并去掉前面的注释
 - 执行`service systemd-logind restart`重启服务以禁用笔记本的关闭盖子休眠功能
 # 参考
 https://www.bilibili.com/read/cv10613992/
