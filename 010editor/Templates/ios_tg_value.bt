@@ -1,0 +1,97 @@
+//--------------------------------------
+//--- 010 Editor v6.0.2 Binary Template
+//
+// File: ios_tg_value.bt
+// Author:  shlu
+// Revision: v1.0.0
+// Magic: 01 5F
+// Purpose:
+//--------------------------------------
+LittleEndian();
+
+typedef enum<byte>{
+   TYPE_INT32  = 0,
+   TYPE_INT64  = 1,
+   TYPE_BOOL   = 2,
+   TYPE_DOUBLE = 3,
+   TYPE_STRING = 4,
+   TYPE_OBJECT = 5,
+   TYPE_INT32_ARRAY        = 6,
+   TYPE_INT64_ARRAY        = 7,
+   TYPE_OBJECT_ARRAY       = 8,
+   TYPE_OBJECT_DICTIONARY  = 9,
+   TYPE_BYTES              = 10,
+   TYPE_NIL                = 11,
+   TYPE_STRING_ARRAY       = 12,
+   TYPE_BYTES_ARRAY        = 13
+} VALUE_TYPE;
+
+// 声明结构体
+struct BaseRule;
+
+typedef struct{
+   int32 len;
+   byte  value[len];
+} BytesValue;
+
+typedef struct{
+   int32 len;
+   char  value[len]<fgcolor=0x000000FF>;
+} StringValue;
+
+typedef struct{
+   int32 typeHash<fgcolor=0x0000FF00>;
+   int32 dataLen;
+   local int end=FTell()+dataLen;
+   while(FTell()<end){
+       BaseRule field;
+   }
+} ObjectValue;
+
+typedef struct{
+   int32 count;
+   if (count>0){
+      ObjectValue value[count]<optimize=false>;
+   }
+} ObjectArrayValue;
+
+//实现结构体
+typedef struct{
+   byte keyLen;
+   char key[keyLen]<format=hex,fgcolor=0x00FF0000>;
+   //检查Magic,必须是01 5F
+   if (FTell()==2&&key[0]!='_'){
+      Printf("magic error:%c\n",key[0]);
+      Exit(-2);
+      return;
+   }
+   VALUE_TYPE valueType;
+   switch(valueType){
+      case TYPE_INT32:
+         int32 value<format=hex,fgcolor=0x00008CFF>;
+         break;
+      case TYPE_INT64:
+         int64 value<format=hex,fgcolor=0x00008CFF>;
+         break;
+      case TYPE_STRING:
+         StringValue value;
+         break;
+      case TYPE_OBJECT:
+         ObjectValue value;
+         break;
+      case TYPE_OBJECT_ARRAY:
+         ObjectArrayValue value;
+         break;
+      case TYPE_NIL:
+         break;
+      default:
+         Printf("[offset 0x%x] not support type: %d\n",FTell(),valueType); 
+         Exit(-1);
+         return;
+   }
+} BaseRule;
+
+
+
+//声明变量，自动解析
+BaseRule root;
