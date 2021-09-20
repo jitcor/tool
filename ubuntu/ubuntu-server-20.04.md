@@ -6,11 +6,13 @@
 - 通过vim修改配置文件/etc/netplan/*.yaml
 > yaml是专门用来写配置文件的语言：它对大小写敏感；使用缩进表示层级关系；缩进时不允许使用Tab键，只允许使用空格；缩进的空格数目不重要，只要相同层级的元素左侧对齐即可
 - 修改配置参考
+1.静态IP
+
 ```python
 # This is the network config written by 'subiquity'
 network:
   ethernets:
-    enp0s3:
+    enp0s3:#配置的网卡名称,使用ifconfig -a查看得到
       dhcp4: no
       addresses: [192.168.1.6/24]
       optional: true
@@ -19,6 +21,22 @@ network:
               addresses: [192.168.1.1,114.114.114.114]
   version: 2
 ```
+
+2.动态IP
+
+```python
+# This is the network config written by 'subiquity'
+network:
+  ethernets:
+    enp0s3:#配置的网卡名称,使用ifconfig -a查看得到
+      dhcp4: true
+      addresses: []
+      optional: true
+      nameservers:
+              addresses: [114.114.114.114]
+  version: 2
+```
+
 > 这里192.168.1.6为当前笔记本局域网IP地址，改为不与其他设备冲突的即可
 - 执行命令`sudo netplan apply`应用更改
 - 执行`ip addr`查看对应网卡状态
