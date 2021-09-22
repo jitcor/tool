@@ -37,7 +37,7 @@ typedef struct{
        char password[readOffset('\n',-1)];
     }
     byte data[readEndOffset()+1]<bgcolor=cGray>;
-} MIUI_HEADER;
+} MIUI_BACKUP_2;
 int readOffset(char key,int max){
     local int i=0;
     local int pc=FTell();
@@ -66,4 +66,4 @@ void readByte(int len){
     FSeek(FTell()+len);
 }
 
-MIUI_HEADER header;
+MIUI_BACKUP_2 root;
