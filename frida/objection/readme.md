@@ -7,3 +7,5 @@
 ```
 objection -d --gadget "微信" explore
 ```
+# 参考
+[iOS Hooking With Objection](https://book.hacktricks.xyz/mobile-apps-pentesting/ios-pentesting/ios-hooking-with-objection)
