@@ -9,3 +9,8 @@ DefenderControl
 - cd 到目标目录
 - 执行 `fsutil.exe file SetCaseSensitiveInfo ./ enable`开启当前目录的大小写敏感
 - 执行 `fsutil.exe file queryCaseSensitiveInfo ./` 查询当前目录的大小写敏感状态
+# VT-x已开启但CPU-V和模拟器显示未开启
+管理员方式执行以下命令，重启电脑即可
+```
+bcdedit /set hypervisorlaunchtype off
+```
