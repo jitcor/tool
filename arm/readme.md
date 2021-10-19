@@ -33,7 +33,13 @@ gcc在进行编译时，会进行各种复杂的优化，以提升执行效率�
 
 ![image](https://user-images.githubusercontent.com/27600008/137844791-411867f0-108c-48d7-97d4-32afdc88fb6a.png)
 
-- 指令顺序交错
+- 指令段交叉
+
+最后一步str赋值会穿插到下一段指令中
+
+![image](https://user-images.githubusercontent.com/27600008/137893756-a7fc1a81-d771-4ef2-adca-2a2579d9d43e.png)
+
+
 - 循环展开
 # LDM与STM
 详细参考：[Here](https://blog.csdn.net/petib_wangwei/article/details/41318395)
