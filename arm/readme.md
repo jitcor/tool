@@ -37,3 +37,6 @@ gcc在进行编译时，会进行各种复杂的优化，以提升执行效率�
 - 循环展开
 # LDM与STM
 详细参考：[Here](https://blog.csdn.net/petib_wangwei/article/details/41318395)
+
+# 其他指令
+- UXTB 参考：[HERE](https://blog.csdn.net/qq_26914291/article/details/120844547)
