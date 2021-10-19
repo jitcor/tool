@@ -46,3 +46,13 @@ gcc在进行编译时，会进行各种复杂的优化，以提升执行效率�
 
 # 其他指令
 - UXTB 参考：[HERE](https://blog.csdn.net/qq_26914291/article/details/120844547)
+# 辅助工具
+- 代码即时编译工具：https://godbolt.org/
+
+![image](https://user-images.githubusercontent.com/27600008/137894473-577d60c5-c3eb-4aaa-a8ed-2d30e8778920.png)
+
+
+- 代码即时运行调试工具：https://github.com/linouxis9/ARMStrong
+
+![image](https://user-images.githubusercontent.com/27600008/137894522-252199b2-a65e-42b3-8aa4-2312c53fb5e2.png)
+
