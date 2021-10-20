@@ -41,6 +41,9 @@ gcc在进行编译时，会进行各种复杂的优化，以提升执行效率�
 
 
 - 循环展开
+# STR与LDR
+![image](https://user-images.githubusercontent.com/27600008/138041430-eb4f77b4-cb5d-4fa7-a882-b8e64670c4e2.png)
+
 # LDM与STM
 详细参考：[Here](https://blog.csdn.net/petib_wangwei/article/details/41318395)
 
