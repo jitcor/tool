@@ -13,10 +13,10 @@ push {r4,r5,r6,lr}
 其实相当于
 ```
 sub sp,sp,#16   ;16=4*4
-mov lr,[sp, #12]
-mov r6,[sp, #8]
-mov r5,[sp, #4]
-mov r4,[sp, #0]
+str lr,[sp, #12]
+str r6,[sp, #8]
+str r5,[sp, #4]
+str r4,[sp, #0]
 ```
 POP就是与PUSH相反操作即可
 # 指令解析
