@@ -33,3 +33,6 @@ func To$STR$(object interface{}) (dst *$STR$, err error) {
 
 ```
 > 这里子struct里的Peer变量需改成指针形式，也就变成`*Peer`
+# 排列与组合
+- https://github.com/kokardy/listing
+- gonum.org/v1/gonum/stat/combin
