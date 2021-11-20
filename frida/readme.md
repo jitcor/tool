@@ -39,3 +39,5 @@ $ make core-android-x86
 # 最后生成的文件在 build/frida-android-x86 build/frida-android-x86_64 
 # 如果需要调整编译参数，在releng/setup-env.sh中进行调整 比如: meson_common_flags="['-g']"
 ```
+# 参考
+https://www.mobibrw.com/2021/28588
