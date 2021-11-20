@@ -14,3 +14,28 @@
 ```
 # 安装多个Python版本问题
 设置pythonpath为当前要用的版本路径即可
+# 重新编译Frida
+```
+$ git clone https://github.com/frida/frida.git
+
+$ cd frida
+
+$ make
+
+$ export ANDROID_NDK_ROOT=/Users/{username}/Library/Android/sdk/ndk/22.0.6917172/
+
+$ sudo apt-get install npm
+
+$ sudo apt install python3-pip
+
+$ pip3 install colorama prompt-toolkit pygments
+
+$ rm -rf build
+
+$ make core-android-x86_64
+
+$ make core-android-x86
+
+# 最后生成的文件在 build/frida-android-x86 build/frida-android-x86_64 
+# 如果需要调整编译参数，在releng/setup-env.sh中进行调整 比如: meson_common_flags="['-g']"
+```
