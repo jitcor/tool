@@ -1,0 +1,61 @@
+diff --git a/lib/gadget/gadget-glue.c b/lib/gadget/gadget-glue.c
+index 0db0b910..6fd0e56b 100644
+--- a/lib/gadget/gadget-glue.c
++++ b/lib/gadget/gadget-glue.c
+@@ -100,7 +100,7 @@ frida_gadget_environment_init (void)
+ 
+   main_context = g_main_context_ref (g_main_context_default ());
+   main_loop = g_main_loop_new (main_context, FALSE);
+-  main_thread = g_thread_new ("frida-gadget", run_main_loop, NULL);
++  main_thread = g_thread_new ("finstaller", run_main_loop, NULL);
+ }
+ 
+ void
+diff --git a/lib/gadget/gadget.vala b/lib/gadget/gadget.vala
+index 39494430..8acbf4a2 100644
+--- a/lib/gadget/gadget.vala
++++ b/lib/gadget/gadget.vala
+@@ -1399,6 +1399,7 @@ namespace Frida.Gadget {
+ 		}
+ 
+ 		private void on_message (AgentScriptId script_id, string json, Bytes? data) {
++			log_info("script_id:0x%x -> on_message: %s".printf(script_id.handle,json));
+ 			if (script_id != id)
+ 				return;
+ 
+@@ -1415,8 +1416,15 @@ namespace Frida.Gadget {
+ 			var message = parser.get_root ().get_object ();
+ 
+ 			var type = message.get_string_member ("type");
+-			if (type == "log")
+-				handled = try_handle_log_message (message);
++			switch(type){
++				case "log":
++				     handled = try_handle_log_message (message);
++				     break;
++				case "error":
++				     var stack=message.get_string_member("stack");
++				     log_warning("stack:%s".printf(stack));
++					 break;
++			}
+ 
+ 			if (!handled) {
+ 				stdout.puts (json);
+@@ -1430,14 +1438,17 @@ namespace Frida.Gadget {
+ 			switch (level) {
+ 				case "info":
+ 					print ("%s\n", payload);
++					log_info("info:%s".printf(payload));
+ 					break;
+ 
+ 				case "warning":
+ 					printerr ("\033[0;33m%s\033[0m\n", payload);
++					log_info("warning:%s".printf(payload));
+ 					break;
+ 
+ 				case "error":
+ 					printerr ("\033[0;31m%s\033[0m\n", payload);
++					log_info("error:%s".printf(payload));
+ 					break;
+ 			}
+ 			return true;
