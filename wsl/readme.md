@@ -78,6 +78,8 @@ appendWindowPath = true
  参考https://devblogs.microsoft.com/commandline/chmod-chown-wsl-improvements/
  - 第一个方案就是把文件放在WSL自己的文件系统里
  - 第二个就是采用官方的Chmod支持插件
+## q5.请启用虚拟机平台 Windows 功能并确保在 BIOS 中启用虚拟化。
+ 
  # 参考
  - 1.[WSL 命令和启动配置](https://docs.microsoft.com/zh-cn/windows/wsl/wsl-config#set-wsl-launch-settings)<a id="ref1"/>
  - 2.[适用于 Linux 的 Windows 子系统安装指南 (Windows 10)](https://docs.microsoft.com/zh-cn/windows/wsl/install-win10)<a id="ref2"/>
