@@ -46,11 +46,14 @@ wsl为window子系统工具
  - root账户切换到普通账户`su - username`
  # WSL2设置全局代理
  ```sh
- #!/bin/bash
+#!/bin/bash
 host_ip=$(cat /etc/resolv.conf |grep "nameserver" |cut -f 2 -d " ")
 export ALL_PROXY="http://$host_ip:10809"
 export HTTP_PROXY="http://$host_ip:10809"
-export HTTPS_PROXY="http://$host_ip:10809"
+export HTTPS_PROXY="https://$host_ip:10809"
+export https_proxy="https://$host_ip:10809"
+export http_proxy="http://$host_ip:10809"
+export all_proxy="http://$host_ip:10809"
 echo "proxy ip:$ALL_PROXY"
  ```
  > 执行时需用source执行，否则无法生效
