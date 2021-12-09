@@ -79,9 +79,10 @@ appendWindowPath = true
  - 第一个方案就是把文件放在WSL自己的文件系统里
  - 第二个就是采用官方的Chmod支持插件
 ## q5.请启用虚拟机平台 Windows 功能并确保在 BIOS 中启用虚拟化。
- 
+ 执行`bcdedit /set hypervisorlaunchtype auto`然后重启系统即可
  # 参考
  - 1.[WSL 命令和启动配置](https://docs.microsoft.com/zh-cn/windows/wsl/wsl-config#set-wsl-launch-settings)<a id="ref1"/>
  - 2.[适用于 Linux 的 Windows 子系统安装指南 (Windows 10)](https://docs.microsoft.com/zh-cn/windows/wsl/install-win10)<a id="ref2"/>
  - 3.[WSL中的VSCode：如何对根文件进行sudo，以便我可以对其进行编辑](https://stackoverflow.com/questions/58980356/vscode-in-wsl-how-to-sudo-a-root-file-so-i-can-edit-it)<a id="ref3"/>
  - 4.[手动下载适用于 Linux 的 Windows 子系统发行版包](https://docs.microsoft.com/zh-cn/windows/wsl/install-manual)<a id="ref4"/>
+ - 5.[WSL2启动报错——请启用虚拟机平台 Windows 功能并确保在 BIOS 中启用虚拟化](https://www.jianshu.com/p/be76a0f08dc7)
