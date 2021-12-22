@@ -3,3 +3,6 @@
 # STR
 ![image](https://user-images.githubusercontent.com/27600008/147075614-18ace765-7dcd-475e-b9ae-f372c49b6205.png)
 > 存储时是按q0的类型存储的，q0是16字节，就要存储16字节
+# EXTR
+![image](https://user-images.githubusercontent.com/27600008/147079952-347d4893-b9e8-440e-8391-90a127e2049d.png)
+- 等同于ROR，举例:`EXTR            W5, W21, W21, #0x17`->`ror w5, w21, #0x17`
