@@ -9,3 +9,6 @@
 # NEG
 ![image](https://user-images.githubusercontent.com/27600008/147091925-7048398d-ee0f-48a1-98ee-f37b4932f2e6.png)
 - 简单理解就是加个负号，举例:`NEG w23,w3`->`w23=-w3`
+# BIC
+![image](https://user-images.githubusercontent.com/27600008/147094426-39cc8d25-c26c-4e55-8aff-237d2d1427d3.png)
+- 举例:`bic     r0, r0, #6`->`r0=r0&(~6)`
