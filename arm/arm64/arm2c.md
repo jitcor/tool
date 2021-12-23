@@ -1,3 +1,6 @@
+# LDR
+![image](https://user-images.githubusercontent.com/27600008/147175743-a24f4d80-e8fb-48fe-9441-496b44fbbe55.png)
+-参考:https://www.jianshu.com/p/66d801c85ee9
 # LDUR
 ![image](https://user-images.githubusercontent.com/27600008/147073366-aa01d16d-b535-4cee-a3b5-5cb1de5308fe.png)
 # STR
