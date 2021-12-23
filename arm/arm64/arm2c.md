@@ -15,3 +15,5 @@
 # BIC
 ![image](https://user-images.githubusercontent.com/27600008/147094426-39cc8d25-c26c-4e55-8aff-237d2d1427d3.png)
 - 举例:`bic     r0, r0, #6`->`r0=r0&(~6)`
+# 条件代码
+![image](https://user-images.githubusercontent.com/27600008/147219028-84581a82-061a-4c72-b194-8531bb18d6b2.png)
