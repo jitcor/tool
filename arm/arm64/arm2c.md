@@ -22,3 +22,8 @@
 
 # S
 ![image](https://user-images.githubusercontent.com/27600008/147220615-a9844314-cb86-45a2-a00b-412c43ecf8a1.png)
+# NZCV
+![image](https://user-images.githubusercontent.com/27600008/147321151-a2fe2f6c-3b67-492e-b9b3-f01d25fe9ea7.png)
+
+# 参考
+- http://www.lujun.org.cn/?p=1676
