@@ -25,5 +25,10 @@
 # NZCV
 ![image](https://user-images.githubusercontent.com/27600008/147321151-a2fe2f6c-3b67-492e-b9b3-f01d25fe9ea7.png)
 
+# 未解决问题
+- 1.将下图v5数组放入下面函数中，就会出现段错误，具体原因待研究
+![image](https://user-images.githubusercontent.com/27600008/147350752-d335274b-26d5-4a75-a8b4-c4e8de427fe9.png)
+
+
 # 参考
 - http://www.lujun.org.cn/?p=1676
