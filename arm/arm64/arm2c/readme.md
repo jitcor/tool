@@ -1,3 +1,5 @@
+# 前言
+在伪代码没问题的情况下，尽量还是用伪代码，方便快捷
 # LDR
 ![image](https://user-images.githubusercontent.com/27600008/147175743-a24f4d80-e8fb-48fe-9441-496b44fbbe55.png)
 -参考:https://www.jianshu.com/p/66d801c85ee9
