@@ -12,3 +12,5 @@ import "C"
 # Window下 cgo 导入iostream报错
 `go build -buildmode=exe`
 > 参考:https://github.com/golang/go/issues/45468
+# 参考
+- [CGO学习整理](https://packagewjx.github.io/2018/12/13/cgo-note/)
