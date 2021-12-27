@@ -24,7 +24,33 @@
 ![image](https://user-images.githubusercontent.com/27600008/147220615-a9844314-cb86-45a2-a00b-412c43ecf8a1.png)
 # NZCV
 ![image](https://user-images.githubusercontent.com/27600008/147321151-a2fe2f6c-3b67-492e-b9b3-f01d25fe9ea7.png)
+# REV
+32bits下等效代码
+```cpp
+uint32_t bswap32(uint32_t s) {
+    return ((s << 24) & 0xff000000) |
+           ((s << 8) & 0x00ff0000) |
+           ((s >> 8) & 0x0000ff00) |
+           ((s >> 24) & 0x000000ff);
+}
+```
+# ROR
+32bits下等效代码
+```cpp
+//_DWORD __ROR4__(_DWORD a,char b);
+//循环右移count位
+inline uint32_t __ROR4__(uint32_t value, int count) {
+    int offset = count % 32;
+    if (offset < 0)offset = 32 + offset;
+    if (offset >= 1 && offset <= 31) {
+        return (value >> offset) | (value << (32 - offset));
+    } else if (offset == 0 || offset == 32) {
+        return value;
+    }
+    exit(100);
+}
 
+```
 # 未解决问题
 - 1.将下图v5数组放入下面函数中，就会出现段错误，具体原因待研究
 ![image](https://user-images.githubusercontent.com/27600008/147350752-d335274b-26d5-4a75-a8b4-c4e8de427fe9.png)
