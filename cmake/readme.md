@@ -34,3 +34,7 @@ set(CMAKE_C_STANDARD 99)
 add_executable(demo001 main.c)
 ```
 ## 导入第三方库
+## 打印详细输出信息
+- 1.cmake命令行：`-DCMAKE_VERBOSE_MAKEFILE=ON`
+- 2.cmakeLists.txt: `set(CMAKE_VERBOSE_MAKEFILEON ON)`
+> 打印详细信息可以获取原始的g++编译命令行信息
