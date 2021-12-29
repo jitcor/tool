@@ -35,6 +35,12 @@ public class ByteStream {
                     buffer=new byte[len];
                 }
             }
+            byte[] out=outputStream.toByteArray();
+            if(out.length!=data.length) {
+                new Exception("copy is error").printStackTrace();
+                return;
+            }
+            System.arraycopy(outputStream.toByteArray(),0,data,0,data.length);
         } catch (Exception e) {
             e.printStackTrace();
 
