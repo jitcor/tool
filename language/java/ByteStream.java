@@ -23,7 +23,7 @@ public class ByteStream {
     public static void copy(InputStream inputStream, byte[] data) {
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         int len = data.length;
-        byte[] buffer = new byte[1024];
+        byte[] buffer = new byte[Math.min(len, 1024)];
         int n = 0;
         try {
             while ((n = inputStream.read(buffer)) > 0) {
