@@ -9,4 +9,15 @@ public class Hex {
         }
         return new String(hexChars);
     }
+    public static byte[] DecodeString(String hex){
+        hex = hex.length() % 2 != 0 ? "0" + hex : hex;
+
+        byte[] b = new byte[hex.length() / 2];
+        for (int i = 0; i < b.length; i++) {
+            int index = i * 2;
+            int v = Integer.parseInt(hex.substring(index, index + 2), 16);
+            b[i] = (byte) v;
+        }
+        return b;
+    }
 }
