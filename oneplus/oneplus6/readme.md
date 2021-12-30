@@ -24,6 +24,7 @@
 - 连接电脑
 - 等待自动识别，并刷入固件
 - 完成图
+
 ![image](https://user-images.githubusercontent.com/27600008/147733462-207872e5-21f5-4df6-92c7-320ae7c5ad16.png)
 
 
