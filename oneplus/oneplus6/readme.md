@@ -33,9 +33,8 @@
 
 ![image](https://user-images.githubusercontent.com/27600008/147733462-207872e5-21f5-4df6-92c7-320ae7c5ad16.png)
 
-> 资料下载：[一加6-线刷救砖 (访问码:o3h9)](https://cloud.189.cn/t/UVBbMjAjIBn2)
 
 # 全部资料
-https://cloud.189.cn/t/Bzy6neiAJVzm (访问码:co5m)
+https://cloud.189.cn/t/jAJJBjbM7f6z (访问码:5l7k)
 
 
