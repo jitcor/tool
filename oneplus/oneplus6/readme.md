@@ -3,7 +3,7 @@
 - fastboot oem unlock
 > 注：解BL锁后，Wlan无法正常使用了，即使完全还原也不行，可能需要升级到最新版固件包才能解决(更新:据酷安网友说需要刷persist分区才行，具体待测试)
 # Magisk
-- 下载固件包[https://www.h2os.com/download.](https://www.h2os.com/download.)
+- 下载OTA包[https://www.h2os.com/download.](https://www.h2os.com/download.)
 - 解包提取boot.img
 - Magisk 对boot.img打补丁
 - fastboot boot magisk_patch.img
@@ -11,6 +11,8 @@
 > 该机型在重启手机后，会恢复boot.img，所以在每次重启之后都要进入fastboot，重新刷一次magisk boot补丁。
 > 
 > 至于模块重启生效问题，可以等安装完模块，直接强制重启到fastboot，然后再重新刷一次magisk boot补丁再重启即可。
+> 
+> OTA包需要通过系统更新刷入。
 # 解包提取boot.img
 - 下载解包工具https://gist.github.com/ius/42bd02a5df2226633a342ab7a9c60f15
 - 包含两个py文件payload_dumper.py，update_metadata_pb2.py
