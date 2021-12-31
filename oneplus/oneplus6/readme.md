@@ -30,5 +30,7 @@
 
 > 资料下载：[一加6-线刷救砖 (访问码:o3h9)](https://cloud.189.cn/t/UVBbMjAjIBn2)
 
+# 全部资料
+https://cloud.189.cn/t/Bzy6neiAJVzm (访问码:co5m)
 
 
