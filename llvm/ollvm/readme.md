@@ -11,7 +11,13 @@ make -j7
 ```
 ## Window编译
 ```
-
+git clone -b llvm-4.0 --depth=1 https://github.com/obfuscator-llvm/obfuscator.git
+cd obfuscator
+mkdir build
+cd build
+cmake -G "MSYS Makefiles" -DCMAKE_BUILD_TYPE=Release ../
+# 这里使用msys的make命令，所以在系统环境变量里一定要配置好msys的路径，我这里的路径就是D:\Linux-Program-Files\msys2\usr\bin
+make -j7
 ```
 # 使用
 
