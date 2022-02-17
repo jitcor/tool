@@ -29,23 +29,23 @@ cmake -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release -DLLVM_INCLUDE_TESTS=OFF .
 mingw32-make -j16
 ```
 最后编译结果 \
-![image](https://user-images.githubusercontent.com/27600008/154421924-36523e23-8baa-4750-8339-f5ffcc8263e7.png)\
-![image](https://user-images.githubusercontent.com/27600008/154422258-e1d2380b-a423-4bda-84cc-b94b3846c146.png)
+![image](./images/build_finish.png)\
+![image](./images/build_clang.png)
 
 > 虽然没有构建完成，但关键的clang.exe,clang++.exe,clang-format.exe都已经构建出来了
 # 使用
 - 将上面三个文件复制到`{ndk path}\toolchains\llvm\prebuilt\windows-x86_64\bin\`目录下，覆盖原有文件（想保险的，也可以把原有文件先备份下）
 > 我这里用的ndk版本是16.1.4479499
 - 再将`build/include/clang/`目录复制到`{ndk path}\toolchains\llvm\prebuilt\windows-x86_64\lib\` \
-![image](https://user-images.githubusercontent.com/27600008/154430571-81a171de-ddbb-480d-82cb-c9f4b10d1226.png)
+![image](./images/clang_copy.png)
 > lib目录若不存在，可能只有一个lib64，需要先新建个lib目录
 - 然后下载[/llvm/ollvm/demo/hello001](/llvm/ollvm/demo/hello001) 这个demo
 - 然后在该demo根目录下打开cmd窗口，并像上面一样配置环境变量，只保留DEF_PATH和ndk所在目录
 - 然后执行`ndk-build`，即可开始构建demo
 - 构建完成后会在libs下输出相应二进制so文件
 - 用IDA查看，即可看到被混淆了 \
-![image](https://user-images.githubusercontent.com/27600008/154431475-34613d4b-5c75-4b71-861e-4592054cb551.png) \
-![image](https://user-images.githubusercontent.com/27600008/154431552-5114e7b6-d49b-480c-b8f9-701dbf05a792.png)
+![image](./images/ida_f5.png) \
+![image](./images/ida_cfg.png)
 
 ## 问题
 - Could NOT find OCaml
