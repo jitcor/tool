@@ -1,7 +1,8 @@
 # 网站
 - 账户：https://accounts.nintendo.com/
 - Nintendo Switch Online 会员状态：https://ec.nintendo.com/my/membership
-- Nintendo Switch Online 会员自动续订查询：https://ec.nintendo.com/my/#/rights （不过这里好像看不到，反而上面会员状态里看到了，可能是试用会员的原因）
+- Nintendo Switch Online 会员自动续订查询：https://ec.nintendo.com/my/#/rights 
+>（不过这里好像看不到，反而上面会员状态里看到了，可能是试用会员的原因）
 # 购买方式
 ## 贝宝
 > 优点：方便，安全 \
