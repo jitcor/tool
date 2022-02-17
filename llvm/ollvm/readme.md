@@ -15,7 +15,7 @@ make -j7
 ```
 set PATH=%DEF_PATH%;F:\tool\mingw\x86_64-8.1.0-release-posix-seh-rt_v6-rev0\mingw64\bin;H:\Program Files\CMake\bin\;
 ```
-> DEF_PATH即系统默认的配置，具体参考https://github.com/Humenger/tool/blob/master/window/cmd.md \
+> DEF_PATH即系统默认的配置，具体参考[/window/cmd.md](../../window/cmd.md) \
 > 另外自然是mingw和cmake配置了\
 > MinGW下载地址https://github.com/Humenger/tool/releases/tag/MinGW
 
