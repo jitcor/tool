@@ -10,7 +10,6 @@ cmake -DCMAKE_BUILD_TYPE=Release -DLLVM_INCLUDE_TESTS=OFF ../
 make -j7
 ```
 ## Window编译
-# 预编译
 这里为排除系统环境变量干扰，需要先清洗下\
 执行如下命令，重新设置PATH
 ```
