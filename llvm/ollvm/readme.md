@@ -1,6 +1,6 @@
 # 简介
 # 编译
-## WSL编译
+## WSL
 ```
 git clone -b llvm-4.0 --depth=1 https://github.com/obfuscator-llvm/obfuscator.git
 cd obfuscator
@@ -9,7 +9,7 @@ cd build
 cmake -DCMAKE_BUILD_TYPE=Release -DLLVM_INCLUDE_TESTS=OFF ../
 make -j7
 ```
-## Window编译
+## Window
 这里为排除系统环境变量干扰，需要先清洗下\
 执行如下命令，重新设置PATH
 ```
@@ -34,6 +34,8 @@ mingw32-make -j16
 
 > 虽然没有构建完成，但关键的clang.exe,clang++.exe,clang-format.exe都已经构建出来了
 # 使用
+## WSL
+//TODO
 ## Window
 - 将上面三个文件复制到`{ndk path}\toolchains\llvm\prebuilt\windows-x86_64\bin\`目录下，覆盖原有文件（想保险的，也可以把原有文件先备份下）
 > 我这里用的ndk版本是16.1.4479499
