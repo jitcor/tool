@@ -39,7 +39,7 @@ mingw32-make -j16
 - 再将`build/include/clang/`目录复制到`{ndk path}\toolchains\llvm\prebuilt\windows-x86_64\lib\` \
 ![image](https://user-images.githubusercontent.com/27600008/154430571-81a171de-ddbb-480d-82cb-c9f4b10d1226.png)
 > lib目录若不存在，可能只有一个lib64，需要先新建个lib目录
-- 然后下载https://github.com/Humenger/tool/tree/master/llvm/ollvm/demo/hello001 这个demo
+- 然后下载[/llvm/ollvm/demo/hello001](/llvm/ollvm/demo/hello001) 这个demo
 - 然后在该demo根目录下打开cmd窗口，并像上面一样配置环境变量，只保留DEF_PATH和ndk所在目录
 - 然后执行`ndk-build`，即可开始构建demo
 - 构建完成后会在libs下输出相应二进制so文件
