@@ -34,6 +34,7 @@ mingw32-make -j16
 
 > 虽然没有构建完成，但关键的clang.exe,clang++.exe,clang-format.exe都已经构建出来了
 # 使用
+## Window
 - 将上面三个文件复制到`{ndk path}\toolchains\llvm\prebuilt\windows-x86_64\bin\`目录下，覆盖原有文件（想保险的，也可以把原有文件先备份下）
 > 我这里用的ndk版本是16.1.4479499
 - 再将`build/include/clang/`目录复制到`{ndk path}\toolchains\llvm\prebuilt\windows-x86_64\lib\` \
