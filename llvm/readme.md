@@ -14,7 +14,7 @@ cmake --build .
 - 编译成功后返回如下
 - ![image](./images/llvm_build.png)
 - 输出的二进制文件在build/bin目录下
-- ![image](llvm_build_file.png)
+- ![image](./images/llvm_build_file.png)
 
 
 # 参考
