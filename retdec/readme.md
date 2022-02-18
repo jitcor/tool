@@ -86,6 +86,23 @@ int32_t JNI_OnLoad(int32_t a1) {
 //......
 ```
 > 对比了IDA的反编译结果，差的有点远，很多代码都丢失了
+- 反编译IR
+```lr
+
+define i32 @JNI_OnLoad(i32 %arg1) local_unnamed_addr {
+dec_label_pc_1874:
+  %0 = call i32 @__decompiler_undefined_function_0()
+  %1 = call i32 @function_9a30(i32 3, i8* getelementptr inbounds ([11 x i8], [11 x i8]* @global_var_9da4, i32 0, i32 0), i8* getelementptr inbounds ([18 x i8], [18 x i8]* @global_var_9e34, i32 0, i32 0), i8* getelementptr inbounds ([90 x i8], [90 x i8]* @global_var_9dcc, i32 0, i32 0), i32 143, i32 ptrtoint (i32* @0 to i32), i32 ptrtoint (i32* @0 to i32)), !insn.addr !90
+  %2 = icmp ne i32 %arg1, 0, !insn.addr !91
+  %3 = icmp eq i32 %0, 0, !insn.addr !92
+  %or.cond = or i1 %2, %3
+  %4 = ashr i32 %0, 31
+  %5 = or i32 %4, ptrtoint (i32* @global_var_10006 to i32)
+  %r5.0 = select i1 %or.cond, i32 -1, i32 %5
+  ret i32 %r5.0, !insn.addr !93
+}
+
+```
 # 参考
 - https://www.bookstack.cn/read/CTF-All-In-One/doc-5.11.1_retdec.md
 - 
