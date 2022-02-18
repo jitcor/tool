@@ -12,9 +12,9 @@ cmake ../llvm
 cmake --build .
 ```
 - 编译成功后返回如下
-- ![image](https://user-images.githubusercontent.com/27600008/125034648-67398700-e0c3-11eb-9c1c-054dcce1c0d9.png)
+- ![image](./images/llvm_build.png)
 - 输出的二进制文件在build/bin目录下
-- ![image](https://user-images.githubusercontent.com/27600008/125035041-e5962900-e0c3-11eb-9914-a2b63af81a03.png)
+- ![image](llvm_build_file.png)
 
 
 # 参考
