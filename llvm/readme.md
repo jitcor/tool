@@ -20,3 +20,4 @@ cmake --build .
 # 参考
 - https://llvm.org/docs/GettingStarted.html
 - https://github.com/llvm/llvm-project
+- https://zhuanlan.zhihu.com/p/66793637
