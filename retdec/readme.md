@@ -26,6 +26,8 @@ python ../retdec-v4.0-windows-32b\retdec\bin\retdec-decompiler.py libwb_security
 #include <string.h>
 #include <wchar.h>
 
+//......
+
 // Address range: 0x15a4 - 0x16f2
 int32_t stringEncrypt_cplusplus(int32_t a1, int32_t a2, int32_t a3, int32_t a4) {
     // 0x15a4
@@ -80,7 +82,7 @@ int32_t JNI_OnLoad(int32_t a1) {
     return a1 != 0 | v1 == 0 ? -1 : v1 >> 31 | (int32_t)&g1;
 }
 
-
+//......
 ```
 # 参考
 - https://www.bookstack.cn/read/CTF-All-In-One/doc-5.11.1_retdec.md
