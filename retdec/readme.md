@@ -13,6 +13,7 @@ https://github.com/avast/retdec/
 ```
 python ../retdec-v4.0-windows-32b\retdec\bin\retdec-decompiler.py libwb_security.so
 ```
+> [libwb_security.so](./libwb_security.so)
 - 输出结果\
 ![image](./images/retdec_done.png)
 - 反编译结果
