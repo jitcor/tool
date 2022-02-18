@@ -13,7 +13,7 @@ https://github.com/avast/retdec/
 ```
 python ../retdec-v4.0-windows-32b\retdec\bin\retdec-decompiler.py libwb_security.so
 ```
-> [libwb_security.so](./libwb_security.so)
+> 下载： [libwb_security.so](./libwb_security.so)
 - 输出结果\
 ![image](./images/retdec_done.png)
 - 反编译结果
@@ -85,6 +85,7 @@ int32_t JNI_OnLoad(int32_t a1) {
 
 //......
 ```
+> 对比了IDA的反编译结果，差的有点远，很多代码都丢失了
 # 参考
 - https://www.bookstack.cn/read/CTF-All-In-One/doc-5.11.1_retdec.md
 - 
