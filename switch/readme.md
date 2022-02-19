@@ -29,6 +29,17 @@
 - 优点：可以一个游戏，一个账户，方便再次出售
 - 优点：一个主账号用来玩游戏，其他账号设置成固定且各不相同的国家分区用来购买游戏，就不用再频繁切换分区，不用再考虑清掉余额问题了
 - 缺点：账户一多，就有管理问题，不过对于它的优点来说，这都是小问题
+# 存储卡
+> 官方说明https://www.nintendo.com.hk/switch/support/data_management/microsdcard/
+## 购买
+> 参考https://www.zhihu.com/question/397495712/answer/1350785593
+- 仅支持TF卡（又名microSD）
+- 仅支持UHS-I（也就是存储卡上显示有“I”字母）
+- 最低读取速度60MB/s，最高则越高越好
+- U属性越高越好
+- C属性越高越好
+- V属性越高越好
+- A属性越高越好
 # 破解
 参考https://github.com/Humenger/switch
 
