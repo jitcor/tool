@@ -40,6 +40,7 @@
 - C属性越高越好
 - V属性越高越好
 - A属性越高越好
+> 目前我买的是这款https://item.jd.com/6201910.html#crumb-wrap
 # 破解
 参考https://github.com/Humenger/switch
 
