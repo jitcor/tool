@@ -103,6 +103,12 @@ dec_label_pc_1874:
 }
 
 ```
+### 问题
+- 1. 
+```
+ error: unterminated attribute group
+attributes #0 = { nounwind readnone speculatable }
+```
 # 参考
 - https://www.bookstack.cn/read/CTF-All-In-One/doc-5.11.1_retdec.md
 - 
