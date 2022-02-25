@@ -17,7 +17,7 @@ https://www.kali.org/get-kali/#kali-virtual-machines
 ## WSL
 
 # 配置
-# 默认账户
+## 默认账户
 参考https://www.kali.org/docs/introduction/default-credentials/
 > 我这里VMware虚拟机的默认账户是kali kali
 
