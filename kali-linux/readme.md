@@ -8,7 +8,7 @@ https://www.kali.org/get-kali/#kali-virtual-machines
 > 天翼云备份：https://cloud.189.cn/t/INzIFjABbqam (访问码:k8l8)
 ## Linux版
 # 安装
-## VMware
+## VMware虚拟机版
 - VMware工具下载安装
 > 天翼云盘：https://cloud.189.cn/t/Qnay6n6jARvi (访问码:2dew)
 - 解压上面下载的kali的VMware虚拟机版压缩包
