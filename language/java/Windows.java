@@ -1,4 +1,3 @@
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -8,6 +7,10 @@ import java.util.List;
 import java.util.StringTokenizer;
 
 public final class Windows {
+    private static final String OS = System.getProperty("os.name").toLowerCase();
+    public static boolean isWindows(){
+        return OS.contains("windows");
+    }
     public static String getAdbPath() {
         Result result= execCmd("cmd /c wmic process list brief | findstr adb");
 //        CommandUtils.Result result=CommandUtils.run("tasklist /fi \"imagename eq adb.exe\" /fo list");
@@ -41,7 +44,7 @@ public final class Windows {
         } catch (Exception e) {
             throw new RuntimeException(e);
         } finally {
-            //close stream 
+            //close stream
             try {
                 is.close();
             } catch (IOException e) {
