@@ -58,6 +58,7 @@ public class Menus {
         public void addOptions(MenuOption... options) {
             for (MenuOption option : options) {
                 if (ids.add(option.name)) {
+                    if(option.name.length()>getMaxTitleLength())throw new IllegalArgumentException("Option title max length is "+getMaxTitleLength());
                     this.options.add(option);
                 }
             }
@@ -116,10 +117,13 @@ public class Menus {
             }
         }
         protected String buildOptionText(int i,MenuOption option){
-            return String.format("%d) %s  %s", i, option.name, option.summary);
+            return String.format("%d) %-24s  %s", i, option.name, option.summary);
         }
         protected String getInputPrefix(){
             return "option >";
+        }
+        protected int getMaxTitleLength(){
+            return 20;
         }
     }
 
@@ -181,43 +185,3 @@ public class Menus {
     }
 
 }
-/*demo
-
-private static void printMenu() {
-        Menus.Menu rootMenu = new Menus.Menu( null);
-        Menus.Menu getPropMenu = new Menus.Menu( rootMenu);
-        getPropMenu.addOptions(new Menus.MenuOption( "get adb debug", "get adb debug", new Menus.MenuAction() {
-            @Override
-            public void doAction() {
-                System.out.println("todo get adb debug prop");
-            }
-        }));
-        rootMenu.addOptions(new Menus.MenuOption("sign apk", "sign apk", new Menus.MenuAction() {
-                    @Override
-                    public void doAction() {
-                        System.out.println("todo sign apk");
-                    }
-                }),
-                new Menus.MenuOption("read apk path", "read apk path with adb command", new Menus.MenuAction() {
-                    @Override
-                    public void doAction() {
-                        System.out.println("todo apk path");
-                    }
-                }),
-                new Menus.MenuOption( "check apk", "check apk info", new Menus.MenuAction() {
-                    @Override
-                    public void doAction() {
-                        System.out.println("todo check apk info");
-                    }
-                })
-        );
-        rootMenu.addOptions(new Menus.MenuOption( "get prop", "get device prop with adb", new Menus.MenuAction() {
-            @Override
-            public void doAction() {
-                getPropMenu.show();
-            }
-        }));
-        rootMenu.show();
-    }
-
-*/
