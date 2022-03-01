@@ -181,3 +181,43 @@ public class Menus {
     }
 
 }
+/*demo
+
+private static void printMenu() {
+        Menus.Menu rootMenu = new Menus.Menu( null);
+        Menus.Menu getPropMenu = new Menus.Menu( rootMenu);
+        getPropMenu.addOptions(new Menus.MenuOption( "get adb debug", "get adb debug", new Menus.MenuAction() {
+            @Override
+            public void doAction() {
+                System.out.println("todo get adb debug prop");
+            }
+        }));
+        rootMenu.addOptions(new Menus.MenuOption("sign apk", "sign apk", new Menus.MenuAction() {
+                    @Override
+                    public void doAction() {
+                        System.out.println("todo sign apk");
+                    }
+                }),
+                new Menus.MenuOption("read apk path", "read apk path with adb command", new Menus.MenuAction() {
+                    @Override
+                    public void doAction() {
+                        System.out.println("todo apk path");
+                    }
+                }),
+                new Menus.MenuOption( "check apk", "check apk info", new Menus.MenuAction() {
+                    @Override
+                    public void doAction() {
+                        System.out.println("todo check apk info");
+                    }
+                })
+        );
+        rootMenu.addOptions(new Menus.MenuOption( "get prop", "get device prop with adb", new Menus.MenuAction() {
+            @Override
+            public void doAction() {
+                getPropMenu.show();
+            }
+        }));
+        rootMenu.show();
+    }
+
+*/
