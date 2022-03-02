@@ -2,7 +2,7 @@
 import java.util.*;
 
 public class Menus {
-    public static final boolean DEBUG = true;
+    public static final boolean DEBUG = false;
 
     //menu header
     //menu color
@@ -91,22 +91,28 @@ public class Menus {
                 optionMap.put(i++, option);
             }
             System.out.println(buildOptionText(i,menuOptionExit));
+            optionMap.put(i,menuOptionExit);
             try {
                 System.out.print(getInputPrefix());
                 Scanner scanner = new Scanner(System.in);
                 if (scanner.hasNext()) {
                     int index = scanner.nextInt();
-                    if (index == i) {
-                        System.exit(0);
-                    } else {
+                    if(index>=1&&index<=i){
                         optionMap.get(index).doAction();
+                        if(index!=i){
+                            show();
+                        }
+                    }else {
+                        System.out.println("warn: please input number 1~"+i);
                         show();
                     }
+
                 }
             } catch (Exception e) {
                 if (DEBUG) {
                     e.printStackTrace();
                 }
+                System.out.println("warn: please input number 1~"+i);
                 show();
             }
         }
