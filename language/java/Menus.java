@@ -39,7 +39,7 @@ public class Menus {
         private final List<MenuOption> options = new ArrayList<>();
         private final Menu parentMenu;
         private final Set<String> ids = new HashSet<>();
-        private MenuOption menuOptionBack=new MenuOption("back to previous","",new MenuAction(){
+        private final MenuOption menuOptionBack=new MenuOption("..","",new MenuAction(){
             @Override
             public void doAction() {
                 if(Menu.this.parentMenu!=null){
@@ -50,9 +50,6 @@ public class Menus {
 
         public Menu(Menu parent) {
             this.parentMenu = parent;
-            if(this.parentMenu==null){
-                menuOptionBack=menuOptionExit;
-            }
         }
 
         public void addOptions(MenuOption... options) {
@@ -73,37 +70,34 @@ public class Menus {
             return null;
         }
         public List<MenuOption> getAllOption(){
-            return this.options;
+            return new ArrayList<>(this.options);
         }
-        public Menu setMenuOptionBack(MenuOption menuOptionBack){
-            if(menuOptionBack==null)throw new IllegalArgumentException("menuOptionBack not support reset null");
-            this.menuOptionBack=menuOptionBack;
-            return this;
+        public void clearOptions(){
+            this.options.clear();
+            this.ids.clear();
         }
 
         public void show() {
             int i = 1;
             Map<Integer, MenuOption> optionMap = new HashMap<>();
+            if(this.parentMenu!=null){
+                System.out.println(buildOptionText(i,this.menuOptionBack));
+                optionMap.put(i++, this.menuOptionBack);
+            }
             this.options.sort(Collections.reverseOrder());
             for (MenuOption option : this.options) {
                 if (!option.show) continue;
                 System.out.println(buildOptionText(i,option));
-                optionMap.put(i, option);
-                i++;
+                optionMap.put(i++, option);
             }
-            System.out.println(buildOptionText(i,this.menuOptionBack));
+            System.out.println(buildOptionText(i,menuOptionExit));
             try {
                 System.out.print(getInputPrefix());
                 Scanner scanner = new Scanner(System.in);
                 if (scanner.hasNext()) {
                     int index = scanner.nextInt();
                     if (index == i) {
-                        if (this.parentMenu != null) {
-                            this.parentMenu.show();
-                        } else {
-                            System.exit(0);
-                        }
-
+                        System.exit(0);
                     } else {
                         optionMap.get(index).doAction();
                         show();
