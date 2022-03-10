@@ -28,7 +28,7 @@ repo init -u https://android.googlesource.com/platform/manifest -b android-10.0.
 
 repo sync -c -j8
 ```
-# 导入设备驱动(刷入真实设备需要)
+# 导入设备驱动(可选，刷入真实设备需要)
 
 - 访问 https://developers.google.com/android/drivers#taimenqp1a.190711.020 地址下载Pixel 2 XL对应版本驱动文件
 - 将两个压缩包放入源码根目录
