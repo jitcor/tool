@@ -1,11 +1,13 @@
 # 配置环境
-- ubuntu20.04-server
+- ubuntu20.04-server(已切换清华镜像)
 - 4 core
 - 16G RAM
 - 2T disk
 - 物理主机
 - 必备代理，速度够快，70Mb/s左右
 - Pixel 2 XL 手机一部
+- 配置proxychains
+
 # 下载源码
 ```
 sudo apt-get update
@@ -15,7 +17,7 @@ sudo apt-get install git-core gnupg flex bison build-essential zip curl zlib1g-d
 mkdir ~/bin
 PATH=~/bin:$PATH
 
-curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+proxychains curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 chmod a+x ~/bin/repo
 
 mkdir WORKING_DIRECTORY
@@ -25,10 +27,10 @@ git config --global user.name Your Name
 git config --global user.email you@example.com
 
 # -b 后面代号选择，访问：https://source.android.com/setup/start/build-numbers#source-code-tags-and-builds
-repo init -u https://android.googlesource.com/platform/manifest -b android-10.0.0_r2
+proxychains repo init -u https://android.googlesource.com/platform/manifest -b android-10.0.0_r2
 
 # -j 的数字根据机器性能而定
-repo sync -c -j8
+proxychains repo sync -c -j8
 ```
 # 导入设备驱动(可选，刷入真实设备需要)
 
