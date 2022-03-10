@@ -28,6 +28,13 @@ repo init -u https://android.googlesource.com/platform/manifest -b android-10.0.
 
 repo sync -c -j8
 ```
+# 导入设备驱动(刷入真实设备需要)
+```
+访问https://developers.google.com/android/drivers#taimenqp1a.190711.020地址下载Pixel 2 XL对应版本驱动文件
+将两个压缩包放入源码根目录
+执行解压命令 tar -zxvf xxxxx.tgz
+执行完后可在源码根目录下找到vector目录
+```
 # 构建源码
 ```
 cd WORKING_DIRECTORY
@@ -39,7 +46,6 @@ export _JAVA_OPTIONS="-Xmx4g"
 source build/envsetup.sh
 
 lunch aosp_taimen-user
-
 
 m 
 ```
