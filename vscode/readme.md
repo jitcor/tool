@@ -23,6 +23,7 @@ Host 47.xx.xx.11
   IdentityFile C:\Users\Administrator\.ssh\id_rsa.pub
 
 ```
+> cat id_rsa.pub >> ~/.ssh/authorized_keys # id_rsa.pub由本地上传到服务端，然后在服务端执行该命令，之后就可以正常连接了
 ## 无法连接问题
 ![image](https://user-images.githubusercontent.com/27600008/128586497-ef6d7c3b-0fb5-4730-85ae-81df3c66d5bb.png)
 - id_rsa.pub文件的权限太开放，改成如下仅有一个用户，并且权限改成只读
