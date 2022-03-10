@@ -12,8 +12,6 @@ sudo apt-get update
 
 sudo apt-get install git-core gnupg flex bison build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 libncurses5-dev lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z1-dev libgl1-mesa-dev libxml2-utils xsltproc unzip fontconfig python
 
-sudo apt-get install libncurses5
-
 mkdir ~/bin
 PATH=~/bin:$PATH
 
@@ -33,6 +31,10 @@ repo sync -c -j8
 # 构建源码
 ```
 cd WORKING_DIRECTORY
+
+sudo apt-get install libncurses5
+
+export _JAVA_OPTIONS="-Xmx4g"
 
 source build/envsetup.sh
 
