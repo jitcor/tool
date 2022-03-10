@@ -24,8 +24,10 @@ cd WORKING_DIRECTORY
 git config --global user.name Your Name
 git config --global user.email you@example.com
 
+# -b 后面代号选择，访问：https://source.android.com/setup/start/build-numbers#source-code-tags-and-builds
 repo init -u https://android.googlesource.com/platform/manifest -b android-10.0.0_r2
 
+# -j 的数字根据机器性能而定
 repo sync -c -j8
 ```
 # 导入设备驱动(可选，刷入真实设备需要)
@@ -57,3 +59,8 @@ fastboot flashall -w
 ```
 # 定制
 ## root权限
+
+# 参考
+- https://source.android.com/setup/develop
+- http://koifishly.com/2020/07/24/android/source-code/xia-zai-bian-yi-yun-xing-an-zhuo-yuan-ma/
+- http://www.zhuoyue360.com/crack/34.html
