@@ -51,6 +51,9 @@ m
 ```
 > 这里循环执行m，报错就继续执行，有给修复提示，就按提示做，否则默认一直m，只要不是每次错误都一样
 # 刷入镜像
-
+```
+cd WORKING_DIRECTORY/out/target/product/taimen/
+fastboot flashall -w
+```
 # 定制
 ## root权限
