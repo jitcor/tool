@@ -61,10 +61,41 @@ fastboot flashall -w
 ```
 # 定制
 - 修改代码
+- `m <target module>`
 - `make snod` (编译system.img，忽略依赖)
 - `m`
 ## root权限
+## 默认开启USB调试
+- 开启USB调试
+```java
+//android-10.0.0_r2/frameworks/base/services/core/java/com/android/server/adb/AdbService.java#119
+                // mAdbEnabled = containsFunction(
+                //         SystemProperties.get(USB_PERSISTENT_CONFIG_PROPERTY, ""),
+                //         UsbManager.USB_FUNCTION_ADB);
+                mAdbEnabled = true;
 
+```
+- 处理USB验证
+```
+//android-10.0.0_r2/frameworks/base/packages/SystemUI/src/com/android/systemui/usb/UsbDebuggingActivity.java#onCreate()
+   @Override
+    public void onCreate(Bundle icicle) {
+        //......
+        setupAlert();
+        //....
+        mAlert.getButton(BUTTON_POSITIVE).setOnTouchListener(filterTouchListener);
+        //add code
+        try {
+            IBinder b = ServiceManager.getService(ADB_SERVICE);
+            IAdbManager service = IAdbManager.Stub.asInterface(b);
+            service.allowDebugging(true, mKey);
+        } catch (Exception e) {
+            Log.e(TAG, "Unable to notify Usb service", e);
+        }
+        finish();
+    }
+
+```
 # 参考
 - https://source.android.com/setup/develop
 - http://koifishly.com/2020/07/24/android/source-code/xia-zai-bian-yi-yun-xing-an-zhuo-yuan-ma/
