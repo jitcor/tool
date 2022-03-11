@@ -76,7 +76,7 @@ fastboot flashall -w
 
 ```
 - 处理USB验证
-```
+```java
 //android-10.0.0_r2/frameworks/base/packages/SystemUI/src/com/android/systemui/usb/UsbDebuggingActivity.java#onCreate()
    @Override
     public void onCreate(Bundle icicle) {
