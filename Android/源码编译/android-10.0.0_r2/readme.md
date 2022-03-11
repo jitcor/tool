@@ -60,6 +60,9 @@ cd WORKING_DIRECTORY/out/target/product/taimen/
 fastboot flashall -w
 ```
 # 定制
+- 修改代码
+- `make snod` (编译system.img，忽略依赖)
+- `m`
 ## root权限
 
 # 参考
