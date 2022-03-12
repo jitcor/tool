@@ -28,9 +28,9 @@ public final class Windows {
         Result result= execCmd("cmd /c wmic process list brief | findstr adb");
 //        CommandUtils.Result result=CommandUtils.run("tasklist /fi \"imagename eq adb.exe\" /fo list");
         if(result.code==0){
-            if(Ferba.MODE_MENU) System.out.println("[adb process list]:\n"+result.data);
+            System.out.println("[adb process list]:\n"+result.data);
             String[] row=result.data.split("\r\n")[0].split(" +");
-            if(Ferba.MODE_MENU) System.out.println("[process id]:"+row[3]);
+            System.out.println("[process id]:"+row[3]);
             result= execCmd("cmd /c wmic process where processid="+row[3]+" get executablepath");
             if(result.code==0){
                 String[] split=result.data.split("(\r\n)+");
@@ -40,7 +40,7 @@ public final class Windows {
         return "adb";
     }
     private  static Result execCmd(List<String> command, String charsetName) {
-        if(Ferba.MODE_MENU) System.out.println("run:"+ command);
+        System.out.println("run:"+ command);
         Result result = new Result();
         InputStream is = null;
         try {
