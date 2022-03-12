@@ -169,7 +169,7 @@ int __system_property_get(const char* name, char* value) {
 
 
 ```
-## 开启应用debugbable(ro.debuggable依然为0)
+## 开启应用debuggable(ro.debuggable依然为0)
 ```java
 //frameworks/base/core/java/android/content/pm/PackageParser.java#parseBaseApplication()
 
