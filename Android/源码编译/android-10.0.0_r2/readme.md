@@ -96,7 +96,95 @@ fastboot flashall -w
     }
 
 ```
+## 制作releasekey
+- 源码根目录下创建create_key.sh
+```
+#create_key.sh
+subject='/C=CN/ST=Shanghai/L=Shanghai/O=marto/OU=marto/CN=marto.cc/emailAddress=android@marto.cc'
+for x in releasekey platform shared media networkstack;
+do
+  ./development/tools/make_key ~/.android-certs/$x "$subject";
+done
+
+```
+- 源码根目录执行`cp -r ~/.android-certs/releasekey.* build/target/product/security/`
+- `testkey`->`releasekey`
+```mk
+# build/core/config.mk
+
+# The default key if not set as LOCAL_CERTIFICATE
+ifdef PRODUCT_DEFAULT_DEV_CERTIFICATE
+  DEFAULT_SYSTEM_DEV_CERTIFICATE := $(PRODUCT_DEFAULT_DEV_CERTIFICATE)
+else
+  DEFAULT_SYSTEM_DEV_CERTIFICATE := build/target/product/security/releasekey
+endif
+.KATI_READONLY := DEFAULT_SYSTEM_DEV_CERTIFICATE
+```
+```mk
+# build/core/Makefile
+
+# The "test-keys" tag marks builds signed with the old test keys,
+# which are available in the SDK.  "dev-keys" marks builds signed with
+# non-default dev keys (usually private keys from a vendor directory).
+# Both of these tags will be removed and replaced with "release-keys"
+# when the target-files is signed in a post-build step.
+ifeq ($(DEFAULT_SYSTEM_DEV_CERTIFICATE),build/target/product/security/releasekey)
+BUILD_KEYS := release-keys
+else
+BUILD_KEYS := dev-keys
+endif
+
+```
+- `m -j4`重新编译
+## 修改设备属性
+## 隐藏BL解锁
+## 系统属性访问trace
+```cpp
+//bionic/libc/bionic/system_property_api.cpp
+
+#include <async_safe/log.h>
+
+__BIONIC_WEAK_FOR_NATIVE_BRIDGE
+const prop_info* __system_property_find(const char* name) {
+   async_safe_format_log(ANDROID_LOG_ERROR,
+             "marto","call __system_property_find %s",name);
+  return system_properties.Find(name);
+}
+
+__BIONIC_WEAK_FOR_NATIVE_BRIDGE
+int __system_property_read(const prop_info* pi, char* name, char* value) {
+  int ret= system_properties.Read(pi, name, value);
+  async_safe_format_log(ANDROID_LOG_ERROR,
+             "marto","call __system_property_read %s -> %s",name,value);
+  return ret;
+}
+
+__BIONIC_WEAK_FOR_NATIVE_BRIDGE
+int __system_property_get(const char* name, char* value) {
+  int ret= system_properties.Get(name, value);
+  async_safe_format_log(ANDROID_LOG_ERROR,
+             "marto","call __system_property_get %s -> %s",name,value);
+  return ret;
+}
+
+
+```
+## 开启应用debugbable(ro.debuggable依然为0)
+```java
+//frameworks/base/core/java/android/content/pm/PackageParser.java#parseBaseApplication()
+
+       // if (sa.getBoolean(
+       //         com.android.internal.R.styleable.AndroidManifestApplication_debuggable,
+       //         false)) {
+            ai.flags |= ApplicationInfo.FLAG_DEBUGGABLE;
+            // Debuggable implies profileable
+            ai.privateFlags |= ApplicationInfo.PRIVATE_FLAG_PROFILEABLE_BY_SHELL;
+       // }
+
+```
 # 参考
 - https://source.android.com/setup/develop
 - http://koifishly.com/2020/07/24/android/source-code/xia-zai-bian-yi-yun-xing-an-zhuo-yuan-ma/
 - http://www.zhuoyue360.com/crack/34.html
+- https://www.jianshu.com/p/bb5325760506
+- https://source.android.com/devices/tech/ota/sign_builds
