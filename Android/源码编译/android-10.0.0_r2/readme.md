@@ -65,7 +65,8 @@ fastboot flashall -w
 - `make snod` (编译system.img，忽略依赖)
 - `m`
 ## root权限
-## 默认开启USB调试
+## 默认开启USB调试(persist.sys.usb.config依然为none，防止检测usb连接)
+
 - 开启USB调试
 ```java
 //android-10.0.0_r2/frameworks/base/services/core/java/com/android/server/adb/AdbService.java#119
