@@ -65,6 +65,7 @@ fastboot flashall -w
 - `make snod` (编译system.img，忽略依赖)
 - `m`
 ## root权限
+// 看参考
 ## 默认开启USB调试(persist.sys.usb.config依然为none，防止检测usb连接)
 
 - 开启USB调试
@@ -189,3 +190,4 @@ int __system_property_get(const char* name, char* value) {
 - http://www.zhuoyue360.com/crack/34.html
 - https://www.jianshu.com/p/bb5325760506
 - https://source.android.com/devices/tech/ota/sign_builds
+- https://source.android.com/devices/bootloader/locking_unlocking?hl=zh-cn
