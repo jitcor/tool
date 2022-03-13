@@ -184,6 +184,55 @@ int __system_property_get(const char* name, char* value) {
        // }
 
 ```
+## 修改屏幕默认休眠时间(单位：ms)
+```xml
+<!-- frameworks/base/packages/SettingsProvider/res/values/defaults.xml  -->
+    <integer name="def_screen_off_timeout">36000000</integer>
+```
+## 修改默认语言为中文
+```shell
+# build/tools/buildinfo.sh
+
+# ..........
+
+echo "# end build properties"
+
+echo "# custom build properties"
+
+echo "# default language"
+echo "ro.product.locale=zh_CN"
+echo "ro.product.locale.language=zh"
+echo "ro.product.locale.region=CN"
+echo "persist.sys.language=zh"
+echo "persist.sys.country=CN"
+echo "persist.sys.timezone=Asia/Shanghai"
+
+
+echo "# end custom build properties"
+
+```
+## ptrace trace
+```cpp
+//bionic/libc/bionic/ptrace.cpp
+
+#include <async_safe/log.h>
+
+long ptrace(int req, ...) {
+  //......
+  
+  va_end(args);
+  
+  async_safe_format_log(ANDROID_LOG_ERROR,
+             "marto","call ptrace pid:%d,addr:0x%p",pid,addr);
+
+  long result = __ptrace(req, pid, addr, data);
+  if (is_peek && result == 0) {
+    return peek_result;
+  }
+  return result;
+}
+
+```
 # 参考
 - https://source.android.com/setup/develop
 - http://koifishly.com/2020/07/24/android/source-code/xia-zai-bian-yi-yun-xing-an-zhuo-yuan-ma/
