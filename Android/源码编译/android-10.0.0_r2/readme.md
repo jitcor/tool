@@ -1,7 +1,7 @@
 # 配置环境
 - ubuntu20.04-server(已切换清华镜像)
 - 4 core
-- 16G RAM
+- 8G RAM
 - 2T disk
 - 物理主机
 - 必备代理，速度够快，70Mb/s左右
@@ -240,3 +240,5 @@ long ptrace(int req, ...) {
 - https://www.jianshu.com/p/bb5325760506
 - https://source.android.com/devices/tech/ota/sign_builds
 - https://source.android.com/devices/bootloader/locking_unlocking?hl=zh-cn
+- https://blog.csdn.net/qq_35003588/article/details/99567368
+- https://balalals.cn/archives/aosp%E6%9B%B4%E6%94%B9%E9%BB%98%E8%AE%A4%E8%AF%AD%E8%A8%80%E6%97%B6%E5%8C%BA%E9%97%AE%E9%A2%98
