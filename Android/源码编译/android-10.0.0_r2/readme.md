@@ -64,6 +64,7 @@ fastboot flashall -w
 - `m <target module>`
 - `make snod` (编译system.img，忽略依赖)
 - `m`
+- 定制时系统日志检查`dmesg | grep <tag>`
 ## root权限
 // 看参考
 ## 默认开启USB调试(persist.sys.usb.config依然为none，防止检测usb连接)
