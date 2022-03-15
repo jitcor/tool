@@ -59,12 +59,19 @@ m
 cd WORKING_DIRECTORY/out/target/product/taimen/
 fastboot flashall -w
 ```
+
 # 定制
 - 修改代码
 - `m <target module>`
 - `make snod` (编译system.img，忽略依赖)
 - `m`
 - 定制时系统日志检查`dmesg | grep <tag>`
+## audit2allow运行环境修复
+```
+sudo apt-get install python2
+rm -rf /usr/bin/python
+sudo ln -s /usr/bin/python2 /usr/bin/python
+```
 ## root权限
 // 看参考
 ## 默认开启USB调试(persist.sys.usb.config依然为none，防止检测usb连接)
