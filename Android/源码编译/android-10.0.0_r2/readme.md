@@ -156,8 +156,10 @@ endif
 
 __BIONIC_WEAK_FOR_NATIVE_BRIDGE
 const prop_info* __system_property_find(const char* name) {
+  char value[PROP_VALUE_MAX] = {0};
+  system_properties.Get(name, value);
    async_safe_format_log(ANDROID_LOG_ERROR,
-             "marto","call __system_property_find %s",name);
+             "marto","call __system_property_find %s -> %s",name,value);
   return system_properties.Find(name);
 }
 
