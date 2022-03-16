@@ -248,6 +248,23 @@ long ptrace(int req, ...) {
 }
 
 ```
+## getenforce 强制返回Enforcing
+```cpp
+//external/toybox/toys/android/getenforce.c
+
+void getenforce_main(void)
+{
+  if (!is_selinux_enabled()) puts("Disabled");
+  else {
+    int ret = security_getenforce();
+
+    if (ret == -1) perror_exit("Couldn't get enforcing status");
+    //else puts(ret ? "Enforcing" : "Permissive");
+    else puts(ret ? "Permissive" : "Enforcing");
+  }
+}
+
+```
 # 参考
 - https://source.android.com/setup/develop
 - http://koifishly.com/2020/07/24/android/source-code/xia-zai-bian-yi-yun-xing-an-zhuo-yuan-ma/
