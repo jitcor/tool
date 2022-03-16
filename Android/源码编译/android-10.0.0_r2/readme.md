@@ -197,6 +197,11 @@ int __system_property_get(const char* name, char* value) {
 <!-- frameworks/base/packages/SettingsProvider/res/values/defaults.xml  -->
     <integer name="def_screen_off_timeout">36000000</integer>
 ```
+## 屏幕锁定默认为“无”
+```xml
+<!-- frameworks/base/packages/SettingsProvider/res/values/defaults.xml  -->
+<bool name="def_lockscreen_disabled">true</bool>
+```
 ## 修改默认语言为中文
 ```shell
 # build/tools/buildinfo.sh
