@@ -311,3 +311,7 @@ void getenforce_main(void)
 - https://balalals.cn/archives/aosp%E6%9B%B4%E6%94%B9%E9%BB%98%E8%AE%A4%E8%AF%AD%E8%A8%80%E6%97%B6%E5%8C%BA%E9%97%AE%E9%A2%98
 - [SELinux政策文件](https://source.android.com/security/selinux/implement)
 - https://www.modb.pro/db/375240
+- https://blog.csdn.net/zxc99408267/article/details/80789670
+- https://www.shuzhiduo.com/A/gVdnOvYlzW/
+- https://blog.51cto.com/u_15315240/3212141
+- http://www.juneleo.cn/47a3736f9762/
