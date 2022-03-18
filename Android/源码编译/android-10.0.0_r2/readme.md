@@ -83,7 +83,7 @@ export PATH=/mnt/d/tool/android/android-10.0.0_r2/out/soong/host/linux-x86/bin:$
 build/build.sh
 ```
 ## 替换aosp内核
-> aosp里替换上面编译后的内核,这里通过环境变量TARGET_PREBUILT_KERNEL指定，方便动态切换内核，具体看：https://source.android.google.cn/setup/build/building-kernels?hl=zh-cn#running
+> aosp里替换上面编译后的内核，这里通过环境变量TARGET_PREBUILT_KERNEL指定，方便动态切换内核，具体看：https://source.android.google.cn/setup/build/building-kernels?hl=zh-cn#running
 ```
 cd android-10.0.0_r2
 
