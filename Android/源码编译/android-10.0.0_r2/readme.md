@@ -74,7 +74,9 @@ proxychains repo sync -c -j8
 ```
 ## 编译源码
 ```
+sudo apt-get install libssl-dev
 
+build/build.sh
 ```
 # 定制
 - 修改代码
