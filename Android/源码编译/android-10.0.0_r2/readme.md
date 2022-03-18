@@ -74,8 +74,10 @@ proxychains repo sync -c -j8
 ```
 ## 编译源码
 ```
+# openssl/bio.h file not found
 sudo apt-get install libssl-dev
 
+# soong_zip: cammand not found
 export PATH=/mnt/d/tool/android/android-10.0.0_r2/out/soong/host/linux-x86/bin:$PATH
 
 build/build.sh
