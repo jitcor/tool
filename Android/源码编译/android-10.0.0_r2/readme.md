@@ -59,7 +59,22 @@ m
 cd WORKING_DIRECTORY/out/target/product/taimen/
 fastboot flashall -w
 ```
+# 编译Pixel 2 XL内核
+> 各个机型的内核不一样，具体参看：https://source.android.google.cn/setup/build/building-kernels?hl=zh-cn
+## 下载源码
+```
+mkdir android-msm-wahoo-4.4-android10-qpr3
 
+cd android-msm-wahoo-4.4-android10-qpr3
+
+proxychains repo init -u https://android.googlesource.com/kernel/manifest -b android-msm-wahoo-4.4-android10-qpr3
+
+proxychains repo sync -c -j8
+```
+## 编译源码
+```
+
+```
 # 定制
 - 修改代码
 - `m <target module>`
