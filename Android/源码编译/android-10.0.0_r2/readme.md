@@ -82,6 +82,18 @@ export PATH=/mnt/d/tool/android/android-10.0.0_r2/out/soong/host/linux-x86/bin:$
 
 build/build.sh
 ```
+## 替换aosp内核
+> aosp里替换上面编译后的内核,这里通过环境变量TARGET_PREBUILT_KERNEL指定，方便动态切换内核，具体看：https://source.android.google.cn/setup/build/building-kernels?hl=zh-cn#running
+```
+cd android-10.0.0_r2
+
+# 先初始化aosp编译环境，具体看上面构建aosp源码步骤
+
+export TARGET_PREBUILT_KERNEL=/mnt/d/tool/android/kernel/android-msm-wahoo-4.4-android10-qpr3/out/android-msm-wahoo-4.4/dist/Image.lz4-dtb
+
+m bootimage
+```
+> 之后按上面的<刷入镜像>步骤正常刷入即可
 # 定制
 - 修改代码
 - `m <target module>`
