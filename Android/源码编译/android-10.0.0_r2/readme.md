@@ -76,6 +76,8 @@ proxychains repo sync -c -j8
 ```
 sudo apt-get install libssl-dev
 
+export PATH=/mnt/d/tool/android/android-10.0.0_r2/out/soong/host/linux-x86/bin:$PATH
+
 build/build.sh
 ```
 # 定制
