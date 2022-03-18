@@ -99,7 +99,7 @@ m bootimage
 - `m <target module>`
 - `make snod` (编译system.img，忽略依赖)
 - `m`
-- 定制时系统日志检查`dmesg | grep <tag>`
+- 定制时系统日志检查`dmesg | grep <tag>` or `cat /proc/kmsg | grep <tag>`
 ## audit2allow运行环境修复
 ```
 sudo apt-get install python2
