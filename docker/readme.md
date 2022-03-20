@@ -34,7 +34,7 @@ proxychains curl https://get.docker.com/ -o install.sh
 chmod +x ./install.sh
 sudo proxychains ./install.sh
 ```
-> 若要更改docker数据目录，参见：https://github.com/IronicBadger/til/blob/master/docker/change-docker-root.md
+> 若要更改docker数据目录，参见：[./change-docker-root.md](./change-docker-root.md)
 ### 拉取镜像
 ```
 sudo docker pull <image name>
