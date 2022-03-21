@@ -16,7 +16,7 @@ https://wwa.lanzous.com/irSqBg923vg
 ![image](./images/pycharm_import_idaapi.png)
 ## pycharm 调试idapython插件
 - 配置pydevd-pycharm \
-![image](./images/pycharm_debug_ida.png)
+![image](./images/pycharm_debug_config.png)
 
 
 
