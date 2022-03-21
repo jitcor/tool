@@ -24,3 +24,30 @@ docker pull busybox
 docker images
 ```
 > 注意：不同于完全linux虚拟机方式，WLS2下通过apt install docker-ce命令安装的docker无法启动，因为WSL2方式的ubuntu里面没有systemd。上述官方get-docker.sh安装的docker，dockerd进程是用ubuntu传统的init方式而非systemd启动的。
+
+# Linux
+## Ubuntu
+### 安装
+```
+cd <work dir>
+proxychains curl https://get.docker.com/ -o install.sh
+chmod +x ./install.sh
+sudo proxychains ./install.sh
+```
+> 若要更改docker数据目录，参见：[./change-docker-root.md](./change-docker-root.md)
+### 拉取镜像
+```
+sudo docker pull <image name>
+```
+### 运行镜像
+```
+sudo docker run -it <image name>
+```
+### 常用命令
+```
+# 查看已运行镜像
+sudo docker ps
+
+# 查看已安装镜像
+sudo docker ps --all
+```
