@@ -18,7 +18,7 @@ https://wwa.lanzous.com/irSqBg923vg
 - `pip install pydevd-pycharm` 具体安装哪个版本看下图 \
 ![image](./images/pycharm_debug_config.png)
 - 在目标py脚本欲调试位置上方加入如下代码
-![image](./image/pycharm_debug_code.png)
+![image](./images/pycharm_debug_code.png)
 - 点击调试按钮，开启pycharm调试服务 \
 ![image](./images/pycharm_debug_btn.png)
 - IDA PRO->File->Script file...选择目标py脚本
