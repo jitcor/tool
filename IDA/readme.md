@@ -14,7 +14,13 @@ https://wwa.lanzous.com/irSqBg923vg
 # IDA 技巧
 ## pycharm导入idapython api实现自动补全
 ![image](./images/pycharm_import_idaapi.png)
-## ida导入pycharm正开发的脚本
+## pycharm 调试idapython插件
+- 配置pydevd-pycharm \
+![image](./images/pycharm_debug_ida.png)
+
+
 
 # 常见问题
 - IDA启动问题：https://bbs.pediy.com/thread-264346.htm
+# 参考
+- [Pycharm 调试 Idapython](http://nigoule.com/?p=621)
