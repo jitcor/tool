@@ -5,5 +5,5 @@
 > 参考[IDA-重新设置函数类型、创建数组结构](https://blog.csdn.net/hgy413/article/details/7669369)
 # 调用约定
 - _cdecl
-# IDA 
+# IDA 把一个立即数拆分成两个数相加的依据是什么？
 ![image](./images/sp++.png)
