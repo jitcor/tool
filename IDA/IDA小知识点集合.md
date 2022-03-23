@@ -5,3 +5,5 @@
 > 参考[IDA-重新设置函数类型、创建数组结构](https://blog.csdn.net/hgy413/article/details/7669369)
 # 调用约定
 - _cdecl
+# IDA 
+![image](./images/sp++.png)
