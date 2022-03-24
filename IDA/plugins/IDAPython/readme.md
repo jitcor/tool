@@ -1,4 +1,5 @@
-# ARM
+# 文档
+- IDAPython 官方文档：https://www.hex-rays.com/wp-content/static/products/ida/support/idapython_docs/
 
 # 小知识点
 ## idapython 如何快速加载已更改模块/脚本
@@ -22,4 +23,9 @@ import arm_unicorn # module name
 importlib.reload(arm_unicorn) ; importlib.reload(arm_unicorn)
 ```
 > 执行两次，是因为，需要先解除上次加载的代码
+## dump 整个so文件
+```python
+size=ida_nalt.retrieve_input_file_size()
+so_bin=idc.get_bytes(0,size)
+```
 
