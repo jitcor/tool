@@ -9,6 +9,7 @@ DefenderControl
 - cd 到目标目录
 - 执行 `fsutil.exe file SetCaseSensitiveInfo ./ enable`开启当前目录的大小写敏感
 - 执行 `fsutil.exe file queryCaseSensitiveInfo ./` 查询当前目录的大小写敏感状态
+> 注意：当某目录开启大小写敏感后，在该目录下的所有可执行文件，在cmd控制台中必须要输入带后缀的文件名才能正常调用
 # VT-x已开启但CPU-V和模拟器显示未开启
 管理员方式执行以下命令，重启电脑即可
 ```
