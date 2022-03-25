@@ -17,7 +17,7 @@ sudo apt-get install git-core gnupg flex bison build-essential zip curl zlib1g-d
 mkdir ~/bin
 PATH=~/bin:$PATH
 
-proxychains curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+proxychains curl https://storage.googleapis.com/git-repo-downloads/repo -o ~/bin/repo
 chmod a+x ~/bin/repo
 
 mkdir WORKING_DIRECTORY
