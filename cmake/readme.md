@@ -3,7 +3,7 @@
 
 压缩包下载地址https://cmake.org/files/
 
-这里以WSL安装未例
+这里以WSL安装为例
 ```
 export http_proxy=http://127.0.0.1:10809
 export https_proxy=http://127.0.0.1:10809
