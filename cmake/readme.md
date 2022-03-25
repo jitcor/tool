@@ -13,6 +13,7 @@ cp -r ./cmake-3.16.9-Linux-x86_64 /usr/local/cmake
 ....
 ...
 .
+rm -rf /usr/bin/cmake
 sudo ln -s /usr/local/cmake/bin/cmake /usr/bin/cmake
 vim ~/.bashrc 
 // 添加
