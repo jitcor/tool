@@ -50,4 +50,11 @@ sudo docker ps
 
 # 查看已安装镜像
 sudo docker ps --all
+
+# ssh 连接docker端口映射 , 10022主机端口，22容器里端口 run 创建一个以test1命名的容器并运行
+sudo docker run -it -p 10022:22 --name test1 ubuntu:18.04
+
+# 启动一个以test1命名的容器
+sudo docker start -a -i test1
+
 ```
