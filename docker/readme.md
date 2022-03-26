@@ -61,10 +61,12 @@ service ssh restart
 echo "service ssh start" >> ~/.bashrc
 # 设置root密码
 passwd root
+# 本地访问容器ssh
+ssh root@x.x.x.x -p 10022
 
 # 启动一个以test1命名的容器
 sudo docker start -a -i test1
 
 ```
 # 参考
-- [](https://blog.csdn.net/winter2121/article/details/118223637)
+- [ssh连接docker容器；docker容器设置root密码](https://blog.csdn.net/winter2121/article/details/118223637)
