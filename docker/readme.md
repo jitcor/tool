@@ -53,8 +53,18 @@ sudo docker ps --all
 
 # ssh 连接docker端口映射 , 10022主机端口，22容器里端口 run 创建一个以test1命名的容器并运行
 sudo docker run -it -p 10022:22 --name test1 ubuntu:18.04
+# 允许ssh以root登录
+echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
+# 重启ssh
+service ssh restart
+# 容器启动时自启ssh
+echo "service ssh start" >> ~/.bashrc
+# 设置root密码
+passwd root
 
 # 启动一个以test1命名的容器
 sudo docker start -a -i test1
 
 ```
+# 参考
+- [](https://blog.csdn.net/winter2121/article/details/118223637)
