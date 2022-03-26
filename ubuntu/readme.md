@@ -19,4 +19,16 @@ export PATH=$PATH:xxx/xxx/xx
 //关闭保存（esc->:wq），执行以下命令
 source /etc/profile
 ```
+# 创建用户
+```
+# 添加用户
+useradd username
 
+# 设置密码
+passwd username
+
+```
+# 切换用户
+```
+su username
+```
