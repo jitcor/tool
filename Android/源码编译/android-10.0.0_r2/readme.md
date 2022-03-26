@@ -28,9 +28,13 @@ git config --global user.email you@example.com
 
 # -b 后面代号选择，访问：https://source.android.com/setup/start/build-numbers#source-code-tags-and-builds
 proxychains repo init -u https://android.googlesource.com/platform/manifest -b android-10.0.0_r2
+# 使用清华源init
+# proxychains repo init -u https://mirrors.tuna.tsinghua.edu.cn/git/AOSP/platform/manifest -b android-10.0.0_r2
 
 # -j 的数字根据机器性能而定
 proxychains repo sync -c -j8
+# 使用清华源sync
+# repo sync -c -j8
 ```
 # 导入设备驱动(可选，刷入真实设备需要)
 
