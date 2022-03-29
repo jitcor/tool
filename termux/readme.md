@@ -47,5 +47,5 @@ passwd
 ssh username@x.x.x.x -p 8022
 ```
 # 自行编译包
-
+https://github.com/termux/termux-packages/wiki/Build-environment
 
