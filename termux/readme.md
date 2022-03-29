@@ -46,5 +46,6 @@ passwd
 # 电脑端连接
 ssh username@x.x.x.x -p 8022
 ```
+# 自行编译包
 
 
