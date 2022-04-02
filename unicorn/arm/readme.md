@@ -4,9 +4,10 @@
 # 我下载时的commit id:c10639fd4658a852049546162d116b123e2b1ec2
 git clone https://github.com/unicorn-engine/unicorn.git
 ```
-- 将以下构建脚本放入项目根目录，然后修改相应路径，最后执行即可
+- 将以下构建脚本放入项目根目录，然后修改相应路径，最后通过`source ./build.sh`命令执行即可
 ```sh
 # build.sh
+# source ./build.sh
 
 rm -rf build
 
