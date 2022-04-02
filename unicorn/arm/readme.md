@@ -43,6 +43,11 @@ echo "finish"
 ```
 # 运行
 ```sh
+
+adb push test001 /data/local/tmp/
+
+adb push libunicorn.so /data/local/tmp/
+
 adb shell
 
 cd /data/local/tmp/
