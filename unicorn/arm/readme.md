@@ -41,3 +41,14 @@ echo "finish"
 ```c
 
 ```
+# 运行
+```sh
+adb shell
+
+cd /data/local/tmp/
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/data/local/tmp/
+
+./test001
+
+```
