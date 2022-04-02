@@ -39,7 +39,7 @@ echo "finish"
 
 ```
 # 调用unicorn
-- 项目结构 \ 
+- 项目结构 \
 ![image](./images/unicorn_demo.png)
 - CMakeLists.txt
 ```cmake
@@ -113,6 +113,24 @@ int main() {
     return 0;
 }
 
+```
+- build.sh
+```sh
+
+export PATH=$PATH:/data/tool/sdk/sdk/cmake/cmake-3.19.8-Linux-x86_64/bin
+
+rm -rf build
+
+mkdir build
+
+cd build
+
+cmake ../ -DCMAKE_TOOLCHAIN_FILE=/data/tool/sdk/sdk/ndk-bundle/build/cmake/android.toolchain.cmake \
+-DANDROID_PLATFORM=android-20 -DANDROID_ABI=armeabi-v7a
+
+make
+
+cd ../
 ```
 # 运行
 ```sh
