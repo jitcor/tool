@@ -15,3 +15,7 @@ DefenderControl
 ```
 bcdedit /set hypervisorlaunchtype off
 ```
+# Window端口转发
+```
+netsh interface portproxy add v4tov4  listenaddress=localaddress listenport= localport connectaddress=destaddress  connectport=destport protocol=tcp
+```
