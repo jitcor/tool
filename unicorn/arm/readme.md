@@ -1,5 +1,36 @@
 # 编译unicorn arm版
-```
+```sh
+# build.sh
+
+rm -rf build
+
+mkdir build
+
+cd build
+
+export JAVA_HOME=/data/tool/android/android-10.0.0_r2/prebuilts/jdk/jdk8/linux-x86
+
+#export NDK=/data/tool/sdk/sdk/ndk/16.1.4479499
+export NDK=/data/tool/sdk/sdk/ndk-bundle
+
+
+export ABI=armeabi-v7a
+
+export MINSDKVERSION=16
+
+export PATH=$PATH:$JAVA_HOME:/data/tool/sdk/sdk/cmake/3.18.1/bin:$NDK/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin
+
+echo "exec cmake..."
+
+cmake .. -DCMAKE_TOOLCHAIN_FILE=$NDK/build/cmake/android.toolchain.cmake -DANDROID_ABI=$ABI -DANDROID_NATIVE_API_LEVEL=$MINSDKVERSION
+
+echo "exec make..."
+
+make
+
+cd ../
+
+echo "finish"
 
 ```
 # 调用unicorn
