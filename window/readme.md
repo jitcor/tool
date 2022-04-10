@@ -19,3 +19,5 @@ bcdedit /set hypervisorlaunchtype off
 ```
 netsh interface portproxy add v4tov4  listenaddress=localaddress listenport= localport connectaddress=destaddress  connectport=destport protocol=tcp
 ```
+# 远程桌面无法共享剪切板
+请查看本地或远程设备的进程列表是否有rdpclip.exe，没有则\[任务管理器->文件->新建任务\]输入rdpclip，确定即可
