@@ -21,3 +21,15 @@ netsh interface portproxy add v4tov4  listenaddress=localaddress listenport= lo
 ```
 # 远程桌面无法共享剪切板
 请查看本地或远程设备的进程列表是否有rdpclip.exe，没有则\[任务管理器->文件->新建任务\]输入rdpclip，确定即可
+- 一键重启脚本
+```bat
+taskkill /im rdpclip.exe -f
+rdpclip.exe
+
+```
+# 休眠/睡眠后自动唤醒问题
+- 执行以下命令获取最后唤醒详情
+```
+powercfg /lastwake
+```
+> 若是设备唤醒，可在设备管理器里的设备>属性>电源管理>取消勾选“允许此设备唤醒计算机”
