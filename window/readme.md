@@ -34,5 +34,5 @@ powercfg /lastwake
 ```
 > 若是设备唤醒，可在设备管理器里的设备>属性>电源管理>取消勾选“允许此设备唤醒计算机” \
 > 注意，若是网卡驱动唤醒的，取消勾选会导致无法远程连接到已休眠的目标机器 
-- 定时唤醒计算机看[wakeup.md](./wakeup.md)
+- 定时唤醒计算机看[wakeup.md](./wakeup.md) \
 参考：https://zhuanlan.zhihu.com/p/93306740
