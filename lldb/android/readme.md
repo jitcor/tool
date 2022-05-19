@@ -22,7 +22,7 @@ platform connect connect://:1234
 platform process list
 attach <pid>
 ```
-> 获取进程pid: ps -A | grep <packageName>
+> 获取进程pid: ps -A | grep \<packageName\>
 
 # 具体调试
 
