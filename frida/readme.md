@@ -39,5 +39,20 @@ $ make core-android-x86
 # 最后生成的文件在 build/frida-android-x86 build/frida-android-x86_64 
 # 如果需要调整编译参数，在releng/setup-env.sh中进行调整 比如: meson_common_flags="['-g']"
 ```
+# 检测frida服务是否在运行
+```python
+# 仅适用于低于15的版本，15以上的版本已经去掉了该握手验证，具体参看：https://frida.re/news/2021/07/18/frida-15-0-released/
+def check_frida_server(ip=default_ip, port=default_port):
+    try:
+        tcp = socket.socket()
+        tcp.settimeout(2)
+        tcp.connect((ip, port))
+        tcp.send(b'\x00AUTH\r\n')
+        res = tcp.recv(100)
+        return str(res).find('REJECTED') >= 0
+    except Exception as e:
+        return False
+
+```
 # 参考
 https://www.mobibrw.com/2021/28588
