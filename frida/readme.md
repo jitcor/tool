@@ -53,6 +53,28 @@ def check_frida_server(ip=default_ip, port=default_port):
     except Exception as e:
         return False
 
+# for v15+
+def check_frida_server_v15(ip=default_ip, port=default_port):
+    try:
+        tcp = socket.socket()
+        tcp.settimeout(300)
+        tcp.connect((ip, port))
+        tcp.send(b"""GET /ws HTTP/1.1
+                     Upgrade: websocket
+                     Connection: Upgrade
+                     Sec-WebSocket-Key: EcDK00jyHpvcc1F/rraBPw==
+                     Sec-WebSocket-Version: 13
+                     Host: 127.0.0.1:27045
+                     User-Agent: Frida/15.1.2
+
+""")
+        res = tcp.recv(100)
+        return res==b'HTTP/1.1 400 Bad Request\r\nContent-Length: 0\r\n\r\n'
+    except Exception as e:
+        print(e)
+        return False
+
+
 ```
 # 参考
 https://www.mobibrw.com/2021/28588
