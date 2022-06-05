@@ -10,5 +10,5 @@ C:\Windows\System32\GroupPolicy\Machine\Scripts\Startup\
 > ~~其中gpedit是错的，应该是gpedit.msc才对~~
 
 # ~~在用户登录时启动~~ (这个才是真正的在系统启动时运行)
-把脚本放在`shell:startup`目录下即可
+~~把脚本放在`shell:startup`目录下即可~~ (还是不太行，有时候不会启动)
 
