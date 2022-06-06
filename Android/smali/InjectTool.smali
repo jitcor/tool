@@ -18,6 +18,7 @@
     return-void
 .end method
 
+#### invoke-static {v0}, Lme/inject/InjectTool;->e(Ljava/lang/String;)V
 .method public static e(Ljava/lang/String;)V
     .registers 2
     .param p0, "msg"    # Ljava/lang/String;
