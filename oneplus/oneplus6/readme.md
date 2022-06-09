@@ -19,6 +19,11 @@
 - 或者直接当前目录下载即可
 - pip3 install protobuf
 - python payload_dumper.py payload.bin (payload.bin从固件包里提取即可)
+# OTA/ROM包刷机
+- 下载OTA包
+- 放入手机sdcard根目录
+- 进入系统更新->设置->本地升级->找到OTA包
+- 等待更新完成重启即可
 # 固件救砖
 > 一次刷boot.img不小心执行了错误的命令:`fastboot flash boot magisk_patch.img`(正确的是`fastboot boot magisk_patch.img`)，导致变砖，当然还能通过音量+和电源键进入fastboot模式刷固件也可以解决，不过固件包没找到，需要重新下载，那多麻烦，又发现固件救砖包倒还在，那就试下这个9008救砖吧
 
