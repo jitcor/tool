@@ -13,7 +13,7 @@
 > 至于模块重启生效问题，可以等安装完模块，直接强制重启到fastboot，然后再重新刷一次magisk boot补丁再重启即可。
 > 
 > OTA包需要通过系统更新刷入。
-# LSposed
+# LSPosed
 - lsposed管理器显示不激活问题
 > 在重启第一次激活模块后，需要再次重启才能在lsposed app里显示激活
 # 解包提取boot.img
