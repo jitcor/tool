@@ -6,3 +6,8 @@
 get_bytes(0x1c004,16).hex()
 ```
 - 参考:https://hex-rays.com/products/ida/support/idadoc/1600.shtml
+# 寄存器操作
+```python
+idc.get_reg_value("r0")
+idc.set_reg_value(0x80001,"r0")
+```
