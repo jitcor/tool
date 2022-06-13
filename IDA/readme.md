@@ -23,7 +23,11 @@ https://wwa.lanzous.com/irSqBg923vg
 ![image](./images/pycharm_debug_btn.png)
 - IDA PRO->File->Script file...选择目标py脚本
 - 然后就会在上面添加的调试代码位置断下来
-
+# IDA 动态调试
+- 参考：https://blog.csdn.net/binbin594738977/article/details/106055975
+- 常见问题：https://blog.csdn.net/binbin594738977/article/details/106058742
+## 调试总结
+- android_server(64)要与ida保持统一架构，32位就都是32位，64位就都是64位
 
 # 常见问题
 - IDA启动问题：https://bbs.pediy.com/thread-264346.htm
