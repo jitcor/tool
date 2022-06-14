@@ -33,3 +33,4 @@ https://wwa.lanzous.com/irSqBg923vg
 - IDA启动问题：https://bbs.pediy.com/thread-264346.htm
 # 参考
 - [Pycharm 调试 Idapython](http://nigoule.com/?p=621)
+- [ida的F5伪代码里的类型解析](https://hex-rays.com/products/ida/support/idadoc/1361.shtml)
