@@ -2,6 +2,7 @@
 - IDAPython 官方文档：https://www.hex-rays.com/wp-content/static/products/ida/support/idapython_docs/
 
 # 小知识点
+- 常用api：[api](./../../api/)
 ## idapython 如何快速加载已更改模块/脚本
 - idapythonrc.py
 > window: %appdata%/Hex-Rays/IDA Pro/idapythonrc.py
