@@ -1,5 +1,5 @@
 # IDAPython
-参考[idapython](./../plugins/IDAPython/)
+参考:[idapython](./../plugins/IDAPython/)
 # get_bytes
 > 从当前分析的二进制文件中dump出指定地址的数据 
 
