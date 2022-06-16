@@ -11,3 +11,7 @@ get_bytes(0x1c004,16).hex()
 idc.get_reg_value("r0")
 idc.set_reg_value(0x80001,"r0")
 ```
+# 内存操作
+```
+ida_bytes.get_dword(0xe2d88c60)->uint32
+```
