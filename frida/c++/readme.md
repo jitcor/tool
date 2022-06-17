@@ -18,5 +18,5 @@ if __name__ == '__main__':
         new=fix(match)
         data=data.replace(match,new)
         print("replace {}->{}".format(match,new))
-    open("trace.log.fix.txt", 'wb').write(data)
+    open("trace.log.fix.txt", 'wb').write(data.encode())
 ```
