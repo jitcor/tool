@@ -13,10 +13,10 @@ def fix(name):
    return execCmd('demumble.exe {}'.format(name))
 
 if __name__ == '__main__':
-    data=open("trace.log.txt",'rb').read().decode()
-    for match in re.findall(r'(_Z.*?)\(\)',data):
-        new=fix(match)
-        data=data.replace(match,new)
-        print("replace {}->{}".format(match,new))
-    open("trace.log.fix.txt", 'wb').write(data.encode())
+    data=open("processKey.log.txt",'rb').read().decode()
+    for match in re.findall(r'((_Z.*?)\(\))',data):
+        new=fix(match[1])[:-1]
+        data=data.replace(match[0],new)
+        print("replace {}->{}".format(match[0],new))
+    open("processKey.log.fix.txt", 'wb').write(data.encode())
 ```
