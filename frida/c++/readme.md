@@ -1,4 +1,4 @@
-# Window 还原frida-trace的c++函数名
+# Window下还原frida-trace的c++函数名
 ```python
 import os
 import re
