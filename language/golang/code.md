@@ -1,3 +1,17 @@
+# java hashcode
+```go
+func _JavaHashCode(text string) int32 {
+	l:= len(text)
+	h:=int32(0)
+	if l>0{
+		for i:=0;i<l;i++{
+			h=31*h+int32(text[i])
+		}
+	}
+	return h
+}
+
+```
 # 子struct强制转成父struct (GoLand IDE 代码模板)
 ```go
 func To$STR$(object interface{}) (dst *$STR$, err error) {
