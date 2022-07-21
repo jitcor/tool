@@ -5,5 +5,8 @@
 - [Pandownload修改版](https://pandownload.net/)(待测试，安全性不确定)
 - 百度网盘自带下载套餐(套餐一：5分钟,套餐二：24小时)
 - 百度网盘每个账户每天首次下载免费30秒加速试用
-- 百度自带免费加速服务\
+- 百度自带免费加速服务  
 ![image](./images/baidupan.png)
+- 百度网盘游戏任务  
+![image](./images/game-pc-task.png)
+
