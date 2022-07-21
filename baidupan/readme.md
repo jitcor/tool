@@ -9,4 +9,6 @@
 ![image](./images/baidupan.png)
 - 百度网盘游戏任务  
 ![image](./images/game-pc-task.png)
+- 百度手机端积分中心兑换极速下载卡  
+- 百度手机端广告兑换下载券  
 
