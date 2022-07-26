@@ -76,6 +76,16 @@ proxychains repo init -u https://android.googlesource.com/kernel/manifest -b and
 
 proxychains repo sync -c -j8
 ```
+## 切换到指定commitId
+这个commitId可以通过查看手机内核版本获取，一般是-g{commitId}形式出现
+- 显示提交详情，详情里有full_commitId
+```
+repo forall -c 'git show $commitId'
+```
+- 切换到该提交
+```
+repo forall -c 'git reset --hard $full_commitId'
+```
 ## 编译源码
 ```
 # openssl/bio.h file not found
