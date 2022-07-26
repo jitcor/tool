@@ -114,7 +114,7 @@ m bootimage
 - `make snod` (编译system.img，忽略依赖)
 - `m`
 - 定制时系统日志检查`dmesg | grep <tag>` or `cat /proc/kmsg | grep <tag>`
-> 这里的<target module>在bp文件里指的是模块名，若是可执行文件就在bp里着cc_binary{}结构的模块，若是库，就找cc_library开头的，若是App就找android_app开头的....等等
+> 这里的\<target module\>在bp文件里指的是模块名，若是可执行文件就在bp里着cc_binary{}结构的模块，若是库，就找cc_library开头的，若是App就找android_app开头的....等等
 ## audit2allow运行环境修复
 ```
 sudo apt-get install python2
