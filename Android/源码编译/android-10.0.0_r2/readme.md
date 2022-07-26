@@ -64,7 +64,7 @@ cd WORKING_DIRECTORY/out/target/product/taimen/
 fastboot flashall -w
 ```
 # 编译Pixel 2 XL内核
-> 内核源码并不在aosp里，需要单独下载 \
+> 内核源码并不在aosp里，需要单独下载，大概4.35GB \
 > 各个机型的内核不一样，具体参看：https://source.android.google.cn/setup/build/building-kernels?hl=zh-cn
 ## 下载源码
 ```
