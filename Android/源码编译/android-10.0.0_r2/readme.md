@@ -115,6 +115,9 @@ m bootimage
 - `m`
 - 定制时系统日志检查`dmesg | grep <tag>` or `cat /proc/kmsg | grep <tag>`
 > 这里的\<target module\>在bp文件里指的是模块名，若是可执行文件就在bp里着cc_binary{}结构的模块，其name属性就是模块名。若是库，就找cc_library开头的，若是App就找android_app开头的....等等
+## 修改system.img
+由于在系统运行时，模块肯定处于占用中，这时是没法覆盖的，当然你也可以直接覆盖整个system.img文件，但谷歌官方固件肯定跟我们编译的固件不同，从运行后的系统就可以看到区别，应该是在原来系统源码上加了一些私有的东西，当然你也可以尝试下recovery模式下覆盖文件，但实际测试twrp进入recovery模式后，会出现很多问题，data分区加密需要格式化，system挂载不上等等。
+最后剩下唯一可行的方案就是修改system.img文件了
 ## audit2allow运行环境修复
 ```
 sudo apt-get install python2
