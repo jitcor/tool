@@ -36,6 +36,12 @@ No.1:雷神模拟器：http://www.lsplayer.com/#/
 ![image](https://user-images.githubusercontent.com/27600008/141681177-828cfbaf-051f-4c14-b0a0-cf8a132b6641.png)
 > 雷电模拟器大家都知道，用起来非常流畅，就是广告看着挺烦人的，而这个雷神模拟器应该算是无广告版雷电模拟器，也是官方出的，可以放心使用
 
+## 远程USB
+- No.1: VirtualHere:https://www.virtualhere.com/home
+> 支持Window Linux MacOS(m1)  
+> 免费的可以连接一个USB设备  
+> 支持局域网  
+> 配置简单  
 # 参考
 
 https://love.appinn.com/
