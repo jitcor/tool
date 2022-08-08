@@ -38,6 +38,7 @@ No.1:雷神模拟器：http://www.lsplayer.com/#/
 
 ## 远程USB
 - No.1: VirtualHere:https://www.virtualhere.com/home
+> 备份地址：https://github.com/Humenger/tool/releases/tag/VirtualHere  
 > 支持Window Linux MacOS(m1)  
 > 免费的可以连接一个USB设备  
 > 支持局域网  
