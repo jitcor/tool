@@ -43,7 +43,7 @@ No.1:雷神模拟器：http://www.lsplayer.com/#/
 > 支持X86 x64 arm  
 > 免费的可以连接一个USB设备  
 > 支持局域网  
-> 配置简单  
+> 界面清爽，配置简单  
 # 参考
 
 https://love.appinn.com/
