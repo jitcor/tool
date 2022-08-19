@@ -31,13 +31,42 @@ cmake -version
 ## 最简写法
 ```cmake
 cmake_minimum_required(VERSION 3.16.3)
-project(demo001 C)
+project(demo001)
 
 set(CMAKE_C_STANDARD 99)
 add_executable(demo001 main.c)
+```
+# 静态库
+## 精简写法
+```
+cmake_minimum_required(VERSION 3.16.3)
+project(demo002)
+add_library(demo002 STATIC xx.c xxx.cc)
+```
+# 动态库
+## 精简写法
+```
+cmake_minimum_required(VERSION 3.16.3)
+project(demo002)
+add_library(demo002 SHARE xx.c xxx.cc)
+```
+
+# 常用Api
+```
+# 设置输出目录
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY /path/to/out/dir/)
+# 打印消息
+message(STATUS "hello")
+```
+# 常用命令行Options
+```
+# 指定什么项目工程文件
+-G "Unix Makefiles"
 ```
 ## 导入第三方库
 ## 打印详细输出信息
 - 1.cmake命令行：`-DCMAKE_VERBOSE_MAKEFILE=ON`
 - 2.cmakeLists.txt: `set(CMAKE_VERBOSE_MAKEFILEON ON)`
 > 打印详细信息可以获取原始的g++编译命令行信息
+# 小知识点
+- vscode 里的cmake辅助插件，可以自动帮你列出当前系统已有的编译环境，然后让你选择  
