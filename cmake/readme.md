@@ -45,14 +45,14 @@ add_library(demo002 STATIC xx.c xxx.cc)
 ```
 # 动态库
 ## 精简写法
-```
+```cmake
 cmake_minimum_required(VERSION 3.16.3)
 project(demo002)
 add_library(demo002 SHARE xx.c xxx.cc)
 ```
 
 # 常用Api
-```
+```cmake
 # 设置输出目录
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY /path/to/out/dir/)
 # 打印消息
