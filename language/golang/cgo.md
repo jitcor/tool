@@ -1,3 +1,14 @@
+# 条件编译
+## 文件名方式
+//todo 
+## 首行注释方式
+//todo 
+## cgo 后缀方式
+```
+#cgo windows CXXFLAGS:xxxx
+#cgo linux xxxxxxxx
+#cgo amd64 xxxxxx
+```
 # CPP编译
 ```go
 /*
