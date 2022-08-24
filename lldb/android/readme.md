@@ -25,7 +25,7 @@ attach <pid>
 > 获取进程pid: ps -A | grep \<packageName\>
 
 # 具体调试
-
+- 常用命令：wa,image,info,br
 ## 参考
 - [远程调试](https://lldb.llvm.org/use/remote.html)
 - [lldb调试命令](https://lldb.llvm.org/use/map.html)
