@@ -32,7 +32,8 @@ attach <pid>
 ## pycharm 导入lldb模块
 ref:[pycharm下设置PYTHONPATH](https://blog.csdn.net/weixin_41698305/article/details/90902427)  
 lldb模块路径：`sdk\ndk\23.0.7599858\toolchains\llvm\prebuilt\windows-x86_64\lib\python3.9\site-packages`  
-
+# python api for lldb
+ref:[python-reference](https://lldb.llvm.org/use/python-reference.html)
 ## 参考
 - [远程调试](https://lldb.llvm.org/use/remote.html)
 - [lldb调试命令](https://lldb.llvm.org/use/map.html)
