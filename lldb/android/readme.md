@@ -26,6 +26,13 @@ attach <pid>
 
 # 具体调试
 - 常用命令：wa,image,info,br
+# 其它
+## 常用命令
+- help:查看所有帮助信息
+## pycharm 导入lldb模块
+ref:[pycharm下设置PYTHONPATH](https://blog.csdn.net/weixin_41698305/article/details/90902427)  
+lldb模块路径：`sdk\ndk\23.0.7599858\toolchains\llvm\prebuilt\windows-x86_64\lib\python3.9\site-packages`  
+
 ## 参考
 - [远程调试](https://lldb.llvm.org/use/remote.html)
 - [lldb调试命令](https://lldb.llvm.org/use/map.html)
