@@ -83,11 +83,11 @@ if __name__ == '__main__':
     debugger: lldb.SBDebugger = lldb.SBDebugger.Create()
     debugger.SetSelectedPlatform(platform)
 
-    ###########TASK###################
+    ###########TASK Start###################
 
     #todo task
     
-    #############Disconnect########################
+    #############TASK End########################
 
     platform.DisconnectRemote()
 
