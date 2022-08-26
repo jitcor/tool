@@ -43,19 +43,36 @@ import os
 import sys
 import lldb
 
+
+def get_so_base(platform: lldb.SBPlatform, so_name: str) -> (int, lldb.SBError):
+    command: lldb.SBPlatformShellCommand = lldb.SBPlatformShellCommand("image list")
+    err: lldb.SBError=platform.Run(command)
+    if not err.success:
+        return 0,err
+    print(command.GetOutput())
+    return 12344,None
 if __name__ == '__main__':
     os.system("D:\\tool\\AdbTool1.0.1\\adb forward tcp:8129 tcp:8129")
-    os.popen("D:\\tool\\AdbTool1.0.1\\adb shell su -c './data/local/tmp/lldb-server platform --listen \"*:8129\" --server'")
-    platform:lldb.SBPlatform=lldb.SBPlatform("remote-android")
-    error:lldb.SBError=platform.ConnectRemote(lldb.SBPlatformConnectOptions("connect://:8129"))
-    print("error3:",error.success)
-    print("isConnect:",platform.IsConnected())
-    env:lldb.SBEnvironment=platform.GetEnvironment()
+    os.popen(
+        "D:\\tool\\AdbTool1.0.1\\adb shell su -c './data/local/tmp/lldb-server platform --listen \"*:8129\" --server'")
+    platform: lldb.SBPlatform = lldb.SBPlatform("remote-android")
+    error: lldb.SBError = platform.ConnectRemote(lldb.SBPlatformConnectOptions("connect://:8129"))
+    print("error3:", error.success)
+    print("isConnect:", platform.IsConnected())
+    env: lldb.SBEnvironment = platform.GetEnvironment()
     print(env.GetNumValues())
     print(platform.GetWorkingDirectory())
-    error=platform.Run(lldb.SBPlatformShellCommand("attach 32742"))
+    command:lldb.SBPlatformShellCommand=lldb.SBPlatformShellCommand("ls -l")# (shell) android shell env
+    error = platform.Run(command)
     print(error)
-
+    print(command.GetOutput())
+    debugger:lldb.SBDebugger=lldb.SBDebugger.Create()
+    debugger.SetSelectedPlatform(platform)
+    ci:lldb.SBCommandInterpreter=debugger.GetCommandInterpreter()
+    ci_result=lldb.SBCommandReturnObject()
+    ci.HandleCommand("attach 32742",ci_result)# (lldb)
+    print(ci_result)
+    print(get_so_base(platform,"so name"))
 ```
 ## 参考
 - [远程调试](https://lldb.llvm.org/use/remote.html)
