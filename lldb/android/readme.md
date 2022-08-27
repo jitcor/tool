@@ -45,6 +45,11 @@ import sys
 import lldb
 
 
+def enter_console(command_interpreter: lldb.SBCommandInterpreter, ):
+    while True:
+        print(exec_lldb(command_interpreter, input("(lldb) ")))
+
+
 def hexdump(command_interpreter: lldb.SBCommandInterpreter, pointer: int, size: int) -> str:
     return exec_lldb(command_interpreter, "memory read %s %s" % (pointer, pointer + size))
 
@@ -79,6 +84,9 @@ def exec_android_shell(platform: lldb.SBPlatform, command: str) -> str:
     return command.GetOutput()
 
 
+def do_task(debugger: lldb.SBDebugger):
+    pass
+
 if __name__ == '__main__':
     os.system(r"D:\tool\AdbTool1.0.1\adb forward tcp:8129 tcp:8129")
     os.popen(
@@ -91,15 +99,17 @@ if __name__ == '__main__':
     debugger: lldb.SBDebugger = lldb.SBDebugger.Create()
     debugger.SetSelectedPlatform(platform)
 
-    ###########  TASK Start  ###################
-    #todo task
-    ###########  TASK End    ###################
+    ###########TASK Start###################
+    do_task(debugger)
+    #############TASK End###################
 
     platform.DisconnectRemote()
 
     platform.Clear()
 
     debugger.Clear()
+
+
 ```
 ## 参考
 - [远程调试](https://lldb.llvm.org/use/remote.html)
