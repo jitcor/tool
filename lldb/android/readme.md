@@ -26,6 +26,10 @@ attach <pid>
 
 # 具体调试
 - 常用命令：wa,image,info,br
+- 内存写入断点
+```
+watchpoint set expression -w write -- 0xe8583c00+32
+```
 # 其它
 ## 常用命令
 - help:查看所有帮助信息
