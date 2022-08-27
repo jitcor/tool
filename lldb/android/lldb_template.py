@@ -49,8 +49,9 @@ def exec_android_shell(platform: lldb.SBPlatform, command: str) -> str:
 def do_task(debugger: lldb.SBDebugger):
     debugger.SetAsync(False)#关闭异步模式，否则控制台不会阻塞
     ci = debugger.GetCommandInterpreter()
+    plat=debugger.GetSelectedPlatform()
 
-    result = exec_android_shell(platform, "system/bin/ps -A | grep {包名} | grep -v {进一步过滤}")
+    result = exec_android_shell(plat, "system/bin/ps -A | grep {包名} | grep -v {进一步过滤}")
     print(result)
     pid = re.split(' +', result)[1]
     print(exec_lldb(ci, "attach " + pid))
