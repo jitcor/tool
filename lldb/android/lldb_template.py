@@ -47,7 +47,23 @@ def exec_android_shell(platform: lldb.SBPlatform, command: str) -> str:
 
 
 def do_task(debugger: lldb.SBDebugger):
-    pass
+    debugger.SetAsync(False)#关闭异步模式，否则控制台不会阻塞
+    ci = debugger.GetCommandInterpreter()
+
+    result = exec_android_shell(platform, "system/bin/ps -A | grep {包名} | grep -v {进一步过滤}")
+    print(result)
+    pid = re.split(' +', result)[1]
+    print(exec_lldb(ci, "attach " + pid))
+
+    base = get_so_base(ci, "lib{XXXXX}.so")
+    print("base:", hex(base))
+
+    XXX_ptr = get_pointer_value(ci, base + 0xbe530)
+    print("interface:", hex(XXX_ptr))
+
+    enter_console(ci)
+    
+    exec_lldb(ci, "detach")
 
 
 if __name__ == '__main__':
