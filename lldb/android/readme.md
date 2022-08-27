@@ -45,14 +45,21 @@ import sys
 import lldb
 
 
+def hexdump(command_interpreter: lldb.SBCommandInterpreter, pointer: int, size: int) -> str:
+    return exec_lldb(command_interpreter, "memory read %s %s" % (pointer, pointer + size))
+
+
 def get_so_base(command_interpreter: lldb.SBCommandInterpreter, so_name: str) -> int:
     result = exec_lldb(command_interpreter, "image list")
-    return int(re.findall(r"\[.*?\\%s" % so_name, result)[0].split(' ')[-2], 16)
-
-def get_pointer_value(command_interpreter:lldb.SBCommandInterpreter,pointer:int)->int:
-    result=exec_lldb(command_interpreter,"memory read %s"%pointer)
     print(result)
-    return 0
+    return int(re.split(r" +", re.findall(r"\[.*?\\%s" % so_name, result)[0])[-2], 16)
+
+
+def get_pointer_value(command_interpreter: lldb.SBCommandInterpreter, pointer: int) -> int:
+    result = exec_lldb(command_interpreter, "memory read -fx -c1 %s" % pointer)
+    print(result)
+    return int(result.split(' ')[1], 16)
+
 
 def exec_lldb(command_interpreter: lldb.SBCommandInterpreter, command: str) -> str:
     ci_result = lldb.SBCommandReturnObject()
@@ -73,26 +80,26 @@ def exec_android_shell(platform: lldb.SBPlatform, command: str) -> str:
 
 
 if __name__ == '__main__':
-    os.system("D:\\tool\\AdbTool1.0.1\\adb forward tcp:8129 tcp:8129")
+    os.system(r"D:\tool\AdbTool1.0.1\adb forward tcp:8129 tcp:8129")
     os.popen(
-        "D:\\tool\\AdbTool1.0.1\\adb shell su -c './data/local/tmp/lldb-server platform --listen \"*:8129\" --server'")
+        r"D:\tool\AdbTool1.0.1\adb shell su -c './data/local/tmp/lldb-server platform --listen \"*:8129\" --server'")
 
     platform: lldb.SBPlatform = lldb.SBPlatform("remote-android")
-    platform.ConnectRemote(lldb.SBPlatformConnectOptions("connect://:8129"))
+    error = platform.ConnectRemote(lldb.SBPlatformConnectOptions("connect://:8129"))
+    print(error)
 
     debugger: lldb.SBDebugger = lldb.SBDebugger.Create()
     debugger.SetSelectedPlatform(platform)
 
-    ###########TASK Start###################
-
+    ###########  TASK Start  ###################
     #todo task
-    
-    #############TASK End########################
+    ###########  TASK End    ###################
 
     platform.DisconnectRemote()
 
-    debugger.Clear()
+    platform.Clear()
 
+    debugger.Clear()
 ```
 ## 参考
 - [远程调试](https://lldb.llvm.org/use/remote.html)
