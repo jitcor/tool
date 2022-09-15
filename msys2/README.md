@@ -42,6 +42,8 @@ $ pacman -U /var/cache/pacman/pkg/curl-7.70.0-1-x86_64.pkg.tar.zst
 ##### 云端
 pacman仓库地址：https://repo.msys2.org/msys/x86_64/  
 
-镜像地址：https://mirror.jmu.edu/pub/msys2/msys/x86_64/
+镜像地址：https://mirror.jmu.edu/pub/msys2/msys/x86_64/  
+镜像地址2：https://ftp.osuosl.org/pub/msys2/msys/x86_64/  
+镜像地址3：https://download.nus.edu.sg/mirror/msys2/msys/x86_64/  
 
 安装步骤跟上面一样，只不过路径换成云端的URL
