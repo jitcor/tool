@@ -47,3 +47,14 @@ pacman仓库地址：https://repo.msys2.org/msys/x86_64/
 镜像地址3：https://download.nus.edu.sg/mirror/msys2/msys/x86_64/  
 
 安装步骤跟上面一样，只不过路径换成云端的URL
+### 查找包
+##### 本地
+```
+pacman -Qs python
+```
+##### 云端
+
+```
+pacman -Ss python
+```
+
