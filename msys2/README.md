@@ -50,8 +50,21 @@ pacman仓库地址：https://repo.msys2.org/msys/x86_64/
 ### 查找包
 ##### 本地
 ```
-pacman -Qs python
+$ pacman -Qs python
+local/mingw-w64-x86_64-python 3.10.6-1
+    A high-level scripting language (mingw-w64)
+local/mingw-w64-x86_64-python-pycryptodome 3.15.0-1
+    Collection of cryptographic algorithms and protocols, implemented for use from Python (mingw-w64)
+local/mingw-w64-x86_64-python-six 1.16.0-3
+    Python 2 and 3 compatibility utilities (mingw-w64)
 ```
+```
+$ pacman -Q | grep python
+mingw-w64-x86_64-python 3.10.6-1
+mingw-w64-x86_64-python-pycryptodome 3.15.0-1
+mingw-w64-x86_64-python-six 1.16.0-3
+```
+> 注意：mingw-w64-x86_64-python才是包名 ，并不是 python ，若是要卸载包，必须指定mingw-w64-x86_64-python才行
 ##### 云端
 
 ```
