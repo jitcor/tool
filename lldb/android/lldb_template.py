@@ -18,7 +18,6 @@ def hexdump(command_interpreter: lldb.SBCommandInterpreter, pointer: int, size: 
 
 def get_so_base(command_interpreter: lldb.SBCommandInterpreter, so_name: str) -> int:
     result = exec_lldb(command_interpreter, "image list")
-    print(result)
     return int(re.split(r" +", re.findall(r"\[.*?\\%s" % so_name, result)[0])[-2], 16)
 
 
@@ -31,6 +30,7 @@ def get_pointer_value(command_interpreter: lldb.SBCommandInterpreter, pointer: i
 def exec_lldb(command_interpreter: lldb.SBCommandInterpreter, command: str) -> str:
     ci_result = lldb.SBCommandReturnObject()
     command_interpreter.HandleCommand(command, ci_result)
+    process:lldb.SBProcess=command_interpreter.GetProcess()
     if not ci_result.Succeeded():
         print(ci_result)
         return ""
@@ -47,40 +47,53 @@ def exec_android_shell(platform: lldb.SBPlatform, command: str) -> str:
 
 
 def do_task(debugger: lldb.SBDebugger):
-    debugger.SetAsync(False)#关闭异步模式，否则控制台不会阻塞
-    ci = debugger.GetCommandInterpreter()
-    plat=debugger.GetSelectedPlatform()
+    # try:
+    debugger.SetAsync(False)
+    ci :lldb.SBCommandInterpreter= debugger.GetCommandInterpreter()
+    plat:lldb.SBPlatform=debugger.GetSelectedPlatform()
 
-    result = exec_android_shell(plat, "system/bin/ps -A | grep {包名} | grep -v {进一步过滤}")
+    result = exec_android_shell(plat, "system/bin/ps -A | grep xxxxx | grep -v xxx")
     print(result)
     pid = re.split(' +', result)[1]
-    print(exec_lldb(ci, "attach " + pid))
+    exec_lldb(ci, "attach " + pid)
 
-    base = get_so_base(ci, "lib{XXXXX}.so")
+    base = get_so_base(ci, "libxxxxxx.so")
     print("base:", hex(base))
 
-    XXX_ptr = get_pointer_value(ci, base + 0xbe530)
-    print("interface:", hex(XXX_ptr))
+    # enter_console(ci)
+
+    print(hexdump(ci,base+0xa5910,1024))
+
+    exec_lldb(ci,"memory read %s %s -outfile ./test.bin --binary -force"%(base+0xa5910,base+0xa5910+47308*5))
+    # exec_lldb(ci,"br set -a %s"%(base+0x2991c))
+
+    # tmp=ci.GetProcess().ReadMemory(base,1000000,error)
+    # print(error)
+    # data=bytearray(tmp)
+    # index=data.find(bytes({0x11,0x00,0x3D,0xC1}))
+    # print(index)
 
     enter_console(ci)
-    
+
+    # except Exception as e:
+    #     print(e)
     exec_lldb(ci, "detach")
 
 
 if __name__ == '__main__':
-    os.system(r"D:\tool\AdbTool1.0.1\adb forward tcp:8129 tcp:8129")
     os.popen(
-        r"D:\tool\AdbTool1.0.1\adb shell su -c './data/local/tmp/lldb-server platform --listen \"*:8129\" --server'")
+        r"D:\tool\AdbTool1.0.1\adb shell su -c './data/local/tmp/lldb-server p --server --listen unix-abstract:///data/local/tmp/debug.sock'")
 
     platform: lldb.SBPlatform = lldb.SBPlatform("remote-android")
-    error = platform.ConnectRemote(lldb.SBPlatformConnectOptions("connect://:8129"))
+
+    error = platform.ConnectRemote(lldb.SBPlatformConnectOptions("unix-abstract-connect:///data/local/tmp/debug.sock"))
     print(error)
 
     debugger: lldb.SBDebugger = lldb.SBDebugger.Create()
     debugger.SetSelectedPlatform(platform)
 
     do_task(debugger)
-    
+
     platform.DisconnectRemote()
     platform.Clear()
     debugger.Clear()
