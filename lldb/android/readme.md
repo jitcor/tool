@@ -9,6 +9,12 @@ adb push lldb-server /data/local/tmp/
 adb shell su -c 'chmod +x ./data/local/tmp/lldb-server'
 adb shell su -c './data/local/tmp/lldb-server platform --listen "*:1234" --server'
 ```
+### 方案二
+```
+adb push lldb-server /data/local/tmp/
+adb shell su -c 'chmod +x ./data/local/tmp/lldb-server'
+adb shell su -c './data/local/tmp/lldb-server platform --listen unix-abstract:///data/local/tmp/debug.sock --server'
+```
 # 配置lldb
 ```
 adb forward tcp:124 tcp:1234
@@ -16,6 +22,13 @@ lldb.cmd
 platform list
 platform select remote-android
 platform connect connect://:1234
+```
+### 方案二
+```
+lldb.cmd
+platform list
+platform select remote-android
+platform connect unix-abstract-connect:///data/local/tmp/debug.sock
 ```
 # 注入进程
 ```
