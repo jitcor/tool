@@ -23,7 +23,7 @@ gcloud projects list --format="value(projectId)"
 ```
 gcloud run deploy
 ```
-
+> 按提示操作即可
 # 常用命令
 ### 查看所有项目
 ```
