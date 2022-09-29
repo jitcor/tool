@@ -19,6 +19,10 @@ gcloud projects list --format="value(projectId)"
  gcloud config set project {PROJECT_ID}
 ```
 > 部署在哪个项目下
+### 部署项目到云端
+```
+gcloud run deploy
+```
 
 # 常用命令
 ### 查看所有项目
