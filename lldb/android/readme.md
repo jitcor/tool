@@ -58,7 +58,24 @@ ref:[python-reference](https://lldb.llvm.org/use/python-reference.html)
 [./lldb_template.py](./lldb_template.py)
 ## lldb 调试时汇编显示错误问题
 ```
-dis -A thumb
+(lldb) dis -A thumb
+cmd: dis -A thumb
+->  0xc90701e6: mov    r6, r0
+    0xc90701e8: ldr    r0, [pc, #0x3c]
+    0xc90701ea: add    r0, pc
+    0xc90701ec: ldr    r0, [r0]
+    0xc90701ee: ldr    r0, [r0]
+    0xc90701f0: cmp    r0, r6
+    0xc90701f2: .short 0xbf04                    ; unknown opcode
+    0xc90701f4: add    sp, #0x8
+    0xc90701f6: pop    {r4, r5, r6, pc}
+    0xc90701f8: movs   r0, #0x10
+    0xc90701fa: .long  0xebeaf6db                ; unknown opcode
+    0xc90701fe: ldr    r1, [r4, #0x4]
+    0xc9070200: mov    r5, r0
+    0xc9070202: mov    r2, r6
+    0xc9070204: .long  0x0000f7ff                ; unknown opcode
+
 ```
 ## 参考
 - [远程调试](https://lldb.llvm.org/use/remote.html)
