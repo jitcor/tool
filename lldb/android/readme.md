@@ -77,6 +77,7 @@ cmd: dis -A thumb
     0xc9070204: .long  0x0000f7ff                ; unknown opcode
 
 ```
+## LLDB调试尽量不要断在匿名函数上，否则容易出现异常
 ## 参考
 - [远程调试](https://lldb.llvm.org/use/remote.html)
 - [lldb调试命令](https://lldb.llvm.org/use/map.html)
