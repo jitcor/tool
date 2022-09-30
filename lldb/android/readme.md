@@ -47,6 +47,7 @@ watchpoint set expression -w write -- 0xe8583c00+32
 ## 常用命令
 - help:查看所有帮助信息
 - apropos:查找和特定的词或主题相关的调试器命令列表
+- image list -o -f :查找所有模块基址
 ## pycharm 导入lldb模块
 ref:[pycharm下设置PYTHONPATH](https://blog.csdn.net/weixin_41698305/article/details/90902427)  
 lldb模块路径：`sdk\ndk\23.0.7599858\toolchains\llvm\prebuilt\windows-x86_64\lib\python3.9\site-packages` 
