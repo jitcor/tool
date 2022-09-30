@@ -82,6 +82,23 @@ cmd: dis -A thumb
 ```
 thread select <thread index>
 ```
+## image lookup 用法
+```
+(lldb) image lookup -n gaea::idl::BaseModel::Pack
+cmd: image lookup -n gaea::idl::BaseModel::Pack
+2 matches found in C:\Users\shlu\.lldb\module_cache\remote-android\.cache\88BCF618-38A8-E885-2B70-C424D3CDD73F-D4819735\libgaea.so:
+        Address: libgaea.so[0x00191f40] (libgaea.so.PT_LOAD[0]..text + 120672)
+        Summary: libgaea.so`gaea::idl::BaseModel::Pack(cmp_ctx_s*) const        Address: libgaea.so[0x00191fe4] (libgaea.so.PT_LOAD[0]..text + 120836)
+        Summary: libgaea.so`gaea::idl::BaseModel::Pack(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >*) const
+
+```
+```
+(lldb) image lookup -a 0xcfddd00a
+cmd: image lookup -a 0xcfddd00a
+      Address: libgaea.so[0x0019200a] (libgaea.so.PT_LOAD[0]..text + 120874)
+      Summary: libgaea.so`gaea::idl::BaseModel::Pack(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >*) const + 38
+
+```
 ## 参考
 - [远程调试](https://lldb.llvm.org/use/remote.html)
 - [lldb调试命令](https://lldb.llvm.org/use/map.html)
