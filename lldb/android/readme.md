@@ -56,6 +56,10 @@ lldb模块路径：`sdk\ndk\23.0.7599858\toolchains\llvm\prebuilt\windows-x86_64
 ref:[python-reference](https://lldb.llvm.org/use/python-reference.html)
 ## pycharm 编写lldb调试代码
 [./lldb_template.py](./lldb_template.py)
+## lldb 调试时汇编显示错误问题
+```
+dis -A thumb
+```
 ## 参考
 - [远程调试](https://lldb.llvm.org/use/remote.html)
 - [lldb调试命令](https://lldb.llvm.org/use/map.html)
