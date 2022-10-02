@@ -37,10 +37,14 @@ gcloud auth login
 ```
 gcloud auth list
 ```
+# 注意事项
+### gcloud 网域映射限制
+https://cloud.google.com/run/docs/mapping-custom-domains?_ga=2.79877783.-1055374585.1664688564#limitations
 
 # ping 测试
 https://www.boce.com/ping/xxx.xx.xxx
-
+# google 域名注册
+https://domains.google.com/
 # 参考
 - [cloud run](https://cloud.google.com/run?hl=zh-cn)
 - [install](https://cloud.google.com/sdk/docs/install?hl=zh-cn)
