@@ -6,7 +6,14 @@ https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe?hl=
 ```
 gcloud init
 ```
+# 配置代理
+```
+gcloud config set proxy/type http
 
+gcloud config set proxy/address 127.0.0.1
+
+gcloud config set proxy/port 7890
+```
 
 # go代码配置http服务器HelloWorld
 ### 列出已有项目ID
