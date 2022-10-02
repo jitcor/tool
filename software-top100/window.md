@@ -44,6 +44,10 @@ No.1:雷神模拟器：http://www.lsplayer.com/#/
 > 免费的可以连接一个USB设备  
 > 支持局域网，若是我们再搞个端口转发，就能支持互联网    
 > 界面清爽，配置简单  
+
+## 端口扫描工具
+- No.1: fscan :https://github.com/shadow1ng/fscan
+> 操作简单：fscan -h 192.168.31.1-255 -p 1-65535
 # 参考
 
 https://love.appinn.com/
