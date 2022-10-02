@@ -1,4 +1,5 @@
 # 公众号开发
+- 公众号开发平台：https://mp.weixin.qq.com
 # 后台
 ### 域名注册
 google domains
