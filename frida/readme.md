@@ -14,6 +14,10 @@
 ```
 # 安装多个Python版本问题
 设置pythonpath为当前要用的版本路径即可
+# 问题：`ImportError: DLL load failed while importing _frida: 找不到指定的模块。`
+refs:https://blog.csdn.net/guo343310267/article/details/88343025  
+需要安装最新版的frida，安装历史版本的没有egg文件，导致出现上面的错误  
+
 # 重新编译Frida
 ```
 $ git clone https://github.com/frida/frida.git
