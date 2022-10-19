@@ -18,3 +18,6 @@
 ##### 打包boot.img
 ##### 刷入打包后boot.img
 ##### 启动系统进行验证
+
+## magiskboot 
+refs:https://topjohnwu.github.io/Magisk/tools.html#magiskboot
