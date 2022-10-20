@@ -29,4 +29,5 @@ importlib.reload(arm_unicorn) ; importlib.reload(arm_unicorn)
 size=ida_nalt.retrieve_input_file_size()
 so_bin=idc.get_bytes(0,size)
 ```
-
+# 第三方开发教程
+refs:[编写IDApython的PY插件](https://cryzlasm.github.io/2017/11/24/%E7%BC%96%E5%86%99IDApython%E7%9A%84PY%E6%8F%92%E4%BB%B6/)
