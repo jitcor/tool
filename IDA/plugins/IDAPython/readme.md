@@ -23,7 +23,7 @@ import arm_unicorn # module name
 ```python
 importlib.reload(arm_unicorn) ; importlib.reload(arm_unicorn)
 ```
-> 执行两次，是因为，需要先解除上次加载的代码
+> ~~执行两次，是因为，需要先解除上次加载的代码~~
 ## dump 整个so文件
 ```python
 size=ida_nalt.retrieve_input_file_size()
