@@ -21,7 +21,7 @@ import arm_unicorn # module name
 ```
 - 更改模块/脚本后，python命令行输入如下代码
 ```python
-importlib.reload(arm_unicorn) ; importlib.reload(arm_unicorn)
+importlib.reload(arm_unicorn)
 ```
 > ~~执行两次，是因为，需要先解除上次加载的代码~~
 ## dump 整个so文件
