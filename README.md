@@ -3,7 +3,7 @@
 
 
 
-# 加入星球不迷路
+# 加入星球讨论技术
 [逆向涉猎](https://t.zsxq.com/071NJKjZb)
 # 统计
 ![Visitor's Count](https://profile-counter.glitch.me/Humenger_tool/count.svg)
