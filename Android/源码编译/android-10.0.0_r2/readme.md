@@ -7,7 +7,8 @@
 - 必备代理，速度够快，70Mb/s左右
 - Pixel 2 XL 手机一部
 - 配置proxychains
-
+# 分支版本与手机型号对应关系
+https://source.android.com/docs/setup/about/build-numbers#source-code-tags-and-builds
 # 下载源码
 ```
 sudo apt-get update
