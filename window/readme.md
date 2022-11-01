@@ -37,4 +37,17 @@ powercfg /lastwake
 
 参考：https://zhuanlan.zhihu.com/p/93306740
 
+# 定时器唤醒后自动休眠问题
+
+ref:[无人值守睡眠空闲超时](https://learn.microsoft.com/zh-cn/windows-hardware/customize/power-settings/sleep-settings-sleep-unattended-idle-timeout)  
+- 一键开启脚本，保存为注册表文件  
+```reg
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\238C9FA8-0AAD-41ED-83F4-97BE242C8F20\7bc4a2f9-d8fc-4469-b07b-33eb785aaca0]
+"Attributes"=dword:00000002
+
+```
+执行完脚本后，进入高级电源设置，在睡眠选项中会出现“无人参与系统睡眠超时”，将默认的2分钟修改成0分钟，即禁用该功能  
+
 - 定时唤醒计算机看[wakeup.md](./wakeup.md) 
