@@ -35,7 +35,9 @@ powercfg /lastwake
 > 若是设备唤醒，可在设备管理器里的设备>属性>电源管理>取消勾选“允许此设备唤醒计算机” \
 > 注意，若是网卡驱动唤醒的，取消勾选会导致无法远程连接到已休眠的目标机器 
 
-参考：https://zhuanlan.zhihu.com/p/93306740
+参考：https://zhuanlan.zhihu.com/p/93306740  
+
+- 定时唤醒计算机看[wakeup.md](./wakeup.md) 
 
 # 定时器唤醒后自动休眠问题
 
@@ -50,4 +52,3 @@ Windows Registry Editor Version 5.00
 ```
 执行完脚本后，进入高级电源设置，在睡眠选项中会出现“无人参与系统睡眠超时”，将默认的2分钟修改成0分钟，即禁用该功能  
 
-- 定时唤醒计算机看[wakeup.md](./wakeup.md) 
