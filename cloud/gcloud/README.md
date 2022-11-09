@@ -51,6 +51,7 @@ https://cloud.google.com/run/docs/mapping-custom-domains?_ga=2.79877783.-1055374
 ref:[免费试用结束](https://cloud.google.com/free/docs/free-cloud-features?hl=zh-CN#end)  
 解决方案参考：https://lebang2020.cn/details/201204scdock02.html  
 进入Google云的控制台->右上角问号->GCP结算支持->根据提示进行操作即可->最后联系到人工客户，说明自己情况->等待处理结果  
+不要提交退款申请，那个只有被欺诈扣款才有用  
 
 # ping 测试
 https://www.boce.com/ping/xxx.xx.xxx
