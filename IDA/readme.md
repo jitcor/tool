@@ -1,4 +1,6 @@
 
+# IDA 中文网
+http://www.hex-rays.cn/
 # ida pro权威指南第二版
 ## 百度云
 链接: https://pan.baidu.com/s/1Eco3YG7PszHLIkvxGbCDpQ 提取码: dzta
