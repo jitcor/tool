@@ -61,4 +61,4 @@ Exit
 - 或者直接执行`perf annotate --stdio --symbol=wastTime`即可进入上面最后一步  
 ### 参考
 - [用Perf寻找程序中的性能热点](https://zhuanlan.zhihu.com/p/134721612)  
-- 
+- [手把手教你系统级性能分析工具perf的介绍与使用（超详细）](https://zhuanlan.zhihu.com/p/471379451)
