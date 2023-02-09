@@ -2,6 +2,7 @@
 | frida    | frida-tools |
 | :----:   | :----:      |
 | 12.7.22  | 5.2.0       |
+| 16.0.8   | 12.0.4      |
 
 一键查看对应版本https://github.com/frida/frida/releases/tag/12.7.22
 # 安装frida
