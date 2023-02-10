@@ -51,7 +51,7 @@ sudo docker ps
 # 查看已安装镜像
 sudo docker ps --all
 
-# ssh 连接docker端口映射 , 10022主机端口，22容器里端口 run 创建一个以test1命名的容器并运行
+# ssh 连接docker端口映射 , 10022主机端口，22容器里端口，ubuntu:18.04使用镜像， run 创建一个以test1命名的容器并运行
 sudo docker run -it -p 10022:22 --name test1 ubuntu:18.04
 # 允许ssh以root登录
 echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
@@ -67,6 +67,18 @@ ssh root@x.x.x.x -p 10022
 # 启动一个以test1命名的容器
 sudo docker start -a -i test1
 
+```
+## 针对ubuntu:18.04镜像创建容器后的初始化步骤
+```
+# 初始化系统
+apt update
+apt upgrade
+# ssh工具
+apt install openssh-server
+#todo
+#...
+# netstat工具
+apt install net-tools
 ```
 # 参考
 - [ssh连接docker容器；docker容器设置root密码](https://blog.csdn.net/winter2121/article/details/118223637)
