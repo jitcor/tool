@@ -3,7 +3,7 @@ https://www.jianshu.com/p/208200e0c465
 # 官方解密实现(c版)
 https://github.com/sqlcipher/sqlcipher-tools/blob/master/decrypt.c
 # 加密函数流程
-![images](./data/sqlcipher_cipher.png)
+![images](./data/sqlcipher_cipher_process.png)
 # 自己分析
 1.先取出第一页头部16字节作为salt  
 2.将password与salt进行hmac哈希得到key  
