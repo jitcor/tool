@@ -110,4 +110,5 @@ static int sqlcipher_cipher_ctx_key_derive(codec_ctx *ctx, cipher_ctx *c_ctx) {
   return SQLITE_ERROR;
 }
 ```
-> 可以看到若是密钥是x'----'格式，则不进行kdf计算，直接复制到最终aes的key上
+> 可以看到若是密钥是x'----'格式，则不进行kdf计算，直接复制到最终aes的key上  
+> salt 既用于kdf计算，也用于hmac计算  
