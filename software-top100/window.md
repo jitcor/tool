@@ -48,6 +48,9 @@ No.1:雷神模拟器：http://www.lsplayer.com/#/
 ## 端口扫描工具
 - No.1: fscan :https://github.com/shadow1ng/fscan
 > 操作简单：fscan -h 192.168.31.1-255 -p 1-65535
+## 开启自启工具
+- No.1: nssm: https://github.com/kirillkovalenko/nssm  
+> 一个将程序转为服务的程序，而将服务启动类型设置为自动，就可以实现一个超级稳定开机自启功能了，比其他什么计划任务，启动文件夹之类的，简直就是降维打击    
 # 参考
 
 https://love.appinn.com/
