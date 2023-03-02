@@ -23,6 +23,28 @@ import "C"
 # Window下 cgo 导入iostream报错
 `go build -buildmode=exe`
 > 参考:https://github.com/golang/go/issues/45468
+# 编译dll文件
+- api/api.go
+```go
+package main
+/*
+#include <stdlib.h>
+*/
+import "C"
+
+//export func_name
+func func_name(outPath *C.char)C.int {
+    //pass
+}
+
+func main() {
+   // Need a main function to make CGO compile package as C shared library
+}
+
+```
+```cmd
+set GOOS=windows&& set GOARCH=amd64&& go build  -ldflags "-s -w"  -buildmode=c-shared -o build/export.dll api/api.go
+```
 # 注意事项
 - go语言编译的dll文件，不能被go调用  
 # 参考
