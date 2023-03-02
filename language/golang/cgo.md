@@ -24,6 +24,6 @@ import "C"
 `go build -buildmode=exe`
 > 参考:https://github.com/golang/go/issues/45468
 # 注意事项
-- go语言编译的dll文件，不能被go自身调用  
+- go语言编译的dll文件，不能被go调用  
 # 参考
 - [CGO学习整理](https://packagewjx.github.io/2018/12/13/cgo-note/)
