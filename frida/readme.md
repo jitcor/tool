@@ -7,6 +7,7 @@
 
 一键查看对应版本https://github.com/frida/frida/releases/tag/12.7.22
 # ~~安装frida~~
+> **Note**  
 > 直接安装frida-tools即可，会自动安装对应版本的frida，并且若是单独再安装frida，可能会出现找不到DLL问题
 ```
 ..\python3.6.8\Scripts>pip3.6 install frida==12.7.22  -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
