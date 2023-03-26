@@ -21,3 +21,24 @@ https://www.kali.org/get-kali/#kali-virtual-machines
 参考https://www.kali.org/docs/introduction/default-credentials/
 > 我这里VMware虚拟机的默认账户是kali kali
 
+# 问题
+* An error occurred during the signature verification.
+```
+W: An error occurred during the signature verification. The repository is not updated and the previous 
+index files will be used. GPG error: http://mirrors.jevincanders.net/kali kali-rolling InRelease: The 
+following signatures were invalid: EXPKEYSIG ED444FF07D8D0BF6 Kali Linux Repository <devel@kali.org>
+W: Failed to fetch http://http.kali.org/kali/dists/kali-rolling/InRelease  The following signatures 
+were invalid: EXPKEYSIG ED444FF07D8D0BF6 Kali Linux Repository <devel@kali.org>
+W: Some index files failed to download. They have been ignored, or old ones used instead.
+```
+解决方案(ref:[apt-get-update-issue-in-kali](https://superuser.com/questions/1644520/apt-get-update-issue-in-kali))
+```bash
+# download
+wget http://http.kali.org/kali/pool/main/k/kali-archive-keyring/kali-archive-keyring_2022.1_all.deb
+# install
+sudo dpkg -i kali-archive-keyring_2022.1_all.deb
+# remove downloaded file again
+rm kali-archive-keyring_2022.1_all.deb
+# update
+sudo apt-get update
+```
