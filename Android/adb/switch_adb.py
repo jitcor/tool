@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import os
+import time
 
 # 获取当前ANDROID_SERIAL环境变量
 current_device = os.environ.get("ANDROID_SERIAL")
@@ -35,7 +36,8 @@ try:
     os.environ["ANDROID_SERIAL"] = device_id
     os.system("setx \"ANDROID_SERIAL\" \"%s\""%device_id)
     #os.system("set ANDROID_SERIAL=%s&&start cmd /k \"adb shell\""%device_id)
-    print("Already switch to ",device_id)
+    print("\n[OK] Already switch to ",device_id)
     #os.environ["ANDROID_SERIAL"] = current_device
 except (ValueError, IndexError):
     print("Invalid choice.")
+time.sleep(3)
