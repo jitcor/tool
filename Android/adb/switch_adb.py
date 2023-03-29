@@ -2,23 +2,25 @@
 import os
 import time
 
-# »ñÈ¡µ±Ç°ANDROID_SERIAL»·¾³±äÁ¿
+# è·å–å½“å‰ANDROID_SERIALç¯å¢ƒå˜é‡
 current_device = os.environ.get("ANDROID_SERIAL")
 
-# ÁĞ³öÒÑÁ¬½ÓµÄAndroidÉè±¸ÁĞ±í
+# åˆ—å‡ºå·²è¿æ¥çš„Androidè®¾å¤‡åˆ—è¡¨
 devices = []
 models = []
 for line in os.popen("adb devices").readlines():
-    if "List of devices attached" not in line and line.strip() != "":
+    if "List of devices attached" not in line and "offline" not in line and line.strip() != "":
         device_id = line.split("\t")[0]
-        devices.append(device_id)
+        device_status = line.split("\t")[1]
+        if "device" in device_status:
+            devices.append(device_id)
 
-# ¼ì²éÉè±¸ÊÇ·ñÖÁÉÙÓĞÒ»¸ö
+# æ£€æŸ¥è®¾å¤‡æ˜¯å¦è‡³å°‘æœ‰ä¸€ä¸ª
 if len(devices) == 0:
     print("No devices found.")
     exit()
 
-# ÏÔÊ¾¿ÉÓÃÉè±¸ÁĞ±í£¬°üÀ¨Éè±¸ĞÍºÅºÍAndroid°æ±¾ºÅ
+# æ˜¾ç¤ºå¯ç”¨è®¾å¤‡åˆ—è¡¨ï¼ŒåŒ…æ‹¬è®¾å¤‡å‹å·å’ŒAndroidç‰ˆæœ¬å·
 print("{:<8}{:<30}{:<16}{}".format("Index", "Device ID", "Model", "Version"))
 for index, device_id in enumerate(devices):
     model = os.popen(f"adb -s {device_id} shell getprop ro.product.model").read().strip()
@@ -26,18 +28,18 @@ for index, device_id in enumerate(devices):
     models.append(model)
     print("{:<8}{:<30}{:<16}{}".format(f"[{index + 1}]", device_id, model, android_version))
 
-# ÇëÇóÓÃ»§Ñ¡ÔñÒªÁ¬½ÓµÄÉè±¸
+# è¯·æ±‚ç”¨æˆ·é€‰æ‹©è¦è¿æ¥çš„è®¾å¤‡
 choice = input("Enter device number to switch to: ")
 
-# ÇĞ»»µ½Ñ¡ÔñµÄÉè±¸
+# åˆ‡æ¢åˆ°é€‰æ‹©çš„è®¾å¤‡
 try:
     choice = int(choice) - 1
     device_id = devices[choice]
     os.environ["ANDROID_SERIAL"] = device_id
-    os.system("setx \"ANDROID_SERIAL\" \"%s\""%device_id)
-    #os.system("set ANDROID_SERIAL=%s&&start cmd /k \"adb shell\""%device_id)
-    print("\n[OK] Already switch to ",device_id)
-    #os.environ["ANDROID_SERIAL"] = current_device
+    os.system("setx \"ANDROID_SERIAL\" \"%s\"" % device_id)
+    # os.system("set ANDROID_SERIAL=%s&&start cmd /k \"adb shell\""%device_id)
+    print("\n[OK] Already switch to ", device_id)
+    # os.environ["ANDROID_SERIAL"] = current_device
 except (ValueError, IndexError):
     print("Invalid choice.")
 time.sleep(3)
