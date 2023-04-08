@@ -43,3 +43,4 @@ git push origin main -f  # 上传修改
 因此，如果您想修复提交，您可以简单地git commit --amend：这将修改提交，而不创建另一个提交。
 如果只是想重新开始，可以删除.git存储库，然后使用git init创建另一个存储库  
 refs:https://cloud.tencent.com/developer/ask/sof/77445   
+refs:https://blog.csdn.net/CHAOS_ORDER/article/details/122655480  
