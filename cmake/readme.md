@@ -64,6 +64,30 @@ message(STATUS "hello")
 -G "Unix Makefiles"
 ```
 ## 导入第三方库
+在 CMake 中引用静态库需要执行以下步骤：  
+  
+定义静态库路径  
+首先需要定义静态库的路径，可以使用 set 命令设置变量，例如：  
+  
+`set(LIBRARY_DIR /path/to/library)`  
+添加静态库头文件路径  
+如果静态库包含头文件，则需要将头文件路径添加到 CMake 的搜索路径中，可以使用 `include_directories` 命令，例如：   
+  
+`include_directories(${LIBRARY_DIR}/include)`  
+添加静态库链接路径  
+然后需要将静态库链接路径添加到 CMake 的搜索路径中，可以使用 link_directories 命令，例如：  
+  
+`link_directories(${LIBRARY_DIR}/lib)`  
+链接静态库  
+最后需要将静态库链接到目标程序中，可以使用 target_link_libraries 命令，例如：  
+  
+`add_executable(myprogram main.cpp)`  
+`target_link_libraries(myprogram mylibrary)`  
+其中，mylibrary 是静态库的名称。如果静态库不在搜索路径中，可以使用绝对路径来指定库文件，例如：  
+  
+`target_link_libraries(myprogram /path/to/library/libmylibrary.a)`  
+完成以上步骤后，重新生成项目即可使用静态库。  
+
 ## 打印详细输出信息
 - 1.cmake命令行：`-DCMAKE_VERBOSE_MAKEFILE=ON`
 - 2.cmakeLists.txt: `set(CMAKE_VERBOSE_MAKEFILEON ON)`
