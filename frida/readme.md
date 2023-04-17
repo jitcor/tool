@@ -30,7 +30,6 @@ $ cd frida
 
 $ make
 
-# 这里ndk版本根据当前frida版本而定，不过不用担心，在下面make编译时，frida会报错提示正确的ndk版本
 $ export ANDROID_NDK_ROOT=/Users/{username}/Library/Android/sdk/ndk/22.0.6917172/
 
 $ sudo apt-get install npm
@@ -47,6 +46,13 @@ $ make core-android-x86
 
 # 最后生成的文件在 build/frida-android-x86 build/frida-android-x86_64 
 # 如果需要调整编译参数，在releng/setup-env.sh中进行调整 比如: meson_common_flags="['-g']"
+```
+## 重新编译Frida(16.+)
+* refs:https://frida.re/docs/building/#gnulinux  
+```
+$ git clone --recurse-submodules https://github.com/frida/frida.git
+$ cd frida
+$ make
 ```
 # 检测frida服务是否在运行
 ```python
