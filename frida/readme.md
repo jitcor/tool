@@ -30,6 +30,7 @@ $ cd frida
 
 $ make
 
+# 这里ndk版本根据当前frida版本而定，不过不用担心，在下面make编译时，frida会报错提示正确的ndk版本
 $ export ANDROID_NDK_ROOT=/Users/{username}/Library/Android/sdk/ndk/22.0.6917172/
 
 $ sudo apt-get install npm
