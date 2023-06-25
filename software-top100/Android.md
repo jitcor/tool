@@ -1,7 +1,8 @@
 ## 小说软件
 * No.1:阅读
 ## 音乐软件
-* No.1:LX Music:https://github.com/lyswhut/lx-music-mobile
+* No.1:酷狗概念版
+* No.2:LX Music:https://github.com/lyswhut/lx-music-mobile
 > 开源，免费，多平台支持
 ## 听书软件
 * No.2:喜马拉雅
@@ -9,7 +10,8 @@
 ## 视频软件
 * No.2:腾讯视频
 ## TV视频软件
-* No.1:https://github.com/CatVodTVOfficial/TVBoxOSC
+* No.1:TVBox: https://github.com/CatVodTVOfficial/TVBoxOSC
 > 变种和源地址: TvBox:https://github.com/liu673cn/box
 ## 充电保护
 * No.1:acc: https://github.com/VR-25/acc
+## 后台守护
