@@ -1,5 +1,5 @@
 # 下载程序
-[./Xshell-5.0.1339p.exe](./Xshell-5.0.1339p.exe)
+[Xshell-5.0.1339p.exe](https://github.com/Humenger/tool/releases/tag/xshell5)
 # 下载补丁文件
 > 禁用检测强制更新
 
