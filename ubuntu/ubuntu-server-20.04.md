@@ -47,6 +47,33 @@ network:
 - 执行`wget https://raw.githubusercontent.com/Humenger/tool/master/IDEA/ssh-setup.sh`
 - 执行`./ssh-setup.sh`开启ssh服务，默认端口22
 - xshell，或IDEA里ssh连接即可
+## 连接WLAN
+* 连接前需要先通过上面的有线网连接方式连接到有线网下载一些东西，具体如下
+* `sudo apt install net-tools`
+* `sudo apt install wireless-tools`
+* `sudo apt install wpasupplicant`
+* `iwcondig` 查看有什么网卡，只要网卡名后面没显示`no wireless extensions`并且显示了详细的网卡信息的就是无线网卡，一般以'w'字母开头，我这里显示的网卡名字是`wlp3s0`
+* 然后执行`sudo ip link set wlp3s0 up`这里wlp3s0为上面查询到的网卡名
+* 如果该WLAN没加密，直接执行`sudo iw dev wlan0 connect wifi_name` 这里wifi_name专业术语叫ssid，其实就是平常手机wifi列表里看到的wifi名字
+* 如果该WLAN是WEP协议，执行`sudo iw dev wlan0 connect wifi_name key 0:password` 这里wifi_name同上，password自然就是wifi密码
+* 如果该WLAN是WPA或WPA2协议，就稍微复杂一点，具体步骤如下
+* 执行`sudo vim /etc/wpasupplicant/wpa_supplicant.conf` 添加配置WPA文件
+* 然后在该文件里输入以下内容
+```conf
+ctrl_interface=/var/run/wpa_supplicant
+
+ap_scan=1
+
+network={
+        ssid="wifi_name"
+        psk="password"
+        priority=1
+}
+```
+* 参数含义同上
+* 然后执行命令`sudo wpa_supplicant -i wlp3s0 -c /etc/wpa_supplicant/wpa_supplicant.conf &` 开始连接WLAN，wlp3s0修改成上面获取的
+* 通过iwconfig命令, 查看wlp3s0是否已经连接上相应wifi_name的WIFI, 或者通过ping尝试联网
+* 参考：https://developer.aliyun.com/article/704878
 ## 笔记本关盖子不休眠
 - 修改`/etc/systemd/logind.conf`的HandleLidSwitch的值为ignore，并去掉前面的注释
 - 执行`service systemd-logind restart`重启服务以禁用笔记本的关闭盖子休眠功能
