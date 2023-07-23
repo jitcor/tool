@@ -1,7 +1,8 @@
 # 下载程序
 [./Xshell-5.0.1339p.exe](./Xshell-5.0.1339p.exe)
 # 下载补丁文件
-> 禁用检测强制更新  
+> 禁用检测强制更新
+
 [./nslicense.dll](./nslicense.dll)
 # 先安装后补丁替换即可
 # 参考
