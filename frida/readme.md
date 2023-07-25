@@ -16,6 +16,7 @@
 ```
 ..\python3.6.8\Scripts>pip3.6 install frida-tools==5.2.0  -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
 ```
+> MacOS 下安装需要加sudo,否则会无法使用frida的命令行工具
 # 安装多个Python版本问题
 设置pythonpath为当前要用的版本路径即可
 # 问题：`ImportError: DLL load failed while importing _frida: 找不到指定的模块。`
