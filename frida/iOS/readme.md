@@ -22,3 +22,35 @@ function iOSNSTemporaryDirectory(){
     }
 }
 ```
+# dump iOS系统库
+```oc
+// @ts-ignore
+const cc=Process.getModuleByAddress(Module.findExportByName(null,"CC_SHA1"));
+console.log("path:",cc.path);
+console.log("size:",cc.size);
+console.log("base:",cc.base);
+
+function iOSNSTemporaryDirectory(){
+    try {
+        // @ts-ignore
+        var NSTemporaryDirectory = new NativeFunction(ptr(Module.findExportByName("Foundation", "NSTemporaryDirectory")), 'pointer', []);
+        // @ts-ignore
+        let path = new ObjC.Object(NSTemporaryDirectory());
+        // @ts-ignore
+        return new ObjC.Object(NSTemporaryDirectory()).UTF8String();
+    }catch (e){
+        return "";
+    }
+}
+// @ts-ignore
+function iOSDumpMemory(address,size,name){
+    let outFile=new File(iOSNSTemporaryDirectory()+"/"+name,"wb");
+    // @ts-ignore
+    outFile.write(ptr(address).readByteArray(size))
+    outFile.flush();
+    outFile.close();
+}
+iOSDumpMemory(cc.base,cc.size,"libName");
+```
+> 实测可以dump出来，但是IDA无法识别，可能需要修复头，具体后面再研究吧
+> 这里直接按路径找，是找不到系统库的，只能二进制dump
