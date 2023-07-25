@@ -5,3 +5,20 @@ https://github.com/noobpk/frida-ios-hook
 
 # 安装指定版本frida server
 [iOS iphone 7 手动安装Frida指定版本(老版本) 这里以15.1.2版本为例](https://blog.csdn.net/qq_26914291/article/details/129031855)
+
+# 获取iOS路径
+```oc
+//tmp路径
+function iOSNSTemporaryDirectory(){
+    try {
+        // @ts-ignore
+        var NSTemporaryDirectory = new NativeFunction(ptr(Module.findExportByName("Foundation", "NSTemporaryDirectory")), 'pointer', []);
+        // @ts-ignore
+        let path = new ObjC.Object(NSTemporaryDirectory());
+        // @ts-ignore
+        return new ObjC.Object(NSTemporaryDirectory()).UTF8String();
+    }catch (e){
+        return "";
+    }
+}
+```
