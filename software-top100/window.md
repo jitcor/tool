@@ -54,7 +54,9 @@ No.1:雷神模拟器：http://www.lsplayer.com/#/
 
 ## 任意窗口置顶
 - No.1: deskpins: https://efotinis.neocities.org/deskpins/
-> 可以让Window里任意窗口置顶  
+> 可以让Window里任意窗口置顶
+## 快捷键工具
+- No.1: Power Keys: https://powerkeys.github.io/  
 # 参考
 
 https://love.appinn.com/
