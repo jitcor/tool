@@ -56,7 +56,9 @@ No.1:雷神模拟器：http://www.lsplayer.com/#/
 - No.1: deskpins: https://efotinis.neocities.org/deskpins/
 > 可以让Window里任意窗口置顶
 ## 快捷键工具
-- No.1: Power Keys: https://powerkeys.github.io/  
+- No.1: Quicker: https://getquicker.net/
+> 特点：轮盘菜单  
+- No.2: Power Keys: https://powerkeys.github.io/  
 # 参考
 
 https://love.appinn.com/
