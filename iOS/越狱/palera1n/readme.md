@@ -2,7 +2,7 @@
 ## MacOS
 * `$ sudo /bin/sh -c "$(curl -fsSL https://static.palera.in/scripts/install.sh)"`
 # 越狱
-越狱前需要清除锁屏密码，这里测试用的iPhone X (iOS 16.6.1)
+越狱前需要清除锁屏密码，这里测试用的iPhone X (A11) (iOS 16.6.1)
 ## MacOS
 * 打开一个命令行窗口
 * `$ palera1n`
