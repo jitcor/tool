@@ -17,3 +17,4 @@
 * 进入Sileo安装所需插件即可
 # 参考
 - [Installing palera1n](https://ios.cfw.guide/installing-palera1n/#running-palera1n-1)
+- [Palera1n越狱简体中文，iOS15.0~16.7越狱支持Mac/Linux/U盘多平台](https://dkxuanye.cn/?p=6813)
