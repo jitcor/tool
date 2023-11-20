@@ -1,3 +1,62 @@
+# java random
+```go
+package main
+
+import (
+	"sync/atomic"
+)
+
+const multiplier = int64(0x5DEECE66D)
+const addend = int64(0xB)
+const mask = int64((1 << 48) - 1)
+
+type JRandom struct {
+	seed *atomic.Value
+}
+
+func NewJRandom(seed int64) *JRandom {
+	ptr := &JRandom{}
+	ptr.seed = new(atomic.Value)
+	ptr.seed.Store(ptr.initialScramble(seed))
+	return ptr
+}
+func (that *JRandom) NextInt(bound int32) int32 {
+	r := that.next(31)
+	m := bound - 1
+	if bound&m == 0 {
+		r = (bound * r) >> 31
+	} else {
+		for u := r; ; {
+			r = u % bound
+			if u-r+m < 0 {
+				u = that.next(31)
+			} else {
+				break
+			}
+		}
+	}
+	return r
+}
+func (that *JRandom) NextLong() int64 {
+	return (int64(that.next(32)) << 32) + int64(that.next(32))
+}
+func (that *JRandom) initialScramble(seed int64) int64 {
+	return (seed ^ multiplier) & mask
+}
+func (that *JRandom) next(bits int32) int32 {
+	oldSeed := int64(0)
+	nextSeed := int64(0)
+	for {
+		oldSeed = that.seed.Load().(int64)
+		nextSeed = (oldSeed*multiplier + addend) & mask
+		if that.seed.CompareAndSwap(oldSeed, nextSeed) {
+			break
+		}
+	}
+	return int32(nextSeed >> (48 - bits))
+}
+
+```
 # java hashcode
 ```go
 func _JavaHashCode(text string) int32 {
