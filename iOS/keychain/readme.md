@@ -22,4 +22,5 @@ Abort trap: 6
 - A:
 ```
 修改权利文件：entitlements.xml里的keychain-access-groups里的'*'号为指定的要获取的钥匙串访问组，比如Zoom的BJ4HAAB9B3.us.zoom.meetings.keychain.share，然后重新编译签名即可
+至于如何获取钥匙串访问组，执行./keychain_dumper -e 即可获取
 ```
