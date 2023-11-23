@@ -8,9 +8,15 @@
 objection -d --gadget "微信" explore
 ```
 #### keychain 
+- 简略打印版
 ```
 (objection): ios keychain dump_raw
 ```
+- 完整文件版(v_data是完整数据，键值对的名字是完整名字)
+```
+(objection): ios keychain dump --json keychain_dump.json
+```
+> 保存目录：当前MacOS电脑运行命令路径
 ## Android
 #### ImportError: cannot import name 'escape' from 'jinja2' 错误
 - 将jinja2降低到3.0.3版本即可
