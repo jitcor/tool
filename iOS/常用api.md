@@ -2,3 +2,7 @@
 ```objective-c
 NSData + dataWithContentsOfFile:
 ```
+## plist操作
+```
+NSKeyedArchiver
+```
