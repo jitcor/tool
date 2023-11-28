@@ -1,13 +1,10 @@
 # tool
-常用工具使用记录&amp;填坑
-  
-更多逆向技术加入星球《[逆向涉猎](https://t.zsxq.com/071NJKjZb)》获取  
-  
-More reverse techniques join the planet 《[Reverse Dabbling](https://t.zsxq.com/071NJKjZb)》 to get them.  
-  
-  
-  
-  
+常用工具使用记录&填坑
+
+# 技术支持
+若需技术支持，可加入[星球](https://t.zsxq.com/071NJKjZb)  
+
+# 统计
 ![Visitor's Count](https://profile-counter.glitch.me/Humenger_tool/count.svg) 
 
 
