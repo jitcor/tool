@@ -10,3 +10,9 @@ ssh -p 2222 root@127.0.0.1
 ```
 scp -P 2222 simple.txt root@127.0.0.1:/var/root
 ```
+# 抓包
+## PC端
+### Charles
+
+## 手机端
+### Stream
