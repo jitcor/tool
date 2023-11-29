@@ -1,7 +1,7 @@
 ## 更新PowerShell
 - 安装新版本：`iex "& { $(irm https://aka.ms/install-powershell.ps1 -UseBasicParsing) }"`
 - 设为默认版本
-  - 点击设置
+  - 点击设置  
   ![img](images/powershell_setting.png)
   - 点击`添加新配置文件`
   - 将新版本的powershell路径添加进去
