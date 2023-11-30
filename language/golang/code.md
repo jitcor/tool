@@ -1,4 +1,4 @@
-# 函数阻超时退出
+# 函数阻塞超时退出
 ```golang
 func Go(f func(), timeout time.Duration) {
 	ctx, cancel := context.WithTimeout(context.Background(), timeout)
