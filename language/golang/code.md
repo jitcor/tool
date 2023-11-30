@@ -1,6 +1,6 @@
 # 函数阻超时退出
 ```golang
-func CallFunc(f func(), timeout time.Duration) {
+func Go(f func(), timeout time.Duration) {
 	ctx, cancel := context.WithTimeout(context.Background(), timeout)
 	go func() {
 		f()
