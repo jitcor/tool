@@ -1,3 +1,16 @@
+# 函数阻超时退出
+```golang
+func CallFunc(f func(), timeout time.Duration) {
+	ctx, cancel := context.WithTimeout(context.Background(), timeout)
+	go func() {
+		f()
+		cancel()
+	}()
+	select {
+	case <-ctx.Done():
+	}
+}
+```
 # java random
 ```go
 package main
