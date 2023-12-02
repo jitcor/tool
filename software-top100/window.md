@@ -58,7 +58,11 @@ No.1:雷神模拟器：http://www.lsplayer.com/#/
 ## 快捷键工具
 - No.1: Quicker: https://getquicker.net/
 > 特点：轮盘菜单  
-- No.2: Power Keys: https://powerkeys.github.io/  
+- No.2: Power Keys: https://powerkeys.github.io/
+## 内网穿透(远程局域网)
+- No.1: zerotier: https://www.zerotier.com
+> 配置简单，操作方便，全平台支持，网速很快，跟我的服务器网速不相上下
+- No.2: tailscale: https://tailscale.com/
 # 参考
 
 https://love.appinn.com/
