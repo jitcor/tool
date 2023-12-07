@@ -20,14 +20,14 @@ git config --global --unset https.proxy
 ```
 ## 完全撤回commit（直接在git log里看不到这条commit记录）
 > 注：带--hard的会删除本地更改的代码
-### （方案1）
+### 方案1
 ```
 git log # 查看commit 历史
 git reset --hard HEAD^ # 回滚到上次提交
 git reset --hard xxxxx  # 回滚到xxxxx提交
 git push origin master -f # 提交删除操作
 ```
-### （方案2）
+### 方案2
 ```
 git log # 查看commit 历史
 git rebase -i xxxxxx # xxxxx为目标commit的前一个commit
