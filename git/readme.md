@@ -71,7 +71,7 @@ git reset --hard  	彻底清除工作区和暂存区，***慎用***
 git reset --keep 	保留工作区和HEAD之间的差异
 
 ```
-### HEAD~N or HEADE^N
+### HEAD~N or HEAD^N
 替代commit id，表示距离HEAD之前的第N次commit id  
 另附：很好的一张解释图  
 ```
