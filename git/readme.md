@@ -47,6 +47,7 @@ git push origin main -f  # 上传修改
 refs:https://cloud.tencent.com/developer/ask/sof/77445   
 refs:https://blog.csdn.net/CHAOS_ORDER/article/details/122655480
 ## 修改commit
+> 这部分仅适合没有git push 提交的，若是已经提交的，则仅能才能上面的命令才行
 ### 修改最新commit
 ```
 git reset HEAD~1 # 相当于git reset --mixed HEAD~1 会撤销add和commit
