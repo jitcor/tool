@@ -89,3 +89,10 @@ warp=plus
 然后这个IP就不会走warp通道了
 
 ### 仅代理指定IP或domain
+
+-> 可以仅代理需要魔法的网站，实现机场的效果，这样就获取了一个免费机场
+
+换到这个选项即可 include IPs and domains
+
+![image-20240124151431083](./warp/image-20240124151431083.png)
+
