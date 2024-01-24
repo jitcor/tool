@@ -1,4 +1,4 @@
-## 注册账户
+## 入门
 
 ## ubuntu
 参考：https://developers.cloudflare.com/warp-client/get-started/linux/  
@@ -54,3 +54,38 @@ warp=plus
 
 ![image-20240124034400230](./warp/image-20240124034400230.png)
 
+
+
+## 进阶
+
+### 排除指定IP或Domain
+
+-> 仅用于团队模式连接
+
+之前一直以为是在本地改的，发现本地客户端只有展示功能，没有修改功能，修改是在云端，具体参考：
+
+[Cloudflare Agent —— 无缝大规模部署](https://blog.cloudflare.com/cloudflare-agent-seamless-deployment-at-scale-zh-cn)
+
+![image-20240124150937485](./warp/image-20240124150937485.png)
+
+[split-tunnels/#add-a-domain](https://developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/configure-warp/route-traffic/split-tunnels/#add-a-domain)
+
+具体步骤如下：
+
+![image-20240124142340459](./warp/image-20240124142340459.png)
+
+![image-20240124142300567](./warp/image-20240124142300567.png)
+
+![image-20240124142127988](./warp/image-20240124142127988.png)
+
+下面添加指定IP地址即可
+
+![image-20240124142442977](./warp/image-20240124142442977.png)
+
+保存后就会自动更新到本地客户端
+
+![image-20240124142636876](./warp/image-20240124142636876.png)
+
+然后这个IP就不会走warp通道了
+
+### 仅代理指定IP或domain
