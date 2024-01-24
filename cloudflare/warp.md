@@ -21,7 +21,7 @@ sudo apt-get update && sudo apt-get install cloudflare-warp
 warp-cli teams-enroll <Name>
 然后会返回一个链接：
 https://<Name>.com.cloudflareaccess.com/warp
-在浏览器打开，输入个邮箱验证，该邮箱domain需要符合你的团队domain要求，验证完后，就注册设备成功了
+在浏览器打开，输入个邮箱验证，该邮箱domain需要符合你的团队domain要求，具体要求看后面详细介绍，验证完后，就注册设备成功了
 
 然后出现一个成功的页面，在该页面检查源代码(ref:[参考文档](https://developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/deployment/manual-deployment/))
 
@@ -55,6 +55,18 @@ warp=plus
 ![image-20240124034400230](./warp/image-20240124034400230.png)
 
 
+
+### 客户端注册邮箱策略
+
+![image-20240124153109887](./warp/image-20240124153109887.png)
+
+![image-20240124153135036](./warp/image-20240124153135036.png)
+
+如下，目前策略仅允许gmail邮箱注册，可以在后面添加更对其他邮箱domain支持
+
+![image-20240124153231543](./warp/image-20240124153231543.png)
+
+![image-20240124153432513](./warp/image-20240124153432513.png)
 
 ## 进阶
 
