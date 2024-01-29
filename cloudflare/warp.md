@@ -72,6 +72,8 @@ warp=plus
 
 ### 排除指定IP或Domain
 
+-> 这个不用看了，贼麻烦，等于要把国内的网站一个个都排除，否则访问国内网站会很慢，贼麻烦，用包含指定IP的方案吧
+
 -> 仅用于团队模式连接
 
 之前一直以为是在本地改的，发现本地客户端只有展示功能，没有修改功能，修改是在云端，具体参考：
@@ -107,4 +109,44 @@ warp=plus
 换到这个选项即可 include IPs and domains
 
 ![image-20240124151431083](./warp/image-20240124151431083.png)
+
+这个方案有几个好处，一是访问国内会很快，二是可以和机场同时使用，一些网站会限制warp的IP，这时就需要用机场代理了，三是不用频繁添加包含的IP，常访问的国外网站就那十几个
+
+算了，放弃了，还是只能作为备用的，网速太慢
+
+### 优选IP
+
+```
+warp-cli.exe set-custom-endpoint ip:port
+```
+
+```
+warp-cli.exe tunnel endpoint ip:port
+```
+
+-> 但这两个都没执行成功，没有权限，可能需要在服务端设置，但服务端没找到设置的地方，或者可能需要采用KEY的方式才行
+
+## FAQ
+
+CentOS执行warp-cli报`/lib64/libc.so.6: version 'GLIBC_2.18' not found`
+
+```
+wget http://ftp.gnu.org/gnu/glibc/glibc-2.18.tar.gz
+tar xf glibc-2.18.tar.gz
+cd glibc-2.18
+mkdir build
+cd build
+../configure --prefix=/opt/glibc-2.18 --disable-profile --enable-add-ons --with-headers=/usr/include --with-binutils=/usr/bin
+
+make
+make install
+
+strings /lib64/libc.so.6 | grep GLIBC
+```
+
+-> 不过没编译通过，make版本太老，又需要编译make，遂放弃，编译完make，不知道又要编译什么，就算编译完了，估计又会引起系统其他毛病，gnu软件就这通病
+
+
+
+
 
