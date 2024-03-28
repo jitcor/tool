@@ -162,5 +162,7 @@
 # 最终方案
 直接买一个吧，推荐一个老牌商家https://www.googlevoice.cn/
 
+或者https://github.com/ssnhd/googlevoice?tab=readme-ov-file
+
 🔝[返回顶部](#注册-google-voice-方法-成功率较高)
 

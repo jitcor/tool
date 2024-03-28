@@ -1,3 +1,15 @@
+## 一键订阅warp机场
+
+直接一键从这个网站导入订阅到clash里即可：https://neko-warp.nloli.xyz/，完美实现warp免费机场
+
+## 获取warp+ KEY
+
+https://blog.upx8.com/warp.html
+
+## Wireguard
+
+https://github.com/yonggekkk/warp-yg
+
 ## 入门
 
 ## ubuntu
@@ -125,6 +137,33 @@ warp-cli.exe tunnel endpoint ip:port
 ```
 
 -> 但这两个都没执行成功，没有权限，可能需要在服务端设置，但服务端没找到设置的地方，或者可能需要采用KEY的方式才行
+
+## Docker
+
+### 构建warp的docker镜像
+
+
+
+```
+# Add cloudflare-warp.repo to /etc/yum.repos.d/
+curl -fsSl https://pkg.cloudflareclient.com/cloudflare-warp-ascii.repo | sudo tee /etc/yum.repos.d/cloudflare-warp.repo
+
+# Update repo
+sudo yum update
+
+# Install
+sudo yum install cloudflare-warp
+
+# 安装依赖库
+yum install dbus-glib.x86_64
+
+# 开始使用
+warp-cli 
+```
+
+
+
+
 
 ## FAQ
 

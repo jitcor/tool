@@ -80,5 +80,31 @@ apt install openssh-server
 # netstat工具
 apt install net-tools
 ```
+## AlmaLinux
+
+更新系统
+
+```bash
+sudo dnf --refresh update
+sudo dnf upgrade
+```
+
+安装docker
+
+```bash
+sudo dnf install yum-utils
+sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+sudo dnf install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+```
+
+赋予ROOT权限
+
+```
+sudo usermod -aG docker ${USER}
+```
+
+
+
 # 参考
+
 - [ssh连接docker容器；docker容器设置root密码](https://blog.csdn.net/winter2121/article/details/118223637)
