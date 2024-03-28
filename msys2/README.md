@@ -46,7 +46,13 @@ pacman仓库地址：https://repo.msys2.org/msys/x86_64/
 镜像地址2：https://ftp.osuosl.org/pub/msys2/msys/x86_64/  
 镜像地址3：https://download.nus.edu.sg/mirror/msys2/msys/x86_64/  
 
-安装步骤跟上面一样，只不过路径换成云端的URL
+```
+pacman -Ss cmake
+pacman -S  mingw-w64-x86_64-cmake
+```
+
+
+
 ### 查找包
 ##### 本地
 ```
