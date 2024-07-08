@@ -10,4 +10,8 @@
 翻译:`客户可以在订阅期结束前 30（三十）天向 JetBrains 提交书面请求，将其产品订阅续订一年。`  
 > 当然，再次申请时，应该也是要该库有三个月活跃提交的，还有邮箱别忘了公开展示
 # 申请地址
-[opensource#support](https://www.jetbrains.com.cn/community/opensource/#support)
+[opensource#support](https://www.jetbrains.com.cn/community/opensource/#support)  
+
+点击下面的了解详情即可跳转到申请界面  
+
+![点击下面的了解详情即可跳转到申请界面](./open source license/image-20240708144051321.png)
