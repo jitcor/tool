@@ -8,10 +8,11 @@
 # 续订  
 官方原文:` Customer may renew its Product subscription for another year by submitting a written request to JetBrains 30 (thirty) days prior to the end of the Subscription period.`  
 翻译:`客户可以在订阅期结束前 30（三十）天向 JetBrains 提交书面请求，将其产品订阅续订一年。`  
+
 > 当然，再次申请时，应该也是要该库有三个月活跃提交的，还有邮箱别忘了公开展示
 # 申请地址
-[opensource#support](https://www.jetbrains.com.cn/community/opensource/#support)  
+主界面：[opensource#support](https://www.jetbrains.com.cn/community/opensource/#support)  
 
-点击下面的了解详情即可跳转到申请界面  
+拉到下面，点击`了解详情`即可跳转到具体申请入口  
 
 ![点击下面的了解详情即可跳转到申请界面](./open_source_license/image-20240708144051321.png)
