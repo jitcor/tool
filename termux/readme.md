@@ -71,6 +71,34 @@ Host 127.0.0.1
 ```
 scp xxx.file a0_u108@127.0.0.1:~/
 ```
+
+# vscode
+```
+# 安装虚拟root
+pkg install proot-distro
+# 安装debian
+proot-distro install debian
+# 登录debian
+proot-distro login debian
+# 更新软件
+apt update
+# 安装openssh
+apt install -y openssh-server
+# 修改/etc/ssh/sshd_config文件里Port端口
+#Port 22
+Port 9022
+/etc/init.d/ssh restart
+# 客户端配置
+# 文件：~/.ssh/config
+Host 127.0.0.1
+    HostName 127.0.0.1
+    User root
+    Port 9022
+    IdentityFile C:\Users\shlu\.ssh\id_rsa
+# vscode连接
+ssh -p 9022 127.0.0.1
+
+```
 # 自行编译包
 https://github.com/termux/termux-packages/wiki/Build-environment
 
