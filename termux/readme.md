@@ -71,7 +71,11 @@ Host 127.0.0.1
 ```
 scp xxx.file a0_u108@127.0.0.1:~/
 ```
-
+# adb端口转发
+```
+adb -s cccc forward tcp:8022 tcp:8022
+adb -s cccc forward tcp:9022 tcp:9022
+```
 # vscode
 ```
 # 安装虚拟root
