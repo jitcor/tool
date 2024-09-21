@@ -19,7 +19,7 @@ pkg update
 > 新版增加了GUI选择源界面，很方便
 ```
 termux-change-repo
-pkg update
+pkg update -y
 ```
 # 查看软件所有有效版本
 ```
@@ -27,7 +27,7 @@ apt-cache madison software_name
 ```
 # 初始化
 ```
-pkg update
+pkg update -y
 ```
 # 查看默认账户
 ```
@@ -36,11 +36,12 @@ whoami
 # ssh
 ```
 # 安装
-pkg install openssh
+pkg install openssh -y
 
 # 运行ssh服务端，默认8022端口
 sshd
 # 查看状态
+pkg install nmap
 nmap 127.0.0.1
 
 # 停止运行
