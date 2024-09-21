@@ -95,7 +95,7 @@ Host 127.0.0.1
     User root
     Port 9022
     IdentityFile C:\Users\shlu\.ssh\id_rsa
-# vscode连接
+# 连接
 ssh -p 9022 127.0.0.1
 
 ```
