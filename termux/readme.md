@@ -5,7 +5,7 @@ https://f-droid.org/en/packages/com.termux/
 export http_proxy=http://127.0.0.1:1080
 export https_proxy=http://127.0.0.1:1080
 ```
-# 替换源
+# ~~替换源~~ 
 ```
 sed -i 's@^\(deb.*stable main\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/termux-packages-24 stable main@' $PREFIX/etc/apt/sources.list
 
@@ -13,6 +13,12 @@ sed -i 's@^\(deb.*games stable\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/
 
 sed -i 's@^\(deb.*science stable\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/science-packages-24 science stable@' $PREFIX/etc/apt/sources.list.d/science.list
 
+pkg update
+```
+# 替换源
+> 新版增加了GUI选择源界面，很方便
+```
+termux-change-repo
 pkg update
 ```
 # 查看软件所有有效版本
