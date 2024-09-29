@@ -52,5 +52,9 @@ function iOSDumpMemory(address,size,name){
 }
 iOSDumpMemory(cc.base,cc.size,"libName");
 ```
-> 实测可以dump出来，但是IDA无法识别，可能需要修复头，具体后面再研究吧
+> 实测可以dump出来，但是IDA无法识别，可能需要修复头，具体后面再研究吧  
 > 这里直接按路径找，是找不到系统库的，只能二进制dump
+
+# 提取TLS证书
+https://github.com/jankais3r/Frida-iOS-15-TLS-Keylogger  
+〉这个仅适配了iOS 15，若是其它版本，需要自行适配
