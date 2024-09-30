@@ -67,3 +67,12 @@ Error: Failure while executing; `cp -pR /private/tmp/d20210826-15074-zh9zmn/buck
 cp: /usr/local/Cellar/buck/./2021.01.12.01_1/bin/buck: Permission denied
 ```
 
+# 常用工具
+## libusb
+```
+brew install libusb
+# 查看安装路径
+brew info libusb
+# 将路径添加到系统查找目录
+export DYLD_LIBRARY_PATH="/usr/local/Cellar/libusb/1.0.27/lib:$DYLD_LIBRARY_PATH"
+```
