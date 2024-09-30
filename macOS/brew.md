@@ -76,3 +76,7 @@ brew info libusb
 # 将路径添加到系统查找目录
 export DYLD_LIBRARY_PATH="/usr/local/Cellar/libusb/1.0.27/lib:$DYLD_LIBRARY_PATH"
 ```
+## ipsw (iOS固件解析工具)
+```
+brew install blacktop/tap/ipsw
+```
