@@ -83,8 +83,20 @@ iPad (7th generation)
        * sep-firmware.j172.RELEASE.im4p
 
 ```
-
-
+```bash
+ipsw mount fs /path/to/xxx.ipsw
+```
+```
+   • Mounted fs DMG 038-96340-065.dmg
+      • Press Ctrl+C to unmount '/tmp/038-96340-065.dmg.mount' ...
+```
+# 技术篇
+## 获取系统库二进制文件
+```bash
+# 1.下载对应版本固件，推荐爱思助手里下载，或者网站：ipsw.me
+# 2.ipsw命令挂载
+# 3.
+```
 
 
 
