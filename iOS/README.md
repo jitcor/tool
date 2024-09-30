@@ -94,10 +94,19 @@ ipsw mount fs /path/to/xxx.ipsw
 ## 获取系统库二进制文件
 ```bash
 # 1.下载对应版本固件，推荐爱思助手里下载，或者网站：ipsw.me
-# 2.ipsw命令挂载
-# 3.
+# 2.ipsw命令挂载,然后可以在磁盘挂载列表找到对应挂载点，如下AzulD开头就是
 ```
 
+![image-20240930174658706](./README.assets/image-20240930174658706.png)
+
+```bash
+# 找到/System/Library/Caches/com.apple.dyld这个目录，复制出来（省去以后再次挂载）
+# 利用dsc_extractor工具导出系统库
+dsc_extractor path/to/com.apple.dyld/dyld_shared_cache_arm64 <out_dir>
+# 导出后，系统库路径：<out_dir>/usr/lib/libxxx.dylib
+```
+
+ [dsc_extractor](./README.assets/dsc_extractor) 
 
 
 
