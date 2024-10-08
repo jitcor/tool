@@ -104,6 +104,7 @@ ipsw mount fs /path/to/xxx.ipsw
 # 利用dsc_extractor工具导出系统库
 dsc_extractor path/to/com.apple.dyld/dyld_shared_cache_arm64 <out_dir>
 # 导出后，系统库路径：<out_dir>/usr/lib/libxxx.dylib
+# 然后可以直接拖入IDA等分析工具分析即可
 ```
 
  [dsc_extractor](./README.assets/dsc_extractor) 
