@@ -273,5 +273,5 @@ wireshark 导入keylog教程：https://wiki.wireshark.org/TLS#tls-decryption
 # 待解决问题
 1. frida spawn方式拦截子进程  
 2. frida spawn方式拦截依赖库报unable to find module  
-    这个可能涉及到iOS的依赖库加载机制，和frida 注入机制，但这两个学习成本有点高，临时解决方案就是主动加载依赖库或者延时hook
+    这个可能涉及到iOS的依赖库加载机制，和frida 注入机制，但这两个学习成本有点高，临时解决方案就是主动加载依赖库，循环检测或者延时hook
 3. 
