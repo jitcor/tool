@@ -268,7 +268,7 @@ startTLSKeyLogger(Module.findExportByName("libboringssl.dylib","SSL_CTX_new"),De
 
 ```
 
-
+wireshark 导入keylog教程：https://wiki.wireshark.org/TLS#tls-decryption
 
 # 待解决问题
 1. frida spawn方式拦截子进程  
