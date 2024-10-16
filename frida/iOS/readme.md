@@ -270,6 +270,8 @@ startTLSKeyLogger(Module.findExportByName("libboringssl.dylib","SSL_CTX_new"),De
 
 wireshark 导入keylog教程：https://wiki.wireshark.org/TLS#tls-decryption
 
+iOS 网卡抓包：`rvictl` 
+
 # 待解决问题
 1. frida spawn方式拦截子进程  
 2. frida spawn方式拦截依赖库报unable to find module  
