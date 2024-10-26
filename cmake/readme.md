@@ -91,6 +91,9 @@ message(STATUS "hello")
 ## 指定C++标准
 `set(CMAKE_CXX_STANDARD 17)` C++17标准
 
+## 添加外部宏定义
+`add_definitions(-DVIXL_INCLUDE_SIMULATOR_AARCH64)` 在CMakeLists.txt添加一个VIXL_INCLUDE_SIMULATOR_AARCH64宏定义。
+
 ## 打印详细输出信息
 - 1.cmake命令行：`-DCMAKE_VERBOSE_MAKEFILE=ON`
 - 2.cmakeLists.txt: `set(CMAKE_VERBOSE_MAKEFILEON ON)`
