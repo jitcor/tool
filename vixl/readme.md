@@ -11,7 +11,12 @@ scons
 编译后，会有个静态库：obj/latest/libvixl.a  
 
 ## 运行demo
-```CMakeLists.txt
+新建目录vixl-demo001  
+将libvixl.a静态库复制到该目录下  
+复制所有头文件并保持文件结构：`find . -name "*.h" | cpio -pdm <target_dir>`  
+然后新建以下文件：  
+CMakeLists.txt  
+```
 cmake_minimum_required(VERSION 3.16.3)
 project(demo001)
 set(CMAKE_CXX_STANDARD 17)
@@ -21,7 +26,7 @@ add_executable(demo001 main.cpp)
 include_directories(${CMAKE_SOURCE_DIR}/include/)
 target_link_libraries(demo001 ${CMAKE_SOURCE_DIR}/libvixl.a)
 ```
-复制所有头文件并保持文件结构：`find . -name "*.h" | cpio -pdm <target_dir>`  
+
 main.cpp  
 ```cpp
 // Copyright 2014, VIXL authors
