@@ -88,6 +88,9 @@ message(STATUS "hello")
 `target_link_libraries(myprogram /path/to/library/libmylibrary.a)`  
 完成以上步骤后，重新生成项目即可使用静态库。  
 
+## 指定C++标准
+`set(CMAKE_CXX_STANDARD 17)` C++17标准
+
 ## 打印详细输出信息
 - 1.cmake命令行：`-DCMAKE_VERBOSE_MAKEFILE=ON`
 - 2.cmakeLists.txt: `set(CMAKE_VERBOSE_MAKEFILEON ON)`
