@@ -22,24 +22,27 @@ git config --global --unset https.proxy
 > 注：带--hard的会删除本地更改的代码
 ### 方案1
 ```
+git checkout <branch>  # 先切换到目标分支
 git log # 查看commit 历史
 git reset --hard HEAD^ # 回滚到上次提交
 git reset --hard xxxxx  # 回滚到xxxxx提交
-git push origin master -f # 提交删除操作
+git push origin <branch> -f # 提交删除操作
 ```
 ### 方案2
 ```
+git checkout <branch>  # 先切换到目标分支
 git log # 查看commit 历史
 git rebase -i xxxxxx # xxxxx为目标commit的前一个commit
 然后drop掉目标commit
-git push origin master -f # 提交删除操作
+git push origin <branch> -f # 提交删除操作
 ```
 ### 初次提交
 ```
 修改文件
+git checkout <branch>  # 先切换到目标分支
 git add .   # 添加修改
 git commit --amend -m 'initial commit'  # 提交修改（但其实是修改的上一次提交）
-git push origin main -f  # 上传修改
+git push origin <branch> -f  # 上传修改
 ```
 > 在第一次提交之前没有任何东西，因为每次提交都引用一个父提交。这使得第一次提交是特殊的(孤立提交)，所以没有办法引用以前的“状态”。
 因此，如果您想修复提交，您可以简单地git commit --amend：这将修改提交，而不创建另一个提交。
