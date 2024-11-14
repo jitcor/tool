@@ -2,6 +2,9 @@
 ```cmd
 # 还能 get 其他版本的golang
 $ go get golang.org/dl/go1.15.2
+# 新版方式
+$ go install golang.org/dl/go1.20.9@latest
+# 版本列表：https://go.dev/dl/
 
 # 下载这一步不能少
 $ go1.15.2 download
