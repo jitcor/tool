@@ -1,6 +1,7 @@
 # tool
 常用工具使用记录&填坑
 ## 目录
+<<<<<<< HEAD
 
 <!-- DIRECTORY INDEX START -->
 ## 目录索引
@@ -121,6 +122,10 @@
 - [程序切片](./%E7%A8%8B%E5%BA%8F%E5%88%87%E7%89%87/)
 - [符号执行](./%E7%AC%A6%E5%8F%B7%E6%89%A7%E8%A1%8C/)
 <!-- DIRECTORY INDEX END -->
+=======
+  - [android studio](./Android/android%20studio/)
+    - [4.1](./Android/android studio/4.1/)
+>>>>>>> 6c1dbf31745b64a48df1a408b50dfad502d08d69
 
 
 
