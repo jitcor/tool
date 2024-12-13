@@ -1,8 +1,3 @@
----
-layout: default
-title: tool
----
-
 <!-- DIRECTORY INDEX START -->
 
 ## 目录索引
