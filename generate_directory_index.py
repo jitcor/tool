@@ -42,7 +42,7 @@ def generate_markdown_index(base_path, current_path='.', level=0, exclude_dirs=N
             else:
                 indent = '  ' * level
                 # 不包含 README.md 的目录，仅显示目录名称，不包含链接
-                markdown += f"{indent}- 📄 {item}/\n"
+                markdown += f"{indent}- 📁 {item}/\n"
                 # 递归查找子目录
                 markdown += generate_markdown_index(base_path, relative_path, level + 1, exclude_dirs)
         elif os.path.isfile(item_path) and is_markdown_file(item) and item.lower() != 'readme.md':
@@ -51,7 +51,7 @@ def generate_markdown_index(base_path, current_path='.', level=0, exclude_dirs=N
             file_name = os.path.splitext(item)[0]
             # 进行 URL 编码
             file_link = urllib.parse.quote(relative_path)
-            markdown += f"{indent}- [{file_name}]({file_link})\n"
+            markdown += f"{indent}- 📄 [{file_name}]({file_link})\n"
 
     return markdown
 

@@ -1,98 +1,98 @@
 <!-- DIRECTORY INDEX START -->
 ## 目录索引
-- 📄 010editor/
-  - 📄 Templates/
-    - [bt编写规则](./010editor/Templates/bt%E7%BC%96%E5%86%99%E8%A7%84%E5%88%99.md)
+- 📁 010editor/
+  - 📁 Templates/
+    - 📄 [bt编写规则](./010editor/Templates/bt%E7%BC%96%E5%86%99%E8%A7%84%E5%88%99.md)
 - 📁 [Android/](./Android/)
-  - 📄 AIDL/
-    - [AIDL调用回溯](./Android/AIDL/AIDL%E8%B0%83%E7%94%A8%E5%9B%9E%E6%BA%AF.md)
-  - [Android逆向面试题](./Android/Android%E9%80%86%E5%90%91%E9%9D%A2%E8%AF%95%E9%A2%98.md)
-  - [App的N种退出方式](./Android/App%E7%9A%84N%E7%A7%8D%E9%80%80%E5%87%BA%E6%96%B9%E5%BC%8F.md)
-  - [Pixel 2 XL 解除激活锁](./Android/Pixel%202%20XL%20%E8%A7%A3%E9%99%A4%E6%BF%80%E6%B4%BB%E9%94%81.md)
-  - [Pixel 循环重启问题](./Android/Pixel%20%E5%BE%AA%E7%8E%AF%E9%87%8D%E5%90%AF%E9%97%AE%E9%A2%98.md)
-  - [Version](./Android/Version.md)
-  - 📄 adb/
+  - 📁 AIDL/
+    - 📄 [AIDL调用回溯](./Android/AIDL/AIDL%E8%B0%83%E7%94%A8%E5%9B%9E%E6%BA%AF.md)
+  - 📄 [Android逆向面试题](./Android/Android%E9%80%86%E5%90%91%E9%9D%A2%E8%AF%95%E9%A2%98.md)
+  - 📄 [App的N种退出方式](./Android/App%E7%9A%84N%E7%A7%8D%E9%80%80%E5%87%BA%E6%96%B9%E5%BC%8F.md)
+  - 📄 [Pixel 2 XL 解除激活锁](./Android/Pixel%202%20XL%20%E8%A7%A3%E9%99%A4%E6%BF%80%E6%B4%BB%E9%94%81.md)
+  - 📄 [Pixel 循环重启问题](./Android/Pixel%20%E5%BE%AA%E7%8E%AF%E9%87%8D%E5%90%AF%E9%97%AE%E9%A2%98.md)
+  - 📄 [Version](./Android/Version.md)
+  - 📁 adb/
     - 📁 [adbtool/](./Android/adb/adbtool/)
-    - [adb禁用app](./Android/adb/adb%E7%A6%81%E7%94%A8app.md)
-    - [pm](./Android/adb/pm.md)
+    - 📄 [adb禁用app](./Android/adb/adb%E7%A6%81%E7%94%A8app.md)
+    - 📄 [pm](./Android/adb/pm.md)
   - 📁 [android studio/](./Android/android%20studio/)
     - 📁 [4.1/](./Android/android%20studio/4.1/)
-    - [External_Tools](./Android/android%20studio/External_Tools.md)
-    - [修改第三方库最优解](./Android/android%20studio/%E4%BF%AE%E6%94%B9%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E6%9C%80%E4%BC%98%E8%A7%A3.md)
-  - 📄 camera/
+    - 📄 [External_Tools](./Android/android%20studio/External_Tools.md)
+    - 📄 [修改第三方库最优解](./Android/android%20studio/%E4%BF%AE%E6%94%B9%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E6%9C%80%E4%BC%98%E8%A7%A3.md)
+  - 📁 camera/
     - 📁 [virtual_camera/](./Android/camera/virtual_camera/)
-  - 📄 dex/
+  - 📁 dex/
     - 📁 [v(c)dex转dex/](./Android/dex/v%28c%29dex%E8%BD%ACdex/)
   - 📁 [gradle/](./Android/gradle/)
   - 📁 [kernel/](./Android/kernel/)
   - 📁 [ndk/](./Android/ndk/)
     - 📁 [minimal_project/](./Android/ndk/minimal_project/)
-      - 📄 jni/
-  - [pixel手机Wifi网络受限问题解决](./Android/pixel%E6%89%8B%E6%9C%BAWifi%E7%BD%91%E7%BB%9C%E5%8F%97%E9%99%90%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3.md)
+      - 📁 jni/
+  - 📄 [pixel手机Wifi网络受限问题解决](./Android/pixel%E6%89%8B%E6%9C%BAWifi%E7%BD%91%E7%BB%9C%E5%8F%97%E9%99%90%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3.md)
   - 📁 [proguard/](./Android/proguard/)
   - 📁 [sdk/](./Android/sdk/)
   - 📁 [smali/](./Android/smali/)
   - 📁 [so/](./Android/so/)
-  - 📄 task/
+  - 📁 task/
     - 📁 [快译/](./Android/task/%E5%BF%AB%E8%AF%91/)
     - 📁 [望月/](./Android/task/%E6%9C%9B%E6%9C%88/)
   - 📁 [usb上网/](./Android/usb%E4%B8%8A%E7%BD%91/)
-  - [产品反馈工具](./Android/%E4%BA%A7%E5%93%81%E5%8F%8D%E9%A6%88%E5%B7%A5%E5%85%B7.md)
-  - [安装开发常用库](./Android/%E5%AE%89%E8%A3%85%E5%BC%80%E5%8F%91%E5%B8%B8%E7%94%A8%E5%BA%93.md)
+  - 📄 [产品反馈工具](./Android/%E4%BA%A7%E5%93%81%E5%8F%8D%E9%A6%88%E5%B7%A5%E5%85%B7.md)
+  - 📄 [安装开发常用库](./Android/%E5%AE%89%E8%A3%85%E5%BC%80%E5%8F%91%E5%B8%B8%E7%94%A8%E5%BA%93.md)
   - 📁 [开发/](./Android/%E5%BC%80%E5%8F%91/)
-    - 📄 Code/
+    - 📁 Code/
       - 📁 [ListView/](./Android/%E5%BC%80%E5%8F%91/Code/ListView/)
     - 📁 [rxjava/](./Android/%E5%BC%80%E5%8F%91/rxjava/)
     - 📁 [svg/](./Android/%E5%BC%80%E5%8F%91/svg/)
   - 📁 [悬浮窗/](./Android/%E6%82%AC%E6%B5%AE%E7%AA%97/)
-  - 📄 检测/
+  - 📁 检测/
     - 📁 [ICBC检测方案/](./Android/%E6%A3%80%E6%B5%8B/ICBC%E6%A3%80%E6%B5%8B%E6%96%B9%E6%A1%88/)
-  - [注册Google voice虚拟号码](./Android/%E6%B3%A8%E5%86%8CGoogle%20voice%E8%99%9A%E6%8B%9F%E5%8F%B7%E7%A0%81.md)
-  - 📄 源码编译/
+  - 📄 [注册Google voice虚拟号码](./Android/%E6%B3%A8%E5%86%8CGoogle%20voice%E8%99%9A%E6%8B%9F%E5%8F%B7%E7%A0%81.md)
+  - 📁 源码编译/
     - 📁 [android-10.0.0_r2/](./Android/%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91/android-10.0.0_r2/)
-      - [修改system.img](./Android/%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91/android-10.0.0_r2/%E4%BF%AE%E6%94%B9system.img.md)
+      - 📄 [修改system.img](./Android/%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91/android-10.0.0_r2/%E4%BF%AE%E6%94%B9system.img.md)
     - 📁 [android_6.0.0_r1/](./Android/%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91/android_6.0.0_r1/)
-    - 📄 wsl2/
-      - 📄 ubuntu18.04/
-        - [源码一条龙](./Android/%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91/wsl2/ubuntu18.04/%E6%BA%90%E7%A0%81%E4%B8%80%E6%9D%A1%E9%BE%99.md)
-        - [草稿](./Android/%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91/wsl2/ubuntu18.04/%E8%8D%89%E7%A8%BF.md)
-    - 📄 wsl方式编译/
+    - 📁 wsl2/
+      - 📁 ubuntu18.04/
+        - 📄 [源码一条龙](./Android/%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91/wsl2/ubuntu18.04/%E6%BA%90%E7%A0%81%E4%B8%80%E6%9D%A1%E9%BE%99.md)
+        - 📄 [草稿](./Android/%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91/wsl2/ubuntu18.04/%E8%8D%89%E7%A8%BF.md)
+    - 📁 wsl方式编译/
       - 📁 [Android-4.4.4_r1/](./Android/%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91/wsl%E6%96%B9%E5%BC%8F%E7%BC%96%E8%AF%91/Android-4.4.4_r1/)
-    - 📄 官方编译/
+    - 📁 官方编译/
       - 📁 [Android-4.4.4_r1/](./Android/%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91/%E5%AE%98%E6%96%B9%E7%BC%96%E8%AF%91/Android-4.4.4_r1/)
-  - [漏洞Index](./Android/%E6%BC%8F%E6%B4%9EIndex.md)
-  - 📄 脱壳/
+  - 📄 [漏洞Index](./Android/%E6%BC%8F%E6%B4%9EIndex.md)
+  - 📁 脱壳/
     - 📁 [几维安全/](./Android/%E8%84%B1%E5%A3%B3/%E5%87%A0%E7%BB%B4%E5%AE%89%E5%85%A8/)
       - 📁 [2022-02-15/](./Android/%E8%84%B1%E5%A3%B3/%E5%87%A0%E7%BB%B4%E5%AE%89%E5%85%A8/2022-02-15/)
-    - 📄 百度壳/
-      - 📄 vmp壳/
+    - 📁 百度壳/
+      - 📁 vmp壳/
         - 📁 [版本1(2020-03)/](./Android/%E8%84%B1%E5%A3%B3/%E7%99%BE%E5%BA%A6%E5%A3%B3/vmp%E5%A3%B3/%E7%89%88%E6%9C%AC1%282020-03%29/)
     - 📁 [腾讯乐固/](./Android/%E8%84%B1%E5%A3%B3/%E8%85%BE%E8%AE%AF%E4%B9%90%E5%9B%BA/)
       - 📁 [2020-12-15加固/](./Android/%E8%84%B1%E5%A3%B3/%E8%85%BE%E8%AE%AF%E4%B9%90%E5%9B%BA/2020-12-15%E5%8A%A0%E5%9B%BA/)
       - 📁 [2022-02-01/](./Android/%E8%84%B1%E5%A3%B3/%E8%85%BE%E8%AE%AF%E4%B9%90%E5%9B%BA/2022-02-01/)
-    - 📄 腾讯御安全/
-      - [2020-6-26](./Android/%E8%84%B1%E5%A3%B3/%E8%85%BE%E8%AE%AF%E5%BE%A1%E5%AE%89%E5%85%A8/2020-6-26.md)
-  - [谷歌账户切换地区](./Android/%E8%B0%B7%E6%AD%8C%E8%B4%A6%E6%88%B7%E5%88%87%E6%8D%A2%E5%9C%B0%E5%8C%BA.md)
-  - [跨语言调用跟踪](./Android/%E8%B7%A8%E8%AF%AD%E8%A8%80%E8%B0%83%E7%94%A8%E8%B7%9F%E8%B8%AA.md)
-  - [进程间调用跟踪](./Android/%E8%BF%9B%E7%A8%8B%E9%97%B4%E8%B0%83%E7%94%A8%E8%B7%9F%E8%B8%AA.md)
-  - [逆向填坑](./Android/%E9%80%86%E5%90%91%E5%A1%AB%E5%9D%91.md)
+    - 📁 腾讯御安全/
+      - 📄 [2020-6-26](./Android/%E8%84%B1%E5%A3%B3/%E8%85%BE%E8%AE%AF%E5%BE%A1%E5%AE%89%E5%85%A8/2020-6-26.md)
+  - 📄 [谷歌账户切换地区](./Android/%E8%B0%B7%E6%AD%8C%E8%B4%A6%E6%88%B7%E5%88%87%E6%8D%A2%E5%9C%B0%E5%8C%BA.md)
+  - 📄 [跨语言调用跟踪](./Android/%E8%B7%A8%E8%AF%AD%E8%A8%80%E8%B0%83%E7%94%A8%E8%B7%9F%E8%B8%AA.md)
+  - 📄 [进程间调用跟踪](./Android/%E8%BF%9B%E7%A8%8B%E9%97%B4%E8%B0%83%E7%94%A8%E8%B7%9F%E8%B8%AA.md)
+  - 📄 [逆向填坑](./Android/%E9%80%86%E5%90%91%E5%A1%AB%E5%9D%91.md)
 - 📁 [Anti-epidemic/](./Anti-epidemic/)
-- [AppCenter](./AppCenter.md)
+- 📄 [AppCenter](./AppCenter.md)
 - 📁 [AutoCAD/](./AutoCAD/)
 - 📁 [CTF/](./CTF/)
-- 📄 ClashX/
-- 📄 Common/
-  - 📄 Serializable/
+- 📁 ClashX/
+- 📁 Common/
+  - 📁 Serializable/
     - 📁 [Kryo/](./Common/Serializable/Kryo/)
     - 📁 [protobuf/](./Common/Serializable/protobuf/)
-  - 📄 algorithms/
+  - 📁 algorithms/
     - 📁 [Aes/](./Common/algorithms/Aes/)
     - 📁 [Des/](./Common/algorithms/Des/)
     - 📁 [PBKDF/](./Common/algorithms/PBKDF/)
-    - 📄 RSA/
+    - 📁 RSA/
     - 📁 [Scrypt/](./Common/algorithms/Scrypt/)
     - 📁 [java/](./Common/algorithms/java/)
-  - 📄 cache/
+  - 📁 cache/
     - 📁 [NSURLCache/](./Common/cache/NSURLCache/)
     - 📁 [YYCache/](./Common/cache/YYCache/)
   - 📁 [cpu/](./Common/cpu/)
@@ -101,57 +101,58 @@
     - 📁 [fmdb/](./Common/sql/fmdb/)
     - 📁 [grdb/](./Common/sql/grdb/)
     - 📁 [sqlcipher/](./Common/sql/sqlcipher/)
-      - [SQLcipher加密机制分析](./Common/sql/sqlcipher/SQLcipher%E5%8A%A0%E5%AF%86%E6%9C%BA%E5%88%B6%E5%88%86%E6%9E%90.md)
-      - [SqlCipher源码分析](./Common/sql/sqlcipher/SqlCipher%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90.md)
+      - 📄 [SQLcipher加密机制分析](./Common/sql/sqlcipher/SQLcipher%E5%8A%A0%E5%AF%86%E6%9C%BA%E5%88%B6%E5%88%86%E6%9E%90.md)
+      - 📄 [SqlCipher源码分析](./Common/sql/sqlcipher/SqlCipher%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90.md)
       - 📁 [data/](./Common/sql/sqlcipher/data/)
       - 📁 [sqlcipher全解析/](./Common/sql/sqlcipher/sqlcipher%E5%85%A8%E8%A7%A3%E6%9E%90/)
-      - [sqlcipher编译](./Common/sql/sqlcipher/sqlcipher%E7%BC%96%E8%AF%91.md)
+      - 📄 [sqlcipher编译](./Common/sql/sqlcipher/sqlcipher%E7%BC%96%E8%AF%91.md)
     - 📁 [wcdb/](./Common/sql/wcdb/)
-- 📄 Embedded/
+- 📁 Embedded/
   - 📁 [esp32/](./Embedded/esp32/)
 - 📁 [Graphviz/](./Graphviz/)
 - 📁 [IDA/](./IDA/)
-  - [IDA小知识点集合](./IDA/IDA%E5%B0%8F%E7%9F%A5%E8%AF%86%E7%82%B9%E9%9B%86%E5%90%88.md)
-  - [IDA汇编指令分析](./IDA/IDA%E6%B1%87%E7%BC%96%E6%8C%87%E4%BB%A4%E5%88%86%E6%9E%90.md)
+  - 📄 [IDA小知识点集合](./IDA/IDA%E5%B0%8F%E7%9F%A5%E8%AF%86%E7%82%B9%E9%9B%86%E5%90%88.md)
+  - 📄 [IDA汇编指令分析](./IDA/IDA%E6%B1%87%E7%BC%96%E6%8C%87%E4%BB%A4%E5%88%86%E6%9E%90.md)
   - 📁 [api/](./IDA/api/)
-  - 📄 ida7.0/
-    - 📄 srcipt/
-  - 📄 ida7.5/
+  - 📁 ida7.0/
+    - 📁 srcipt/
+  - 📁 ida7.5/
     - 📁 [keygen/](./IDA/ida7.5/keygen/)
   - 📁 [ida9.0/](./IDA/ida9.0/)
-    - 📄 readme/
+    - 📁 readme/
   - 📁 [images/](./IDA/images/)
   - 📁 [plugins/](./IDA/plugins/)
     - 📁 [IDAPython/](./IDA/plugins/IDAPython/)
     - 📁 [keypatch/](./IDA/plugins/keypatch/)
-  - 📄 readme/
+  - 📁 readme/
 - 📁 [IDEA/](./IDEA/)
-  - [Android Studio](./IDEA/Android%20Studio.md)
+  - 📄 [Android Studio](./IDEA/Android%20Studio.md)
   - 📁 [Clion/](./IDEA/Clion/)
-    - [Toolchains](./IDEA/Clion/Toolchains.md)
-    - [WSL&Clion](./IDEA/Clion/WSL%26Clion.md)
+    - 📄 [Toolchains](./IDEA/Clion/Toolchains.md)
+    - 📄 [WSL&Clion](./IDEA/Clion/WSL%26Clion.md)
   - 📁 [IDEA插件编写指南/](./IDEA/IDEA%E6%8F%92%E4%BB%B6%E7%BC%96%E5%86%99%E6%8C%87%E5%8D%97/)
-    - [pre_readme](./IDEA/IDEA%E6%8F%92%E4%BB%B6%E7%BC%96%E5%86%99%E6%8C%87%E5%8D%97/pre_readme.md)
-  - [PyCharm](./IDEA/PyCharm.md)
-  - [open source license](./IDEA/open%20source%20license.md)
-  - 📄 open_source_license/
-  - [plugin](./IDEA/plugin.md)
-  - [regex](./IDEA/regex.md)
-  - [webstrom](./IDEA/webstrom.md)
-  - [乱码问题](./IDEA/%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98.md)
+    - 📄 [pre_readme](./IDEA/IDEA%E6%8F%92%E4%BB%B6%E7%BC%96%E5%86%99%E6%8C%87%E5%8D%97/pre_readme.md)
+  - 📄 [PyCharm](./IDEA/PyCharm.md)
+  - 📄 [open source license](./IDEA/open%20source%20license.md)
+  - 📁 open_source_license/
+  - 📄 [plugin](./IDEA/plugin.md)
+  - 📄 [regex](./IDEA/regex.md)
+  - 📄 [webstrom](./IDEA/webstrom.md)
+  - 📄 [乱码问题](./IDEA/%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98.md)
 - 📁 [NLP/](./NLP/)
-- [Navigation](./Navigation.md)
+- 📄 [Navigation](./Navigation.md)
 - 📁 [PC/](./PC/)
-- 📄 PacketCapture/
-  - [路由器转发抓包](./PacketCapture/%E8%B7%AF%E7%94%B1%E5%99%A8%E8%BD%AC%E5%8F%91%E6%8A%93%E5%8C%85.md)
-- 📄 Samsung/
+- 📁 PacketCapture/
+  - 📄 [路由器转发抓包](./PacketCapture/%E8%B7%AF%E7%94%B1%E5%99%A8%E8%BD%AC%E5%8F%91%E6%8A%93%E5%8C%85.md)
+- 📁 Samsung/
   - 📁 [Samsung A51 5G(SM-A5160)/](./Samsung/Samsung%20A51%205G%28SM-A5160%29/)
   - 📁 [Samsung S7(SM-9300)/](./Samsung/Samsung%20S7%28SM-9300%29/)
-- 📄 Serialization/
-  - [序列化方案选型对比](./Serialization/%E5%BA%8F%E5%88%97%E5%8C%96%E6%96%B9%E6%A1%88%E9%80%89%E5%9E%8B%E5%AF%B9%E6%AF%94.md)
+- 📁 Serialization/
+  - 📄 [序列化方案选型对比](./Serialization/%E5%BA%8F%E5%88%97%E5%8C%96%E6%96%B9%E6%A1%88%E9%80%89%E5%9E%8B%E5%AF%B9%E6%AF%94.md)
 - 📁 [Swing/](./Swing/)
 - 📁 [UI/](./UI/)
 - 📁 [VMWare/](./VMWare/)
+- 📁 _plugins/
 - 📁 [ads/](./ads/)
   - 📁 [mopub/](./ads/mopub/)
   - 📁 [unity3d/](./ads/unity3d/)
@@ -159,83 +160,83 @@
 - 📁 [arm/](./arm/)
   - 📁 [arm64/](./arm/arm64/)
     - 📁 [arm2c/](./arm/arm64/arm2c/)
-- 📄 ast/
-  - 📄 010editor/
-    - [pfp](./ast/010editor/pfp.md)
+- 📁 ast/
+  - 📁 010editor/
+    - 📄 [pfp](./ast/010editor/pfp.md)
 - 📁 [baidupan/](./baidupan/)
   - 📁 [images/](./baidupan/images/)
 - 📁 [bnf/](./bnf/)
-- 📄 cloud/
+- 📁 cloud/
   - 📁 [gcloud/](./cloud/gcloud/)
-    - [sql](./cloud/gcloud/sql.md)
-- 📄 cloudflare/
-  - 📄 warp/
-  - [warp](./cloudflare/warp.md)
-  - 📄 开启防攻击模式/
-  - [开启防攻击模式](./cloudflare/%E5%BC%80%E5%90%AF%E9%98%B2%E6%94%BB%E5%87%BB%E6%A8%A1%E5%BC%8F.md)
+    - 📄 [sql](./cloud/gcloud/sql.md)
+- 📁 cloudflare/
+  - 📁 warp/
+  - 📄 [warp](./cloudflare/warp.md)
+  - 📁 开启防攻击模式/
+  - 📄 [开启防攻击模式](./cloudflare/%E5%BC%80%E5%90%AF%E9%98%B2%E6%94%BB%E5%87%BB%E6%A8%A1%E5%BC%8F.md)
 - 📁 [cmake/](./cmake/)
 - 📁 [discuz/](./discuz/)
 - 📁 [docker/](./docker/)
-  - [change-docker-root](./docker/change-docker-root.md)
+  - 📄 [change-docker-root](./docker/change-docker-root.md)
 - 📁 [flutter/](./flutter/)
 - 📁 [frida/](./frida/)
   - 📁 [android/](./frida/android/)
   - 📁 [c++/](./frida/c%2B%2B/)
-  - [compile](./frida/compile.md)
+  - 📄 [compile](./frida/compile.md)
   - 📁 [iOS/](./frida/iOS/)
-    - [frida-trace](./frida/iOS/frida-trace.md)
+    - 📄 [frida-trace](./frida/iOS/frida-trace.md)
   - 📁 [objection/](./frida/objection/)
-  - [openssl](./frida/openssl.md)
+  - 📄 [openssl](./frida/openssl.md)
   - 📁 [patch/](./frida/patch/)
   - 📁 [window/](./frida/window/)
 - 📁 [frp/](./frp/)
 - 📁 [gcc/](./gcc/)
 - 📁 [gdb/](./gdb/)
 - 📁 [git/](./git/)
-  - [gitignore](./git/gitignore.md)
-  - [git提交规范](./git/git%E6%8F%90%E4%BA%A4%E8%A7%84%E8%8C%83.md)
-  - 📄 window/
+  - 📄 [gitignore](./git/gitignore.md)
+  - 📄 [git提交规范](./git/git%E6%8F%90%E4%BA%A4%E8%A7%84%E8%8C%83.md)
+  - 📁 window/
 - 📁 [github/](./github/)
 - 📁 [huawei/](./huawei/)
   - 📁 [honor8x/](./huawei/honor8x/)
 - 📁 [iOS/](./iOS/)
   - 📁 [Cydia/](./iOS/Cydia/)
-  - 📄 README.assets/
+  - 📁 README.assets/
   - 📁 [Surge/](./iOS/Surge/)
   - 📁 [keychain/](./iOS/keychain/)
   - 📁 [lldb/](./iOS/lldb/)
-    - 📄 readme/
-  - [old](./iOS/old.md)
-  - [常用api](./iOS/%E5%B8%B8%E7%94%A8api.md)
-  - 📄 越狱/
+    - 📁 readme/
+  - 📄 [old](./iOS/old.md)
+  - 📄 [常用api](./iOS/%E5%B8%B8%E7%94%A8api.md)
+  - 📁 越狱/
     - 📁 [WinRa1n/](./iOS/%E8%B6%8A%E7%8B%B1/WinRa1n/)
     - 📁 [checkra1n/](./iOS/%E8%B6%8A%E7%8B%B1/checkra1n/)
     - 📁 [palera1n/](./iOS/%E8%B6%8A%E7%8B%B1/palera1n/)
 - 📁 [jitpack/](./jitpack/)
 - 📁 [kali/](./kali/)
 - 📁 [kali-linux/](./kali-linux/)
-  - [android](./kali-linux/android.md)
-- 📄 language/
+  - 📄 [android](./kali-linux/android.md)
+- 📁 language/
   - 📁 [c/](./language/c/)
-    - [常用函数](./language/c/%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0.md)
-    - [常用库](./language/c/%E5%B8%B8%E7%94%A8%E5%BA%93.md)
+    - 📄 [常用函数](./language/c/%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0.md)
+    - 📄 [常用库](./language/c/%E5%B8%B8%E7%94%A8%E5%BA%93.md)
   - 📁 [cpp/](./language/cpp/)
   - 📁 [golang/](./language/golang/)
-    - [cgo](./language/golang/cgo.md)
-    - [code](./language/golang/code.md)
-  - 📄 java/
-  - 📄 javascript/
-    - 📄 nodejs/
+    - 📄 [cgo](./language/golang/cgo.md)
+    - 📄 [code](./language/golang/code.md)
+  - 📁 java/
+  - 📁 javascript/
+    - 📁 nodejs/
       - 📁 [yarn/](./language/javascript/nodejs/yarn/)
     - 📁 [typescript/](./language/javascript/typescript/)
   - 📁 [js/](./language/js/)
   - 📁 [python/](./language/python/)
     - 📁 [ctype(python调用dll)/](./language/python/ctype%28python%E8%B0%83%E7%94%A8dll%29/)
-    - 📄 module/
+    - 📁 module/
       - 📁 [制作module/](./language/python/module/%E5%88%B6%E4%BD%9Cmodule/)
-    - 📄 ubuntu/
-      - [ubuntu16.04安装python3.6](./language/python/ubuntu/ubuntu16.04%E5%AE%89%E8%A3%85python3.6.md)
-    - [常用小功能函数](./language/python/%E5%B8%B8%E7%94%A8%E5%B0%8F%E5%8A%9F%E8%83%BD%E5%87%BD%E6%95%B0.md)
+    - 📁 ubuntu/
+      - 📄 [ubuntu16.04安装python3.6](./language/python/ubuntu/ubuntu16.04%E5%AE%89%E8%A3%85python3.6.md)
+    - 📄 [常用小功能函数](./language/python/%E5%B8%B8%E7%94%A8%E5%B0%8F%E5%8A%9F%E8%83%BD%E5%87%BD%E6%95%B0.md)
   - 📁 [rust/](./language/rust/)
   - 📁 [shell/](./language/shell/)
 - 📁 [linux/](./linux/)
@@ -247,83 +248,86 @@
   - 📁 [images/](./llvm/images/)
   - 📁 [ollvm/](./llvm/ollvm/)
     - 📁 [anti-ollvm/](./llvm/ollvm/anti-ollvm/)
-    - 📄 demo/
-      - 📄 hello001/
-        - 📄 jni/
+    - 📁 demo/
+      - 📁 hello001/
+        - 📁 jni/
     - 📁 [images/](./llvm/ollvm/images/)
-- 📄 macOS/
-  - [brew](./macOS/brew.md)
+- 📁 macOS/
+  - 📄 [brew](./macOS/brew.md)
 - 📁 [magisk/](./magisk/)
 - 📁 [mars/](./mars/)
 - 📁 [mingw/](./mingw/)
 - 📁 [msys/](./msys/)
 - 📁 [msys2/](./msys2/)
-- 📄 nodejs/
-  - [nodejs](./nodejs/nodejs.md)
-  - [ts](./nodejs/ts.md)
-- 📄 oneplus/
+- 📁 nodejs/
+  - 📄 [nodejs](./nodejs/nodejs.md)
+  - 📄 [ts](./nodejs/ts.md)
+- 📁 oneplus/
   - 📁 [oneplus6/](./oneplus/oneplus6/)
   - 📁 [oneplus9r/](./oneplus/oneplus9r/)
 - 📁 [openssl/](./openssl/)
 - 📁 [perf/](./perf/)
-- 📄 proxy/
-  - [curl](./proxy/curl.md)
-  - [git](./proxy/git.md)
-  - [mirror](./proxy/mirror.md)
-  - [repo](./proxy/repo.md)
-  - [v2](./proxy/v2.md)
+- 📁 proxy/
+  - 📄 [curl](./proxy/curl.md)
+  - 📄 [git](./proxy/git.md)
+  - 📄 [mirror](./proxy/mirror.md)
+  - 📄 [repo](./proxy/repo.md)
+  - 📄 [v2](./proxy/v2.md)
 - 📁 [retdec/](./retdec/)
   - 📁 [images/](./retdec/images/)
-- [reverse](./reverse.md)
-- 📄 rom/
-  - [boot](./rom/boot.md)
+- 📄 [reverse](./reverse.md)
+- 📁 rom/
+  - 📄 [boot](./rom/boot.md)
   - 📁 [miui/](./rom/miui/)
-- 📄 router/
+- 📁 router/
   - 📁 [mi/](./router/mi/)
-- 📄 rpc/
+- 📁 rpc/
   - 📁 [golang/](./rpc/golang/)
 - 📁 [selenium/](./selenium/)
 - 📁 [sgmain/](./sgmain/)
-- 📄 software-top100/
-  - [Android](./software-top100/Android.md)
-  - [Linux](./software-top100/Linux.md)
-  - [web](./software-top100/web.md)
-  - [window](./software-top100/window.md)
+- 📁 software-top100/
+  - 📄 [Android](./software-top100/Android.md)
+  - 📄 [Linux](./software-top100/Linux.md)
+  - 📄 [web](./software-top100/web.md)
+  - 📄 [window](./software-top100/window.md)
 - 📁 [ssh/](./ssh/)
 - 📁 [switch/](./switch/)
 - 📁 [termux/](./termux/)
 - 📁 [ubuntu/](./ubuntu/)
   - 📁 [ppa/](./ubuntu/ppa/)
-  - [ubuntu-server-20.04](./ubuntu/ubuntu-server-20.04.md)
+  - 📄 [ubuntu-server-20.04](./ubuntu/ubuntu-server-20.04.md)
 - 📁 [unicorn/](./unicorn/)
   - 📁 [androidnativeemu/](./unicorn/androidnativeemu/)
   - 📁 [arm/](./unicorn/arm/)
     - 📁 [images/](./unicorn/arm/images/)
   - 📁 [compile/](./unicorn/compile/)
-  - [syscall表](./unicorn/syscall%E8%A1%A8.md)
+  - 📄 [syscall表](./unicorn/syscall%E8%A1%A8.md)
   - 📁 [unidbg/](./unicorn/unidbg/)
 - 📁 [usb/](./usb/)
-  - [2018-05-13-usb-reverse-engineering-down-the-rabbit-hole](./usb/2018-05-13-usb-reverse-engineering-down-the-rabbit-hole.md)
+  - 📄 [2018-05-13-usb-reverse-engineering-down-the-rabbit-hole](./usb/2018-05-13-usb-reverse-engineering-down-the-rabbit-hole.md)
 - 📁 [virtualbox/](./virtualbox/)
 - 📁 [vixl/](./vixl/)
 - 📁 [vscode/](./vscode/)
 - 📁 [wechat/](./wechat/)
 - 📁 [window/](./window/)
-  - 📄 assets/
-  - [bat](./window/bat.md)
-  - [cmd](./window/cmd.md)
+  - 📁 assets/
+  - 📄 [bat](./window/bat.md)
+  - 📄 [cmd](./window/cmd.md)
   - 📁 [images/](./window/images/)
   - 📁 [od/](./window/od/)
-    - [win32逆向分析](./window/od/win32%E9%80%86%E5%90%91%E5%88%86%E6%9E%90.md)
-  - [pe](./window/pe.md)
-  - [powershell](./window/powershell.md)
-  - [startup](./window/startup.md)
-  - [vbs](./window/vbs.md)
-  - [wakeup](./window/wakeup.md)
+    - 📄 [win32逆向分析](./window/od/win32%E9%80%86%E5%90%91%E5%88%86%E6%9E%90.md)
+  - 📄 [pe](./window/pe.md)
+  - 📄 [powershell](./window/powershell.md)
+  - 📄 [startup](./window/startup.md)
+  - 📄 [vbs](./window/vbs.md)
+  - 📄 [wakeup](./window/wakeup.md)
 - 📁 [wireshark/](./wireshark/)
 - 📁 [wsl/](./wsl/)
 - 📁 [xshell5/](./xshell5/)
 - 📁 [程序切片/](./%E7%A8%8B%E5%BA%8F%E5%88%87%E7%89%87/)
 - 📁 [符号执行/](./%E7%AC%A6%E5%8F%B7%E6%89%A7%E8%A1%8C/)
 <!-- DIRECTORY INDEX END -->
+
+
+
 
