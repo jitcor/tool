@@ -3,7 +3,7 @@ name: Update README Directory Index
 on:
   push:
     branches:
-      - main  # 根据您的默认分支名称调整
+      - main  # 根据你的默认分支名称调整
   schedule:
     - cron: '0 0 * * 7'  # 每周一次（可选）
 
@@ -18,13 +18,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.9'  # 指定 Python 版本
-
-      - name: Install dependencies
-        run: |
-          # 如果未来需要安装依赖，可以在这里添加，例如：
-          # pip install -r requirements.txt
-          echo "No additional dependencies required."
+          python-version: '3.x'
 
       - name: Run directory index script
         run: python generate_directory_index.py
@@ -34,4 +28,3 @@ jobs:
         with:
           commit_message: "🛠️ 自动更新目录索引"
           file_pattern: "README.md"
-          # 可以根据需要配置更多选项，例如分支
