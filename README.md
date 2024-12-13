@@ -118,8 +118,7 @@
 - [符号执行](./%E7%AC%A6%E5%8F%B7%E6%89%A7%E8%A1%8C/)
 <!-- DIRECTORY INDEX END -->
 
-
-若需技术支持，可加入[星球](https://t.zsxq.com/071NJKjZb)  
+----------------------------------
 
 
 ![Visitor's Count](https://profile-counter.glitch.me/Humenger_tool/count.svg) 
