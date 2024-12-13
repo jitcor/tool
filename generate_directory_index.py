@@ -8,10 +8,15 @@ def has_readme(directory):
             return True
     return False
 
+def is_markdown_file(filename):
+    """检查文件是否为 Markdown 文件（不区分大小写）"""
+    return filename.lower().endswith('.md')
+
 def generate_markdown_index(base_path, current_path='.', level=0, exclude_dirs=None):
     """
-    递归生成 Markdown 目录索引，只包含包含 README.md 的目录，
-    并链接到目录本身，链接进行 URL 编码。
+    递归生成 Markdown 目录索引，包含：
+    - 仅包含 README.md 的目录，链接指向目录本身。
+    - 其他 Markdown 文件，链接指向文件本身，链接文本为文件名（不含 .md）。
     """
     if exclude_dirs is None:
         exclude_dirs = ['.git', '.github', 'node_modules', '__pycache__']
@@ -25,15 +30,23 @@ def generate_markdown_index(base_path, current_path='.', level=0, exclude_dirs=N
 
     for item in items:
         item_path = os.path.join(full_path, item)
-        relative_path = os.path.join(current_path, item)
+        relative_path = os.path.join(current_path, item).replace('\\', '/')
         if os.path.isdir(item_path) and item not in exclude_dirs:
             if has_readme(item_path):
                 indent = '  ' * level
                 # 确保目录路径以 '/' 结尾，并进行 URL 编码
-                link = urllib.parse.quote(relative_path.replace('\\', '/').rstrip('/') + '/')
-                markdown += f"{indent}- [{item}]({link})\n"
+                dir_link = urllib.parse.quote(relative_path.rstrip('/') + '/')
+                markdown += f"{indent}- [{item}/]({dir_link})\n"
                 # 递归查找子目录
                 markdown += generate_markdown_index(base_path, relative_path, level + 1, exclude_dirs)
+        elif os.path.isfile(item_path) and is_markdown_file(item) and item.lower() != 'readme.md':
+            indent = '  ' * level
+            # 文件名不包含后缀
+            file_name = os.path.splitext(item)[0]
+            # 进行 URL 编码
+            file_link = urllib.parse.quote(relative_path)
+            markdown += f"{indent}- [{file_name}]({file_link})\n"
+
     return markdown
 
 def main():
