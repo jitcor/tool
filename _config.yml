@@ -3,6 +3,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-feed
+  - replace_md_links
 relative_links:
   enabled: true
   collections: true
