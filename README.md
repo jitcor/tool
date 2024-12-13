@@ -1,11 +1,8 @@
 # tool
 常用工具使用记录&填坑
 ## 目录
-<!-- DIRECTORY INDEX START -->
-- [Android](./Android/)
-  - [android studio](./Android/android studio/)
+  - [android studio](./Android/android%20studio/)
     - [4.1](./Android/android studio/4.1/)
-<!-- DIRECTORY INDEX END -->
 
 
 
