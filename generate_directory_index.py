@@ -1,4 +1,5 @@
 import os
+import urllib.parse
 
 def has_readme(directory):
     """检查目录中是否存在 README.md（不区分大小写）"""
@@ -8,7 +9,10 @@ def has_readme(directory):
     return False
 
 def generate_markdown_index(base_path, current_path='.', level=0, exclude_dirs=None):
-    """递归生成 Markdown 目录索引，只包含包含 README.md 的目录，并链接到目录本身"""
+    """
+    递归生成 Markdown 目录索引，只包含包含 README.md 的目录，
+    并链接到目录本身，链接进行 URL 编码。
+    """
     if exclude_dirs is None:
         exclude_dirs = ['.git', '.github', 'node_modules', '__pycache__']
 
@@ -25,8 +29,8 @@ def generate_markdown_index(base_path, current_path='.', level=0, exclude_dirs=N
         if os.path.isdir(item_path) and item not in exclude_dirs:
             if has_readme(item_path):
                 indent = '  ' * level
-                # 确保目录路径以 '/' 结尾
-                link = relative_path.replace('\\', '/').rstrip('/') + '/'
+                # 确保目录路径以 '/' 结尾，并进行 URL 编码
+                link = urllib.parse.quote(relative_path.replace('\\', '/').rstrip('/') + '/')
                 markdown += f"{indent}- [{item}]({link})\n"
                 # 递归查找子目录
                 markdown += generate_markdown_index(base_path, relative_path, level + 1, exclude_dirs)

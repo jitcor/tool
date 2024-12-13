@@ -5,8 +5,8 @@
 <!-- DIRECTORY INDEX START -->
 ## 目录索引
 - [Android](./Android/)
-  - [android studio](./Android/android studio/)
-    - [4.1](./Android/android studio/4.1/)
+  - [android studio](./Android/android%20studio/)
+    - [4.1](./Android/android%20studio/4.1/)
   - [gradle](./Android/gradle/)
   - [kernel](./Android/kernel/)
   - [ndk](./Android/ndk/)
@@ -15,11 +15,11 @@
   - [sdk](./Android/sdk/)
   - [smali](./Android/smali/)
   - [so](./Android/so/)
-  - [usb上网](./Android/usb上网/)
-  - [开发](./Android/开发/)
-    - [rxjava](./Android/开发/rxjava/)
-    - [svg](./Android/开发/svg/)
-  - [悬浮窗](./Android/悬浮窗/)
+  - [usb上网](./Android/usb%E4%B8%8A%E7%BD%91/)
+  - [开发](./Android/%E5%BC%80%E5%8F%91/)
+    - [rxjava](./Android/%E5%BC%80%E5%8F%91/rxjava/)
+    - [svg](./Android/%E5%BC%80%E5%8F%91/svg/)
+  - [悬浮窗](./Android/%E6%82%AC%E6%B5%AE%E7%AA%97/)
 - [Anti-epidemic](./Anti-epidemic/)
 - [AutoCAD](./AutoCAD/)
 - [CTF](./CTF/)
@@ -33,7 +33,7 @@
     - [keypatch](./IDA/plugins/keypatch/)
 - [IDEA](./IDEA/)
   - [Clion](./IDEA/Clion/)
-  - [IDEA插件编写指南](./IDEA/IDEA插件编写指南/)
+  - [IDEA插件编写指南](./IDEA/IDEA%E6%8F%92%E4%BB%B6%E7%BC%96%E5%86%99%E6%8C%87%E5%8D%97/)
 - [NLP](./NLP/)
 - [PC](./PC/)
 - [Swing](./Swing/)
@@ -55,7 +55,7 @@
 - [flutter](./flutter/)
 - [frida](./frida/)
   - [android](./frida/android/)
-  - [c++](./frida/c++/)
+  - [c++](./frida/c%2B%2B/)
   - [iOS](./frida/iOS/)
   - [objection](./frida/objection/)
   - [patch](./frida/patch/)
@@ -118,9 +118,10 @@
 - [wireshark](./wireshark/)
 - [wsl](./wsl/)
 - [xshell5](./xshell5/)
-- [程序切片](./程序切片/)
-- [符号执行](./符号执行/)
+- [程序切片](./%E7%A8%8B%E5%BA%8F%E5%88%87%E7%89%87/)
+- [符号执行](./%E7%AC%A6%E5%8F%B7%E6%89%A7%E8%A1%8C/)
 <!-- DIRECTORY INDEX END -->
+
 
 
 
