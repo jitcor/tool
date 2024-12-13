@@ -1,4 +1,10 @@
+---
+layout: default
+title: tool
+---
+
 <!-- DIRECTORY INDEX START -->
+
 ## 目录索引
 - [Android](./Android/)
   - [android studio](./Android/android%20studio/)
