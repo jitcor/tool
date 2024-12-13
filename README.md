@@ -2,6 +2,7 @@
 常用工具使用记录&填坑
 ## 目录
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <!-- DIRECTORY INDEX START -->
 ## 目录索引
@@ -127,6 +128,10 @@
     - [4.1](./Android/android studio/4.1/)
 >>>>>>> 6c1dbf31745b64a48df1a408b50dfad502d08d69
 
+=======
+  - [android studio](./Android/android%20studio/)
+    - [4.1](./Android/android studio/4.1/)
+>>>>>>> 6c1dbf31745b64a48df1a408b50dfad502d08d69
 
 
 
