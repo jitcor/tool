@@ -4,3 +4,9 @@ relative_links:
   enabled: true
   collections: true
 theme: minima
+include:
+  - AppCenter.md
+  - README.md
+  - reverse.md
+  - Navigation.md
+
