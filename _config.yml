@@ -1,5 +1,8 @@
 plugins:
   - jekyll-relative-links
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
 relative_links:
   enabled: true
   collections: true
@@ -8,4 +11,15 @@ include:
   - README.md
   - reverse.md
   - Navigation.md
+title: shlu's tool
+logo: favicon.ico
+tagline: 常用工具使用和填坑
+description: 一名Android&iOS逆向分析Boy
+author:
+  name: shlu
+  url: https://t.me/shluer
+social:
+  name: shlu
+  links:
+    - https://github.com/jitcor
 
