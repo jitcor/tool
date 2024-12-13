@@ -8,7 +8,7 @@ def has_readme(directory):
     return False
 
 def generate_markdown_index(base_path, current_path='.', level=0, exclude_dirs=None):
-    """递归生成 Markdown 目录索引，只包含包含 README.md 的目录"""
+    """递归生成 Markdown 目录索引，只包含包含 README.md 的目录，并链接到目录本身"""
     if exclude_dirs is None:
         exclude_dirs = ['.git', '.github', 'node_modules', '__pycache__']
 
@@ -25,7 +25,8 @@ def generate_markdown_index(base_path, current_path='.', level=0, exclude_dirs=N
         if os.path.isdir(item_path) and item not in exclude_dirs:
             if has_readme(item_path):
                 indent = '  ' * level
-                link = os.path.join(relative_path, 'README.md').replace('\\', '/')
+                # 确保目录路径以 '/' 结尾
+                link = relative_path.replace('\\', '/').rstrip('/') + '/'
                 markdown += f"{indent}- [{item}]({link})\n"
                 # 递归查找子目录
                 markdown += generate_markdown_index(base_path, relative_path, level + 1, exclude_dirs)
