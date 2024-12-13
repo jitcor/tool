@@ -25,6 +25,27 @@ https://wwa.lanzous.com/irSqBg923vg
 ![image](./images/pycharm_debug_btn.png)
 - IDA PRO->File->Script file...选择目标py脚本
 - 然后就会在上面添加的调试代码位置断下来
+
+## IDA 加快分析速度
+
+![image-20241210194232593](./readme/image-20241210194232593.png)
+
+这个配置有点烧钱，土豪方案，还有就是经测试，内存磁盘并不能加快解析速度，与普通磁盘解析时间几乎一样
+
+![image-20241210194310709](./readme/image-20241210194310709.png)
+
+很有用，分析速度大大提升
+
+![image-20241210194341574](./readme/image-20241210194341574.png)
+
+![image-20241210194356869](./readme/image-20241210194356869.png)
+
+![image-20241210194408656](./readme/image-20241210194408656.png)
+
+
+
+
+
 # IDA 动态调试
 - 参考：https://blog.csdn.net/binbin594738977/article/details/106055975
 - 常见问题：https://blog.csdn.net/binbin594738977/article/details/106058742

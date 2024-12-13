@@ -7,8 +7,15 @@
 defineHandler({
   onEnter(log, args, state) {
     this.ObjCToString=function (obj){
-      //@ts-ignore
-      // return  new ObjC.Object(obj).toString()
+      if(parameters.c2s){
+        if(typeof parameters.regex === 'string'&&parameters.regex.length>0){
+          const regex=new RegExp(parameters.regex,"i");
+          if(regex.test(`-[FMDatabase initWithPath:]`)){
+            //@ts-ignore
+            return  new ObjC.Object(obj).toString() 
+          }
+        }
+      }
       return obj;
     }
 
@@ -35,15 +42,21 @@ tracer.py
 defineHandler({
   onEnter(log, args, state) {
     this.ObjCToString=function (obj){
-      //@ts-ignore
-      // return  new ObjC.Object(obj).toString()
+      if(parameters.c2s){
+        if(typeof parameters.filter === 'string'&&parameters.filter.length>0){
+          if(%(display_name)s.toLowerCase().indexOf(parameters.filter.toLowerCase())>-1){
+            //@ts-ignore
+            return  new ObjC.Object(obj).toString() 
+          }
+        }
+      }
       return obj;
     }
     log(%(log_str)s);
   },
 
   onLeave(log, retval, state) {
-    log(`EXIT %(display_name)/ret= ${this.ObjCToString(retval)}`)
+    log(`EXIT %(display_name)s/ret= ${this.ObjCToString(retval)}`)
   }
 });
 """ % {

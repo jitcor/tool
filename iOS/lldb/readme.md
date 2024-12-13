@@ -4,6 +4,81 @@
 - iphone6 12.4(已越狱)
 - macOS 10.15.5 Catalina
 - lldb 1103.0.22.4
+
+# 环境配置
+
+**debugserver** 
+
+> ref: https://book.crifan.org/books/ios_re_debug_debugserver_lldb/website/debugserver/
+
+安装原版debugserver：在设备连接过一次`Xcode`，并在`Window`->`Devices`中添加此设备后，`debugserver`才会被`Xcode`安装到`iOS`的`/Developer/usr/bin/`下（该路径没在系统PATH下，不能直接调用debugserver，需要全路径）
+
+修补debugserver（不修补的没法正常调试其它app）：
+
+```bash
+# ssh 端口映射
+iproxy 2222 22
+```
+
+```bash
+# 复制到mac
+scp -P 2222 root@127.0.0.1:/Developer/usr/bin/debugserver ./
+```
+
+```bash
+# 创建entitlements
+nano debugserver.entitlements
+```
+
+加入如下内容
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>com.apple.springboard.debugapplications</key>
+    <true/>
+    <key>com.apple.backboardd.launchapplications</key>
+    <true/>
+    <key>com.apple.backboardd.debugapplications</key>
+    <true/>
+    <key>com.apple.frontboard.launchapplications</key>
+    <true/>
+    <key>com.apple.frontboard.debugapplications</key>
+    <true/>
+    <key>com.apple.private.logging.diagnostic</key>
+    <true/>
+    <key>com.apple.private.memorystatus</key>
+    <true/>
+    <key>com.apple.private.cs.debugger</key>
+    <true/>
+    <key>get-task-allow</key>
+    <true/>
+    <key>task_for_pid-allow</key>
+    <true/>
+    <key>run-unsigned-code</key>
+    <true/>
+</dict>
+</plist>
+```
+
+![image-20241212142529687](./readme/image-20241212142529687.png)
+
+
+
+```bash
+# 重新签名
+codesign -f -s - --entitlements debugserver.entitlements debugserver
+```
+
+```bash
+# 复制回iphone的/usr/bin/目录下
+scp -P 2222 ./debugserver root@127.0.0.1:/usr/bin/
+```
+
+
+
 # 步骤[<sup>1</sup>](#ref.1)
 - `iproxy 2222 22`:端口转发
 - 打开一个新命令窗口
@@ -53,6 +128,9 @@
 - q2.`Exception getting memory from debugger: NameError("name 'xrange' is not defined>`<a id="q.2"/> \
 将克隆地址切换到`https://github.com/jonasmr/voltron.git`[<sup>3</sup>](#ref.3)
 - q3.
+
+
+
 # 参考
 - [1] [2018-08-10更新-LLDB常用命令--飘云整理](https://www.dllhook.com/post/51.html)<a id="ref.1"/>
 - [2] [IOS越狱12.4之后debugger使用lldb连不上](https://www.ioshacker.net/thread-148-1-1.html)<a id="ref.2"/>
