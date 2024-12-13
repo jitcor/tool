@@ -3,7 +3,6 @@ plugins:
 relative_links:
   enabled: true
   collections: true
-theme: minima
 include:
   - AppCenter.md
   - README.md
