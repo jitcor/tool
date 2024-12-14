@@ -11,11 +11,14 @@ relative_links:
   enabled: true
   collections: true
 #markdown: CommonMarkGhPages # GFM
-markdown: kramdown
-kramdown:
-  input: GFM # 启用 GitHub Flavored Markdown
-  syntax_highlighter: rouge # 使用 Rouge 作为代码高亮器
-  # 其他配置选项，根据需要调整
+#markdown: kramdown
+#kramdown:
+#  input: GFM # 启用 GitHub Flavored Markdown
+#  syntax_highlighter: rouge # 使用 Rouge 作为代码高亮器
+#  # 其他配置选项，根据需要调整
+markdown: redcarpet
+redcarpet:
+  extensions: ["autolink", "no_intra_emphasis", "tables", "strikethrough"]
 
 readme_index:
   enabled:          true
