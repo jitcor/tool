@@ -1,3 +1,20 @@
+# 将github仓库无侵入转换为github-pages
+
+啥叫无侵入？
+
+就是在转换为github-pages后，通过github仓库依然可以正常查看readme.md
+
+第一先开启github pages
+
+jekyll-gh-pages.yml
+
+第二开启github action
+
+
+
+## 建立readme.md索引
+
+```python
 import os
 import urllib.parse
 
@@ -62,7 +79,7 @@ def main():
 
     directory_index = generate_markdown_index(base_path)
 
-    directory_section = f"{start_marker}\n{directory_index}{end_marker}\n"
+    directory_section = f"{start_marker}\n## 目录索引\n{directory_index}{end_marker}\n"
 
     readme_path = 'README.md'
 
@@ -95,3 +112,50 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+```
+
+github action:
+
+```yaml
+name: Update README Directory Index
+
+on:
+  push:
+    branches:
+      - main  # 根据你的默认分支名称调整
+  schedule:
+    - cron: '0 0 * * 7'  # 每周一次（可选）
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Run directory index script
+        run: python generate_directory_index.py
+
+      - name: Commit and Push changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "🛠️ 自动更新目录索引"
+          file_pattern: "README.md"
+```
+
+
+
+但现在有一个问题：readme.md里的.md后缀，不会替换成.html或空
+
+现在有两个方案：
+
+直接通过python脚本替换，然后再交给jekyll处理
+
+直接交由jekyll处理

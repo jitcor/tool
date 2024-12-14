@@ -1,11 +1,11 @@
-whitelist:
-  - markdown_link_replacer
+#whitelist:
+#  - markdown_link_replacer
 plugins:
   - jekyll-relative-links
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-feed
-  - markdown_link_replacer
+#  - markdown_link_replacer
 relative_links:
   enabled: true
   collections: true
@@ -18,7 +18,7 @@ title: shlu's tool
 logo: favicon.ico
 tagline: 常用工具使用和填坑
 description: 一名Android&iOS逆向分析Boy
-safe: false
+#safe: false
 author:
   name: shlu
   url: https://t.me/shluer
@@ -27,3 +27,11 @@ social:
   links:
     - https://github.com/jitcor
 
+# GitHub page default theme :jekyll-theme-primer
+# docs: https://www.rubydoc.info/gems/jekyll-theme-primer/0.6.0
+# source: https://github.com/pages-themes/primer
+# show_downloads: ["true" or "false" (unquoted) to indicate whether to provide a download URL]
+show_downloads: false
+# google_analytics: [Your Google Analytics tracking ID]
+
+url: "https://jitcor.github.io/tool/"
