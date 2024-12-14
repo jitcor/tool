@@ -1,3 +1,5 @@
+whitelist:
+  - markdown_link_replacer
 plugins:
   - jekyll-relative-links
   - jekyll-sitemap
