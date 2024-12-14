@@ -10,7 +10,13 @@ plugins:
 relative_links:
   enabled: true
   collections: true
-markdown: CommonMarkGhPages # GFM
+#markdown: CommonMarkGhPages # GFM
+markdown: kramdown
+kramdown:
+  input: GFM # 启用 GitHub Flavored Markdown
+  syntax_highlighter: rouge # 使用 Rouge 作为代码高亮器
+  # 其他配置选项，根据需要调整
+
 readme_index:
   enabled:          true
   remove_originals: false
