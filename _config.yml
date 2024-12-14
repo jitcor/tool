@@ -10,7 +10,7 @@ plugins:
 relative_links:
   enabled: true
   collections: true
-markdown: GFM
+markdown: CommonMarkGhPages # GFM
 readme_index:
   enabled:          true
   remove_originals: false
