@@ -10,11 +10,11 @@ plugins:
 relative_links:
   enabled: true
   collections: true
-include:
-  - AppCenter.md
-  - README.md
-  - reverse.md
-  - Navigation.md
+
+readme_index:
+  enabled:          true
+  remove_originals: false
+  with_frontmatter: false
 title: shlu's tool
 logo: favicon.ico
 tagline: 常用工具使用和填坑
