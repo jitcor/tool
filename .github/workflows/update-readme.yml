@@ -28,3 +28,4 @@ jobs:
         with:
           commit_message: "🛠️ 自动更新目录索引"
           file_pattern: "README.md"
+          branch: github-pages-pre
