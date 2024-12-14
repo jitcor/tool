@@ -3,7 +3,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-feed
-  - replace_md_links
+  - markdown_link_replacer
 relative_links:
   enabled: true
   collections: true
@@ -12,7 +12,6 @@ include:
   - README.md
   - reverse.md
   - Navigation.md
-  - Android/Android逆向面试题.md
 title: shlu's tool
 logo: favicon.ico
 tagline: 常用工具使用和填坑
