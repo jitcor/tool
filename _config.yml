@@ -21,6 +21,9 @@ relative_links:
   enabled: true
   collections: true
 markdown: CommonMarkGhPages # GFM
+commonmark:
+  options: ["UNSAFE", "SMART", "FOOTNOTES"]
+  extensions: ["strikethrough", "autolink", "table", "tagfilter"]
 #highlighter: rouge
 #markdown: redcarpet   #rdiscount, kramdown, redcarpet, CommonMarkGhPages, CommonMark
 #kramdown:
