@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main  # 根据你的默认分支名称调整
-  schedule:
-    - cron: '0 0 * * 7'  # 每周一次（可选）
 
 jobs:
   update-readme:
@@ -28,3 +26,4 @@ jobs:
         with:
           commit_message: "🛠️ 自动更新目录索引"
           file_pattern: "README.md"
+          branch: github-pages-pre
