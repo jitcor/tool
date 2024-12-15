@@ -1,0 +1,30 @@
+name: Update README Directory Index
+
+on:
+  push:
+    branches:
+      - main  # 根据你的默认分支名称调整
+  schedule:
+    - cron: '0 0 * * 7'  # 每周一次（可选）
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Run directory index script
+        run: python generate_directory_index.py
+
+      - name: Commit and Push changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "🛠️ 自动更新目录索引"
+          file_pattern: "README.md"
