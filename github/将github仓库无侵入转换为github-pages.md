@@ -154,8 +154,23 @@ jobs:
 
 但现在有一个问题：readme.md里的.md后缀，不会替换成.html或空
 
-现在有两个方案：
+问题探究：
 
-直接通过python脚本替换，然后再交给jekyll处理
+相关issue: [reason for blacklisting plugins?](https://github.com/github/pages-gem/issues/926)
 
-直接交由jekyll处理
+​      ^ TODO:  该issue下给出了一个绕过白名单限制的解决方案，后面有时间可以研究下
+
+相关issue: [Links with titles not handled properly](https://github.com/github/pages-gem/issues/876)
+
+​         ^ 据该issue提示：问题出在jekyll-relative-links这个插件上，版本为0.6.1，但其已在[0.7.0](https://github.com/benbalter/jekyll-relative-links/releases/tag/v0.7.0)版本已修复，但官方一直不处理
+
+经过分析提交记录，发现Pages-gem v229~v230已经更新到了0.7.0，但在v231又降回去了，commit: [pages-gem/commit/c29f89c3c](https://github.com/github/13c55cfc4aec49d58089a58c123e980)
+
+​        ^ 因此现在只要在action里指定该[Pages-gem v230](https://github.com/github/pages-gem/releases/tag/v230)，也就是[Jekyll-build-pages v1.0.11](https://github.com/actions/jekyll-build-pages/releases/tag/v1.0.11)版本：
+
+```yaml
+uses: actions/jekyll-build-pages@v1.0.11
+```
+
+
+

@@ -3,10 +3,11 @@
 module Jekyll
   class ReplaceStringConverter < Converter
     # 设置转换器优先级，确保在 Markdown 转换之前执行替换
-    priority :low
+    # priority :low
 
     # 指定该转换器处理的文件扩展名
     def matches(ext)
+      Jekyll.logger.debug "matches(ext): #{ext}"
       if ext != nil
         ext.downcase == '.md' || ext.downcase == '.markdown'
       end
@@ -15,12 +16,14 @@ module Jekyll
 
     # 保持文件扩展名不变
     def output_ext(ext)
+      Jekyll.logger.debug "output_ext(ext): #{ext}"
       ext
     end
 
     # 执行字符串替换并调用默认的 Markdown 转换器
     def convert(content)
-
+      raise ThreadError
+      Jekyll.logger.debug "Converting:", "111111111111"
       # 定义需要替换的字符串对，支持字符串和正则表达式
       replacements = [
         # { pattern: /\[([^\]]+)\]\(([^)]+)\.md\)/, replacement: '[\1](\2)' },
