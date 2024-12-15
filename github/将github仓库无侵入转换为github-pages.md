@@ -124,9 +124,7 @@ on:
   push:
     branches:
       - main  # 根据你的默认分支名称调整
-  schedule:
-    - cron: '0 0 * * 7'  # 每周一次（可选）
-
+      
 jobs:
   update-readme:
     runs-on: ubuntu-latest
@@ -164,7 +162,7 @@ jobs:
 
 ​         ^ 据该issue提示：问题出在jekyll-relative-links这个插件上，版本为0.6.1，但其已在[0.7.0](https://github.com/benbalter/jekyll-relative-links/releases/tag/v0.7.0)版本已修复，但官方一直不处理
 
-经过分析提交记录，发现Pages-gem v229~v230已经更新到了0.7.0，但在v231又降回去了，commit: [pages-gem/commit/c29f89c3c](https://github.com/github/13c55cfc4aec49d58089a58c123e980)
+经过分析Pages-gem项目提交记录，发现v229~v230已经更新到了0.7.0，但在v231又降回去了，commit: [pages-gem/commit/c29f89c3c](https://github.com/github/13c55cfc4aec49d58089a58c123e980)
 
 ​        ^ 因此现在只要在action里指定该[Pages-gem v230](https://github.com/github/pages-gem/releases/tag/v230)，也就是[Jekyll-build-pages v1.0.11](https://github.com/actions/jekyll-build-pages/releases/tag/v1.0.11)版本：
 
