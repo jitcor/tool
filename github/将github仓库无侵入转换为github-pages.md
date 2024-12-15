@@ -79,7 +79,7 @@ def main():
 
     directory_index = generate_markdown_index(base_path)
 
-    directory_section = f"{start_marker}\n## 目录索引\n{directory_index}{end_marker}\n"
+    directory_section = f"{start_marker}\n{directory_index}{end_marker}\n"
 
     readme_path = 'README.md'
 
