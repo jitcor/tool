@@ -34,6 +34,7 @@ commonmark:
 #redcarpet:
 #  extensions: ["autolink", "no_intra_emphasis", "tables", "strikethrough"]
 
+permalink: pretty
 readme_index:
   enabled:          true
   remove_originals: false
