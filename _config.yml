@@ -6,19 +6,30 @@ plugins:
   - jekyll-seo-tag
   - jekyll-feed
   - jekyll-readme-index
+  - jekyll-github-metadata
+  - jekyll-coffeescript
+  - jekyll-commonmark-ghpages
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-optional-front-matter
+  - jekyll-default-layout
+  - jekyll-titles-from-headings
 #  - markdown_link_replacer
+exclude:
+  - jekyll_tmp
 relative_links:
   enabled: true
   collections: true
-#markdown: CommonMarkGhPages # GFM
-#markdown: kramdown
+markdown: CommonMarkGhPages # GFM
+#highlighter: rouge
+#markdown: redcarpet   #rdiscount, kramdown, redcarpet, CommonMarkGhPages, CommonMark
 #kramdown:
 #  input: GFM # 启用 GitHub Flavored Markdown
 #  syntax_highlighter: rouge # 使用 Rouge 作为代码高亮器
 #  # 其他配置选项，根据需要调整
-markdown: redcarpet
-redcarpet:
-  extensions: ["autolink", "no_intra_emphasis", "tables", "strikethrough"]
+#markdown: redcarpet
+#redcarpet:
+#  extensions: ["autolink", "no_intra_emphasis", "tables", "strikethrough"]
 
 readme_index:
   enabled:          true
@@ -45,3 +56,5 @@ show_downloads: false
 # google_analytics: [Your Google Analytics tracking ID]
 
 url: "https://jitcor.github.io/tool/"
+
+show_warnings: true

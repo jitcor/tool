@@ -1,2 +1,6 @@
 .DS_Store
 **/.DS_Store
+_site/
+.idea/
+jekyll_tmp/
+.jekyll-cache/
