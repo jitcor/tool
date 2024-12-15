@@ -154,6 +154,8 @@ jobs:
 
 问题探究：
 
+经过分析github action 代码，发现核心代码在[pages-gem](https://github.com/github/pages-gem)上
+
 相关issue: [reason for blacklisting plugins?](https://github.com/github/pages-gem/issues/926)
 
 ​      ^ TODO:  该issue下给出了一个绕过白名单限制的解决方案，后面有时间可以研究下
