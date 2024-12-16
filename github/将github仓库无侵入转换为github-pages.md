@@ -174,6 +174,9 @@ uses: actions/jekyll-build-pages@v1.0.11
 
 
 
+推荐：
+
+一个快速部署（克隆->改名->完成）jekyll博客的开源项目：[jekyll-now](https://github.com/barryclark/jekyll-now)
 
 
 
