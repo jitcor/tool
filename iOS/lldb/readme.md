@@ -97,7 +97,7 @@ scp -P 2222 ./debugserver root@127.0.0.1:/usr/bin/
 - `r`:重启
 - `si`:指令级步入
 - `ni`:指令级步过
-- `return`:退出子函数(测试好像没有这个命令)
+- `finish`:退出子函数
 - `breakpoint set -a 0x012345`:在函数地址下断
 - `dis -a 0x12345`:从某地址开始反汇编
 - eg `dis -a $pc`:从当前欲要执行地址开始反汇编
