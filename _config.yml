@@ -50,7 +50,7 @@ author:
 social:
   name: shlu
   links:
-    - https://github.com/jitcor
+    - https://github.com/xpko
 
 # GitHub page default theme :jekyll-theme-primer
 # docs: https://www.rubydoc.info/gems/jekyll-theme-primer/0.6.0
@@ -59,7 +59,7 @@ social:
 show_downloads: false
 # google_analytics: G-XLQ8QVT1QY
 
-url: "https://jitcor.github.io"
+url: "https://xpko.github.io"
 
 show_warnings: true
 
@@ -70,7 +70,7 @@ footer-links:
   email:
   facebook:
   flickr:
-  github: jitcor
+  github: xpko
   instagram:
   linkedin:
   pinterest:
